@@ -1,0 +1,3902 @@
+[
+  {
+    "question_id": "Ciphey::__ge__",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "__ge__",
+    "expected_function_name": "__ge__",
+    "needle_description_preview": "\n1. **Purpose**: To determine if the priority of the current instance is greater than or equal to another instance.\n2. **Input**: Another instance of the same c",
+    "needle_path": "ciphey/iface/_modules.py",
+    "config_A_with_cache": {
+      "predicted": "__ge__",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 0.6842774068936706,
+      "query_time": 0.912782991072163,
+      "cache_hit": true,
+      "input_tokens": 501,
+      "output_tokens": 3,
+      "wallclock_s": 1.597551270853728
+    },
+    "config_B_without_cache": {
+      "predicted": "__ge__",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 2.373823461122811,
+      "query_time": 5.6172845819965005,
+      "cache_hit": false,
+      "input_tokens": 501,
+      "output_tokens": 3,
+      "wallclock_s": 7.991554945940152
+    },
+    "config_C_full_text": {
+      "predicted": "Brandon",
+      "exact": false,
+      "input_tokens": 3027,
+      "output_tokens": 237,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.43604794703424
+    }
+  },
+  {
+    "question_id": "Ciphey::alpha",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "alpha",
+    "expected_function_name": "alpha",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to handle a specific type of cryptographic hash cracking, integrating with a broader decryption framework.\n2. **Input*",
+    "needle_path": "ciphey/basemods/Crackers/hash.py",
+    "config_A_with_cache": {
+      "predicted": "decode",
+      "exact": false,
+      "n_candidates": 423,
+      "extraction_time": 0.5963141350075603,
+      "query_time": 3.213728018803522,
+      "cache_hit": true,
+      "input_tokens": 593,
+      "output_tokens": 1,
+      "wallclock_s": 3.810625848826021
+    },
+    "config_B_without_cache": {
+      "predicted": "main",
+      "exact": false,
+      "n_candidates": 423,
+      "extraction_time": 3.191481598187238,
+      "query_time": 2.441512610996142,
+      "cache_hit": false,
+      "input_tokens": 593,
+      "output_tokens": 1,
+      "wallclock_s": 5.6335390659514815
+    },
+    "config_C_full_text": {
+      "predicted": "None",
+      "exact": false,
+      "input_tokens": 3023,
+      "output_tokens": 359,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.820205193944275
+    }
+  },
+  {
+    "question_id": "Ciphey::binary_to_ascii",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "binary_to_ascii",
+    "expected_function_name": "binary_to_ascii",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to convert binary data encoded as a string into ASCII text.\n2. **Input**: A string representing binary data.\n3. **Outp",
+    "needle_path": "ciphey/basemods/Crackers/xandy.py",
+    "config_A_with_cache": {
+      "predicted": "binary_to_ascii",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 0.06519909901544452,
+      "query_time": 0.7762862159870565,
+      "cache_hit": true,
+      "input_tokens": 615,
+      "output_tokens": 3,
+      "wallclock_s": 0.8421980000566691
+    },
+    "config_B_without_cache": {
+      "predicted": "binary_to_ascii",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 2.8908276059664786,
+      "query_time": 2.205523688811809,
+      "cache_hit": false,
+      "input_tokens": 615,
+      "output_tokens": 3,
+      "wallclock_s": 5.09680478204973
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 3026,
+      "output_tokens": 412,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.657562087988481
+    }
+  },
+  {
+    "question_id": "Ciphey::chars_to_byte",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "chars_to_byte",
+    "expected_function_name": "chars_to_byte",
+    "needle_description_preview": "\n1. **Purpose**: Converts a pair of characters from a specific encoding into a single byte value.\n2. **Input**: A string of two characters.\n3. **Output**: An in",
+    "needle_path": "ciphey/basemods/Decoders/base69.py",
+    "config_A_with_cache": {
+      "predicted": "decode",
+      "exact": false,
+      "n_candidates": 423,
+      "extraction_time": 0.6749400550033897,
+      "query_time": 0.6635093740187585,
+      "cache_hit": false,
+      "input_tokens": 630,
+      "output_tokens": 1,
+      "wallclock_s": 1.339040928054601
+    },
+    "config_B_without_cache": {
+      "predicted": "decode",
+      "exact": false,
+      "n_candidates": 423,
+      "extraction_time": 2.6182104360777885,
+      "query_time": 5.071844008984044,
+      "cache_hit": false,
+      "input_tokens": 630,
+      "output_tokens": 1,
+      "wallclock_s": 7.690775761147961
+    },
+    "config_C_full_text": {
+      "predicted": "grep",
+      "exact": false,
+      "input_tokens": 3030,
+      "output_tokens": 291,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.6247087239753455
+    }
+  },
+  {
+    "question_id": "Ciphey::crackOne",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "crackOne",
+    "expected_function_name": "crackOne",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to decrypt a cipher text that has been encrypted using a specific polyalphabetic substitution cipher method. It identi",
+    "needle_path": "ciphey/basemods/Crackers/vigenere.py",
+    "config_A_with_cache": {
+      "predicted": "main",
+      "exact": false,
+      "n_candidates": 423,
+      "extraction_time": 0.760249838931486,
+      "query_time": 1.3166468730196357,
+      "cache_hit": true,
+      "input_tokens": 814,
+      "output_tokens": 1,
+      "wallclock_s": 2.0774256200529635
+    },
+    "config_B_without_cache": {
+      "predicted": "main",
+      "exact": false,
+      "n_candidates": 423,
+      "extraction_time": 2.9870201779995114,
+      "query_time": 3.680682297097519,
+      "cache_hit": false,
+      "input_tokens": 814,
+      "output_tokens": 1,
+      "wallclock_s": 6.668294970178977
+    },
+    "config_C_full_text": {
+      "predicted": "ciphey",
+      "exact": false,
+      "input_tokens": 3001,
+      "output_tokens": 316,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.358651989838108
+    }
+  },
+  {
+    "question_id": "Ciphey::getSentenceCombo",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "getSentenceCombo",
+    "expected_function_name": "getSentenceCombo",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to recursively generate all possible sentences from a list of lists of words, each corresponding to a set of soundex c",
+    "needle_path": "ciphey/basemods/Crackers/soundex.py",
+    "config_A_with_cache": {
+      "predicted": "getSentenceCombo",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 0.1781812570989132,
+      "query_time": 1.8118875580839813,
+      "cache_hit": true,
+      "input_tokens": 760,
+      "output_tokens": 3,
+      "wallclock_s": 1.990605479106307
+    },
+    "config_B_without_cache": {
+      "predicted": "getSentenceCombo",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 1.6833213020581752,
+      "query_time": 2.096798828104511,
+      "cache_hit": false,
+      "input_tokens": 760,
+      "output_tokens": 3,
+      "wallclock_s": 3.7806271659210324
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2995,
+      "output_tokens": 355,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 10.07646229187958
+    }
+  },
+  {
+    "question_id": "Ciphey::get_name",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "get_name",
+    "expected_function_name": "get_name",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to retrieve a string value, either from a command-line argument or from standard input if the argument is not provided",
+    "needle_path": "ciphey/ciphey.py",
+    "config_A_with_cache": {
+      "predicted": "get_name",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 0.45141513110138476,
+      "query_time": 0.6424644861835986,
+      "cache_hit": true,
+      "input_tokens": 681,
+      "output_tokens": 2,
+      "wallclock_s": 1.09514479781501
+    },
+    "config_B_without_cache": {
+      "predicted": "get_name",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 3.7565896830055863,
+      "query_time": 2.3371560969389975,
+      "cache_hit": false,
+      "input_tokens": 681,
+      "output_tokens": 2,
+      "wallclock_s": 6.094254080904648
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 3034,
+      "output_tokens": 314,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.595271539175883
+    }
+  },
+  {
+    "question_id": "Ciphey::new_sort",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "new_sort",
+    "expected_function_name": "new_sort",
+    "needle_description_preview": "\n1. **Purpose**: To organize the elements of a dictionary in descending order based on their values.\n2. **Input**: A dictionary where keys are associated with n",
+    "needle_path": "ciphey/mathsHelper.py",
+    "config_A_with_cache": {
+      "predicted": "new_sort",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 0.4661396569572389,
+      "query_time": 0.6752740829251707,
+      "cache_hit": true,
+      "input_tokens": 637,
+      "output_tokens": 2,
+      "wallclock_s": 1.1420044989790767
+    },
+    "config_B_without_cache": {
+      "predicted": "new_sort",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 2.95844990410842,
+      "query_time": 2.8371641838457435,
+      "cache_hit": false,
+      "input_tokens": 637,
+      "output_tokens": 2,
+      "wallclock_s": 5.796124464133754
+    },
+    "config_C_full_text": {
+      "predicted": "OrderedDict",
+      "exact": false,
+      "input_tokens": 3025,
+      "output_tokens": 286,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.594247704138979
+    }
+  },
+  {
+    "question_id": "Ciphey::sortlistwithdict",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "sortlistwithdict",
+    "expected_function_name": "sortlistwithdict",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to organize a list of sentences based on the cumulative frequency of the words they contain, with the aim of prioritiz",
+    "needle_path": "ciphey/basemods/Crackers/soundex.py",
+    "config_A_with_cache": {
+      "predicted": "sortlistwithdict",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 2.3135614320635796,
+      "query_time": 2.9345435448922217,
+      "cache_hit": true,
+      "input_tokens": 708,
+      "output_tokens": 4,
+      "wallclock_s": 5.248595036100596
+    },
+    "config_B_without_cache": {
+      "predicted": "sortlistwithdict",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 1.499580800998956,
+      "query_time": 2.0548829350154847,
+      "cache_hit": false,
+      "input_tokens": 708,
+      "output_tokens": 4,
+      "wallclock_s": 3.555095850955695
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 3019,
+      "output_tokens": 323,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 13.456419216934592
+    }
+  },
+  {
+    "question_id": "Ciphey::strip_punctuation",
+    "repo": "Ciphey/Ciphey",
+    "needle_function": "strip_punctuation",
+    "expected_function_name": "strip_punctuation",
+    "needle_description_preview": "\n1. **Purpose**: To remove all punctuation characters from a provided string, making it cleaner for text processing or analysis.\n2. **Input**: A single string w",
+    "needle_path": "ciphey/mathsHelper.py",
+    "config_A_with_cache": {
+      "predicted": "strip_punctuation",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 0.8258525889832526,
+      "query_time": 1.4368316589388996,
+      "cache_hit": true,
+      "input_tokens": 621,
+      "output_tokens": 3,
+      "wallclock_s": 2.2633255161345005
+    },
+    "config_B_without_cache": {
+      "predicted": "strip_punctuation",
+      "exact": true,
+      "n_candidates": 423,
+      "extraction_time": 3.5620065310504287,
+      "query_time": 1.883828894002363,
+      "cache_hit": false,
+      "input_tokens": 621,
+      "output_tokens": 3,
+      "wallclock_s": 5.446392487036064
+    },
+    "config_C_full_text": {
+      "predicted": "strip_punctuation",
+      "exact": true,
+      "input_tokens": 3020,
+      "output_tokens": 241,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.56178191700019
+    }
+  },
+  {
+    "question_id": "black::__post_init__",
+    "repo": "psf/black",
+    "needle_function": "__post_init__",
+    "expected_function_name": "__post_init__",
+    "needle_description_preview": "\n1. **Purpose**: Initializes the state and configuration of an object after its creation, setting up necessary properties and methods for handling different typ",
+    "needle_path": "src/black/linegen.py",
+    "config_A_with_cache": {
+      "predicted": "__init__",
+      "exact": false,
+      "n_candidates": 388,
+      "extraction_time": 2.5028429278172553,
+      "query_time": 7.785056611057371,
+      "cache_hit": true,
+      "input_tokens": 597,
+      "output_tokens": 3,
+      "wallclock_s": 10.288464976008981
+    },
+    "config_B_without_cache": {
+      "predicted": "__init__",
+      "exact": false,
+      "n_candidates": 388,
+      "extraction_time": 4.244543717941269,
+      "query_time": 2.15904922503978,
+      "cache_hit": false,
+      "input_tokens": 597,
+      "output_tokens": 3,
+      "wallclock_s": 6.404119895072654
+    },
+    "config_C_full_text": {
+      "predicted": "__init__",
+      "exact": false,
+      "input_tokens": 2787,
+      "output_tokens": 255,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 10.246003994951025
+    }
+  },
+  {
+    "question_id": "black::_merge_string_group",
+    "repo": "psf/black",
+    "needle_function": "_merge_string_group",
+    "expected_function_name": "_merge_string_group",
+    "needle_description_preview": "\n1. **Purpose**: To combine adjacent strings into a single string within a line of code, ensuring that the merged result is syntactically correct.\n2. **Input**:",
+    "needle_path": "src/black/trans.py",
+    "config_A_with_cache": {
+      "predicted": "_merge_string_group",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 1.1318473170977086,
+      "query_time": 10.007077374029905,
+      "cache_hit": false,
+      "input_tokens": 752,
+      "output_tokens": 3,
+      "wallclock_s": 11.139775986084715
+    },
+    "config_B_without_cache": {
+      "predicted": "_merge_string_group",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 3.2113619861193,
+      "query_time": 2.317029702011496,
+      "cache_hit": false,
+      "input_tokens": 752,
+      "output_tokens": 3,
+      "wallclock_s": 5.529107932932675
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2796,
+      "output_tokens": 279,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 17.49492858699523
+    }
+  },
+  {
+    "question_id": "black::check_stability_and_equivalence",
+    "repo": "psf/black",
+    "needle_function": "check_stability_and_equivalence",
+    "expected_function_name": "check_stability_and_equivalence",
+    "needle_description_preview": "\n1. **Purpose**: To ensure that the transformed content remains consistent after formatting and that the original and transformed contents are equivalent in ter",
+    "needle_path": "src/black/__init__.py",
+    "config_A_with_cache": {
+      "predicted": "check_stability_and_equivalence",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 2.192806710023433,
+      "query_time": 8.801332318922505,
+      "cache_hit": true,
+      "input_tokens": 706,
+      "output_tokens": 6,
+      "wallclock_s": 10.994444424053654
+    },
+    "config_B_without_cache": {
+      "predicted": "check_stability_and_equivalence",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 3.569841549033299,
+      "query_time": 2.7029921549838036,
+      "cache_hit": false,
+      "input_tokens": 706,
+      "output_tokens": 6,
+      "wallclock_s": 6.273430635919794
+    },
+    "config_C_full_text": {
+      "predicted": "AssertionError",
+      "exact": false,
+      "input_tokens": 2764,
+      "output_tokens": 318,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 25.988482950953767
+    }
+  },
+  {
+    "question_id": "black::convert_unchanged_lines",
+    "repo": "psf/black",
+    "needle_function": "convert_unchanged_lines",
+    "expected_function_name": "convert_unchanged_lines",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to transform specific lines of code that have not been modified into a special comment format that preserves their ori",
+    "needle_path": "src/black/ranges.py",
+    "config_A_with_cache": {
+      "predicted": "convert_unchanged_lines",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 1.5693646480794996,
+      "query_time": 9.128953714855015,
+      "cache_hit": true,
+      "input_tokens": 756,
+      "output_tokens": 5,
+      "wallclock_s": 10.698715868871659
+    },
+    "config_B_without_cache": {
+      "predicted": "convert_unchanged_lines",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 1.677256379975006,
+      "query_time": 3.3742291531525552,
+      "cache_hit": false,
+      "input_tokens": 756,
+      "output_tokens": 5,
+      "wallclock_s": 5.0519884140230715
+    },
+    "config_C_full_text": {
+      "predicted": "convert_unchanged_lines",
+      "exact": true,
+      "input_tokens": 2744,
+      "output_tokens": 217,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.810649685095996
+    }
+  },
+  {
+    "question_id": "black::is_part_of_annotation",
+    "repo": "psf/black",
+    "needle_function": "is_part_of_annotation",
+    "expected_function_name": "is_part_of_annotation",
+    "needle_description_preview": "\n1. **Purpose**: Determines if a specified syntax element is part of a type annotation in the source code.\n2. **Input**: A syntax element from the parsed source",
+    "needle_path": "src/black/nodes.py",
+    "config_A_with_cache": {
+      "predicted": "prev_siblings_are",
+      "exact": false,
+      "n_candidates": 388,
+      "extraction_time": 1.3348865411244333,
+      "query_time": 9.753393405117095,
+      "cache_hit": true,
+      "input_tokens": 682,
+      "output_tokens": 4,
+      "wallclock_s": 11.088646039133891
+    },
+    "config_B_without_cache": {
+      "predicted": "prev_siblings_are",
+      "exact": false,
+      "n_candidates": 388,
+      "extraction_time": 3.848837021039799,
+      "query_time": 10.212614165153354,
+      "cache_hit": false,
+      "input_tokens": 682,
+      "output_tokens": 4,
+      "wallclock_s": 14.062044662889093
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2792,
+      "output_tokens": 286,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.9261539648287
+    }
+  },
+  {
+    "question_id": "black::make_simple_prefix",
+    "repo": "psf/black",
+    "needle_function": "make_simple_prefix",
+    "expected_function_name": "make_simple_prefix",
+    "needle_description_preview": "\n1. **Purpose**: The function generates a string used to format text with new lines and optionally a form feed character, typically used to control spacing in f",
+    "needle_path": "src/black/nodes.py",
+    "config_A_with_cache": {
+      "predicted": "has_triple_quotes",
+      "exact": false,
+      "n_candidates": 388,
+      "extraction_time": 1.2066876299213618,
+      "query_time": 9.729517405154184,
+      "cache_hit": true,
+      "input_tokens": 695,
+      "output_tokens": 4,
+      "wallclock_s": 10.936620676191524
+    },
+    "config_B_without_cache": {
+      "predicted": "has_triple_quotes",
+      "exact": false,
+      "n_candidates": 388,
+      "extraction_time": 4.292235339991748,
+      "query_time": 2.9499230389483273,
+      "cache_hit": false,
+      "input_tokens": 695,
+      "output_tokens": 4,
+      "wallclock_s": 7.242618856951594
+    },
+    "config_C_full_text": {
+      "predicted": "generate_newlines",
+      "exact": false,
+      "input_tokens": 2776,
+      "output_tokens": 338,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 23.730056797154248
+    }
+  },
+  {
+    "question_id": "black::maybe_install_uvloop",
+    "repo": "psf/black",
+    "needle_function": "maybe_install_uvloop",
+    "expected_function_name": "maybe_install_uvloop",
+    "needle_description_preview": "\n1. **Purpose**: To enhance the event loop performance by optionally integrating a faster alternative if available in the environment.\n2. **Input**: None.\n3. **",
+    "needle_path": "src/black/concurrency.py",
+    "config_A_with_cache": {
+      "predicted": "maybe_install_uvloop",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 2.0850361629854888,
+      "query_time": 8.611778057180345,
+      "cache_hit": true,
+      "input_tokens": 609,
+      "output_tokens": 4,
+      "wallclock_s": 10.697111900895834
+    },
+    "config_B_without_cache": {
+      "predicted": "maybe_install_uvloop",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 4.692045378964394,
+      "query_time": 2.2174780380446464,
+      "cache_hit": false,
+      "input_tokens": 609,
+      "output_tokens": 4,
+      "wallclock_s": 6.91000664094463
+    },
+    "config_C_full_text": {
+      "predicted": "asyncio",
+      "exact": false,
+      "input_tokens": 2798,
+      "output_tokens": 235,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.6391910831443965
+    }
+  },
+  {
+    "question_id": "black::run_transformer",
+    "repo": "psf/black",
+    "needle_function": "run_transformer",
+    "expected_function_name": "run_transformer",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to apply a transformation to a line of code based on specified rules and conditions, and then evaluate the transformed",
+    "needle_path": "src/black/linegen.py",
+    "config_A_with_cache": {
+      "predicted": "run_transformer",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 2.293933894019574,
+      "query_time": 8.64850237313658,
+      "cache_hit": true,
+      "input_tokens": 748,
+      "output_tokens": 3,
+      "wallclock_s": 10.96481237700209
+    },
+    "config_B_without_cache": {
+      "predicted": "run_transformer",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 4.2299931140150875,
+      "query_time": 2.239114424912259,
+      "cache_hit": false,
+      "input_tokens": 748,
+      "output_tokens": 3,
+      "wallclock_s": 6.46956482110545
+    },
+    "config_C_full_text": {
+      "predicted": "transform_line",
+      "exact": false,
+      "input_tokens": 2754,
+      "output_tokens": 266,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.407522849040106
+    }
+  },
+  {
+    "question_id": "black::should_split_funcdef_with_rhs",
+    "repo": "psf/black",
+    "needle_function": "should_split_funcdef_with_rhs",
+    "expected_function_name": "should_split_funcdef_with_rhs",
+    "needle_description_preview": "\n1. **Purpose**: To determine if a function definition line should be split based on the presence of a specific punctuation mark in the return type.\n2. **Input*",
+    "needle_path": "src/black/linegen.py",
+    "config_A_with_cache": {
+      "predicted": "should_split_funcdef_with_rhs",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 2.3666421028319746,
+      "query_time": 8.73085634293966,
+      "cache_hit": true,
+      "input_tokens": 693,
+      "output_tokens": 6,
+      "wallclock_s": 11.097938651917502
+    },
+    "config_B_without_cache": {
+      "predicted": "should_split_funcdef_with_rhs",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 3.5725983469747007,
+      "query_time": 3.498184002004564,
+      "cache_hit": false,
+      "input_tokens": 693,
+      "output_tokens": 6,
+      "wallclock_s": 7.071301918011159
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2791,
+      "output_tokens": 226,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.608472591033205
+    }
+  },
+  {
+    "question_id": "black::visit",
+    "repo": "psf/black",
+    "needle_function": "visit",
+    "expected_function_name": "visit",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to traverse a syntax tree node and its children, applying specific methods based on the node's type, and yielding resu",
+    "needle_path": "src/black/nodes.py",
+    "config_A_with_cache": {
+      "predicted": "visit",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 1.7333929189480841,
+      "query_time": 9.354079840006307,
+      "cache_hit": true,
+      "input_tokens": 684,
+      "output_tokens": 1,
+      "wallclock_s": 11.087861121166497
+    },
+    "config_B_without_cache": {
+      "predicted": "visit",
+      "exact": true,
+      "n_candidates": 388,
+      "extraction_time": 4.48211230407469,
+      "query_time": 1.7586130062118173,
+      "cache_hit": false,
+      "input_tokens": 684,
+      "output_tokens": 1,
+      "wallclock_s": 6.241317848907784
+    },
+    "config_C_full_text": {
+      "predicted": "traverse",
+      "exact": false,
+      "input_tokens": 2799,
+      "output_tokens": 306,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.22089202189818
+    }
+  },
+  {
+    "question_id": "locust::_construct_basic_auth_str",
+    "repo": "locustio/locust",
+    "needle_function": "_construct_basic_auth_str",
+    "expected_function_name": "_construct_basic_auth_str",
+    "needle_description_preview": "\n1. **Purpose**: To create an encoded string for HTTP Basic Authentication that can be used in an HTTP request header.\n2. **Input**: Two strings representing a ",
+    "needle_path": "locust/contrib/fasthttp.py",
+    "config_A_with_cache": {
+      "predicted": "_construct_basic_auth_str",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 5.612963953055441,
+      "query_time": 0.7008537608198822,
+      "cache_hit": true,
+      "input_tokens": 571,
+      "output_tokens": 4,
+      "wallclock_s": 6.315139916958287
+    },
+    "config_B_without_cache": {
+      "predicted": "_construct_basic_auth_str",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 14.439512589015067,
+      "query_time": 4.45972389401868,
+      "cache_hit": false,
+      "input_tokens": 571,
+      "output_tokens": 4,
+      "wallclock_s": 18.901416580192745
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2700,
+      "output_tokens": 372,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.639412268064916
+    }
+  },
+  {
+    "question_id": "locust::get_poller",
+    "repo": "locustio/locust",
+    "needle_function": "get_poller",
+    "expected_function_name": "get_poller",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to select and return an appropriate keyboard input polling mechanism based on the operating system the script is runni",
+    "needle_path": "locust/input_events.py",
+    "config_A_with_cache": {
+      "predicted": "__init__",
+      "exact": false,
+      "n_candidates": 1498,
+      "extraction_time": 5.017968100961298,
+      "query_time": 0.8195725998375565,
+      "cache_hit": true,
+      "input_tokens": 615,
+      "output_tokens": 3,
+      "wallclock_s": 5.83919835393317
+    },
+    "config_B_without_cache": {
+      "predicted": "__init__",
+      "exact": false,
+      "n_candidates": 1498,
+      "extraction_time": 17.429920310154557,
+      "query_time": 6.718650705879554,
+      "cache_hit": false,
+      "input_tokens": 615,
+      "output_tokens": 3,
+      "wallclock_s": 24.15019148704596
+    },
+    "config_C_full_text": {
+      "predicted": "grep",
+      "exact": false,
+      "input_tokens": 2687,
+      "output_tokens": 243,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.885374909965321
+    }
+  },
+  {
+    "question_id": "locust::is_valid_percentile",
+    "repo": "locustio/locust",
+    "needle_function": "is_valid_percentile",
+    "expected_function_name": "is_valid_percentile",
+    "needle_description_preview": "\n1. **Purpose**: To verify if a given parameter is a valid percentile value, specifically ensuring it is a decimal between 0 and 1 (exclusive).\n2. **Input**: A ",
+    "needle_path": "locust/main.py",
+    "config_A_with_cache": {
+      "predicted": "is_valid_percentile",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 7.474930200027302,
+      "query_time": 1.3999990180600435,
+      "cache_hit": true,
+      "input_tokens": 695,
+      "output_tokens": 4,
+      "wallclock_s": 8.87638312811032
+    },
+    "config_B_without_cache": {
+      "predicted": "is_valid_percentile",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 15.941906681051478,
+      "query_time": 4.493547068908811,
+      "cache_hit": false,
+      "input_tokens": 695,
+      "output_tokens": 4,
+      "wallclock_s": 20.437087898841128
+    },
+    "config_C_full_text": {
+      "predicted": "True",
+      "exact": false,
+      "input_tokens": 2722,
+      "output_tokens": 288,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.181933446088806
+    }
+  },
+  {
+    "question_id": "locust::rename_request",
+    "repo": "locustio/locust",
+    "needle_function": "rename_request",
+    "expected_function_name": "rename_request",
+    "needle_description_preview": "\n1. **Purpose**: To temporarily change the label used for grouping performance statistics of web requests in a session, facilitating the aggregation of differen",
+    "needle_path": "locust/clients.py",
+    "config_A_with_cache": {
+      "predicted": "rename_request",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 5.189621763071045,
+      "query_time": 0.960864788852632,
+      "cache_hit": true,
+      "input_tokens": 615,
+      "output_tokens": 2,
+      "wallclock_s": 6.1518275719136
+    },
+    "config_B_without_cache": {
+      "predicted": "rename_request",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 15.562626044964418,
+      "query_time": 5.3938126938883215,
+      "cache_hit": false,
+      "input_tokens": 615,
+      "output_tokens": 2,
+      "wallclock_s": 20.959646911825985
+    },
+    "config_C_full_text": {
+      "predicted": "with",
+      "exact": false,
+      "input_tokens": 2690,
+      "output_tokens": 295,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.234897502930835
+    }
+  },
+  {
+    "question_id": "locust::test_custom_ssl_context_fail_with_bad_context",
+    "repo": "locustio/locust",
+    "needle_function": "test_custom_ssl_context_fail_with_bad_context",
+    "expected_function_name": "test_custom_ssl_context_fail_with_bad_context",
+    "needle_description_preview": "\n1. **Purpose**: To verify that the system correctly handles an error when attempting to use an SSL context with incompatible settings (hostname checks enabled ",
+    "needle_path": "locust/test/test_fasthttp.py",
+    "config_A_with_cache": {
+      "predicted": "test_custom_ssl_context_fail_with_bad_context",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 6.207911984063685,
+      "query_time": 0.8470874789636582,
+      "cache_hit": true,
+      "input_tokens": 646,
+      "output_tokens": 8,
+      "wallclock_s": 7.076736964983866
+    },
+    "config_B_without_cache": {
+      "predicted": "test_custom_ssl_context_fail_with_bad_context",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 14.738380645867437,
+      "query_time": 4.3520877179689705,
+      "cache_hit": false,
+      "input_tokens": 646,
+      "output_tokens": 8,
+      "wallclock_s": 19.092553242808208
+    },
+    "config_C_full_text": {
+      "predicted": "ValueError",
+      "exact": false,
+      "input_tokens": 2678,
+      "output_tokens": 296,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.625169181032106
+    }
+  },
+  {
+    "question_id": "locust::test_distribute_users",
+    "repo": "locustio/locust",
+    "needle_function": "test_distribute_users",
+    "expected_function_name": "test_distribute_users",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to validate the distribution mechanism of users across multiple worker nodes, ensuring that the total number of users ",
+    "needle_path": "locust/test/test_dispatch.py",
+    "config_A_with_cache": {
+      "predicted": "_get_run_time",
+      "exact": false,
+      "n_candidates": 1498,
+      "extraction_time": 4.662633859086782,
+      "query_time": 1.0837429480161518,
+      "cache_hit": true,
+      "input_tokens": 644,
+      "output_tokens": 3,
+      "wallclock_s": 5.747600980103016
+    },
+    "config_B_without_cache": {
+      "predicted": "_get_run_time",
+      "exact": false,
+      "n_candidates": 1498,
+      "extraction_time": 16.093578157015145,
+      "query_time": 4.160965810064226,
+      "cache_hit": false,
+      "input_tokens": 644,
+      "output_tokens": 3,
+      "wallclock_s": 20.256020308006555
+    },
+    "config_C_full_text": {
+      "predicted": "validate",
+      "exact": false,
+      "input_tokens": 2662,
+      "output_tokens": 245,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.188975173979998
+    }
+  },
+  {
+    "question_id": "locust::test_ramp_down_users_to_3_workers_with_spawn_rate_of_9",
+    "repo": "locustio/locust",
+    "needle_function": "test_ramp_down_users_to_3_workers_with_spawn_rate_of_9",
+    "expected_function_name": "test_ramp_down_users_to_3_workers_with_spawn_rate_of_9",
+    "needle_description_preview": "\n1. **Purpose**: To verify that a system correctly reduces the number of active users across three worker nodes to zero using a specific rate of user deactivati",
+    "needle_path": "locust/test/test_dispatch.py",
+    "config_A_with_cache": {
+      "predicted": "_get_current_user_count",
+      "exact": false,
+      "n_candidates": 1498,
+      "extraction_time": 4.591494064079598,
+      "query_time": 0.6903397990390658,
+      "cache_hit": true,
+      "input_tokens": 677,
+      "output_tokens": 4,
+      "wallclock_s": 5.283272103173658
+    },
+    "config_B_without_cache": {
+      "predicted": "_get_current_user_count",
+      "exact": false,
+      "n_candidates": 1498,
+      "extraction_time": 17.338417374994606,
+      "query_time": 3.634515961864963,
+      "cache_hit": false,
+      "input_tokens": 677,
+      "output_tokens": 4,
+      "wallclock_s": 20.975357977906242
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2698,
+      "output_tokens": 240,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.695094892056659
+    }
+  },
+  {
+    "question_id": "locust::test_request_stats_named_endpoint_rename_request",
+    "repo": "locustio/locust",
+    "needle_function": "test_request_stats_named_endpoint_rename_request",
+    "expected_function_name": "test_request_stats_named_endpoint_rename_request",
+    "needle_description_preview": "\n1. **Purpose**: To verify that renaming a request endpoint correctly updates the statistics tracking system with the new name.\n2. **Input**: A GET request to a",
+    "needle_path": "locust/test/test_stats.py",
+    "config_A_with_cache": {
+      "predicted": "rename_request",
+      "exact": false,
+      "n_candidates": 1498,
+      "extraction_time": 5.287458837032318,
+      "query_time": 0.7010188309941441,
+      "cache_hit": true,
+      "input_tokens": 635,
+      "output_tokens": 2,
+      "wallclock_s": 5.990326834842563
+    },
+    "config_B_without_cache": {
+      "predicted": "rename_request",
+      "exact": false,
+      "n_candidates": 1498,
+      "extraction_time": 17.901443156879395,
+      "query_time": 4.62026455393061,
+      "cache_hit": false,
+      "input_tokens": 635,
+      "output_tokens": 2,
+      "wallclock_s": 22.523736494826153
+    },
+    "config_C_full_text": {
+      "predicted": "context",
+      "exact": false,
+      "input_tokens": 2698,
+      "output_tokens": 320,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.814233494922519
+    }
+  },
+  {
+    "question_id": "locust::test_user_classes_with_same_name_is_error",
+    "repo": "locustio/locust",
+    "needle_function": "test_user_classes_with_same_name_is_error",
+    "expected_function_name": "test_user_classes_with_same_name_is_error",
+    "needle_description_preview": "\n1. **Purpose**: To verify that an error is raised when two user classes with identical names are used in the same environment, ensuring unique identification o",
+    "needle_path": "locust/test/test_env.py",
+    "config_A_with_cache": {
+      "predicted": "test_user_classes_with_same_name_is_error",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 3.8529801808763295,
+      "query_time": 0.943013465963304,
+      "cache_hit": false,
+      "input_tokens": 642,
+      "output_tokens": 8,
+      "wallclock_s": 4.7978217620402575
+    },
+    "config_B_without_cache": {
+      "predicted": "test_user_classes_with_same_name_is_error",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 18.128603112883866,
+      "query_time": 3.125378570985049,
+      "cache_hit": false,
+      "input_tokens": 642,
+      "output_tokens": 8,
+      "wallclock_s": 21.257161861052737
+    },
+    "config_C_full_text": {
+      "predicted": "ValueError",
+      "exact": false,
+      "input_tokens": 2694,
+      "output_tokens": 283,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.039232830982655
+    }
+  },
+  {
+    "question_id": "locust::test_worker_heartbeat_messages_sent_to_master",
+    "repo": "locustio/locust",
+    "needle_function": "test_worker_heartbeat_messages_sent_to_master",
+    "expected_function_name": "test_worker_heartbeat_messages_sent_to_master",
+    "needle_description_preview": "\n1. **Purpose**: To verify that the correct heartbeat data is sent from a worker to the master, including the worker's state and resource usage metrics.\n2. **In",
+    "needle_path": "locust/test/test_runners.py",
+    "config_A_with_cache": {
+      "predicted": "test_worker_heartbeat_messages_sent_to_master",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 4.311099280836061,
+      "query_time": 1.7957515211310238,
+      "cache_hit": true,
+      "input_tokens": 691,
+      "output_tokens": 8,
+      "wallclock_s": 6.108308776980266
+    },
+    "config_B_without_cache": {
+      "predicted": "test_worker_heartbeat_messages_sent_to_master",
+      "exact": true,
+      "n_candidates": 1498,
+      "extraction_time": 15.6352399289608,
+      "query_time": 5.112225560937077,
+      "cache_hit": false,
+      "input_tokens": 691,
+      "output_tokens": 8,
+      "wallclock_s": 20.74936180189252
+    },
+    "config_C_full_text": {
+      "predicted": "test_heartbeat",
+      "exact": false,
+      "input_tokens": 2701,
+      "output_tokens": 321,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.172652469016612
+    }
+  },
+  {
+    "question_id": "marshmallow::__len__",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "__len__",
+    "expected_function_name": "__len__",
+    "needle_description_preview": "\n1. **Purpose**: To determine the number of unique elements stored in a custom set-like data structure.\n2. **Input**: No explicit input is required from the use",
+    "needle_path": "src/marshmallow/orderedset.py",
+    "config_A_with_cache": {
+      "predicted": "__init__",
+      "exact": false,
+      "n_candidates": 257,
+      "extraction_time": 0.1253089129459113,
+      "query_time": 0.6262799089308828,
+      "cache_hit": true,
+      "input_tokens": 545,
+      "output_tokens": 3,
+      "wallclock_s": 0.752004805020988
+    },
+    "config_B_without_cache": {
+      "predicted": "__init__",
+      "exact": false,
+      "n_candidates": 257,
+      "extraction_time": 1.795867590000853,
+      "query_time": 1.4955514690373093,
+      "cache_hit": false,
+      "input_tokens": 545,
+      "output_tokens": 3,
+      "wallclock_s": 3.2917882008478045
+    },
+    "config_C_full_text": {
+      "predicted": "CustomSet",
+      "exact": false,
+      "input_tokens": 2755,
+      "output_tokens": 321,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.387494231807068
+    }
+  },
+  {
+    "question_id": "marshmallow::_invoke_field_validators",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "_invoke_field_validators",
+    "expected_function_name": "_invoke_field_validators",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to execute field-specific validation methods on data, either for individual items or collections of items, and handle ",
+    "needle_path": "src/marshmallow/schema.py",
+    "config_A_with_cache": {
+      "predicted": "handle_error",
+      "exact": false,
+      "n_candidates": 257,
+      "extraction_time": 0.43203950487077236,
+      "query_time": 0.5943553820252419,
+      "cache_hit": true,
+      "input_tokens": 690,
+      "output_tokens": 2,
+      "wallclock_s": 1.0267176849301904
+    },
+    "config_B_without_cache": {
+      "predicted": "handle_error",
+      "exact": false,
+      "n_candidates": 257,
+      "extraction_time": 1.678636594908312,
+      "query_time": 2.0128096221014857,
+      "cache_hit": false,
+      "input_tokens": 690,
+      "output_tokens": 2,
+      "wallclock_s": 3.6919528180733323
+    },
+    "config_C_full_text": {
+      "predicted": "marshmallow",
+      "exact": false,
+      "input_tokens": 2718,
+      "output_tokens": 275,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.428449877072126
+    }
+  },
+  {
+    "question_id": "marshmallow::_normalize_nested_options",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "_normalize_nested_options",
+    "expected_function_name": "_normalize_nested_options",
+    "needle_description_preview": "\n1. **Purpose**: To adjust and simplify the settings related to field inclusion and exclusion for nested schemas within a data processing context.\n2. **Input**:",
+    "needle_path": "src/marshmallow/schema.py",
+    "config_A_with_cache": {
+      "predicted": "_normalize_nested_options",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 0.12680264399386942,
+      "query_time": 0.7526682280004025,
+      "cache_hit": true,
+      "input_tokens": 664,
+      "output_tokens": 4,
+      "wallclock_s": 0.8798192960675806
+    },
+    "config_B_without_cache": {
+      "predicted": "_normalize_nested_options",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 0.32626321306452155,
+      "query_time": 1.6924182178918272,
+      "cache_hit": false,
+      "input_tokens": 664,
+      "output_tokens": 4,
+      "wallclock_s": 2.0193583108484745
+    },
+    "config_C_full_text": {
+      "predicted": "marshmallow",
+      "exact": false,
+      "input_tokens": 2725,
+      "output_tokens": 329,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 10.658663549926132
+    }
+  },
+  {
+    "question_id": "marshmallow::_run_validator",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "_run_validator",
+    "expected_function_name": "_run_validator",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to execute a validation function on deserialized data, handling any validation errors that occur.\n2. **Input**: It acc",
+    "needle_path": "src/marshmallow/schema.py",
+    "config_A_with_cache": {
+      "predicted": "_validate",
+      "exact": false,
+      "n_candidates": 257,
+      "extraction_time": 0.3709489479660988,
+      "query_time": 0.5910009739454836,
+      "cache_hit": true,
+      "input_tokens": 696,
+      "output_tokens": 1,
+      "wallclock_s": 0.9622596360277385
+    },
+    "config_B_without_cache": {
+      "predicted": "_validate",
+      "exact": false,
+      "n_candidates": 257,
+      "extraction_time": 2.0044889808632433,
+      "query_time": 4.820280797081068,
+      "cache_hit": false,
+      "input_tokens": 696,
+      "output_tokens": 1,
+      "wallclock_s": 6.825498756952584
+    },
+    "config_C_full_text": {
+      "predicted": "validates_schema",
+      "exact": false,
+      "input_tokens": 2714,
+      "output_tokens": 453,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 12.687849776120856
+    }
+  },
+  {
+    "question_id": "marshmallow::dict_class",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "dict_class",
+    "expected_function_name": "dict_class",
+    "needle_description_preview": "\n1. **Purpose**: To determine the type of dictionary used in the serialization process based on the ordering preference.\n2. **Input**: No direct inputs; the dec",
+    "needle_path": "src/marshmallow/schema.py",
+    "config_A_with_cache": {
+      "predicted": "dict_class",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 1.137153945164755,
+      "query_time": 0.8640647050924599,
+      "cache_hit": true,
+      "input_tokens": 540,
+      "output_tokens": 2,
+      "wallclock_s": 2.001533952075988
+    },
+    "config_B_without_cache": {
+      "predicted": "dict_class",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 1.9749538048636168,
+      "query_time": 1.6124084980692714,
+      "cache_hit": false,
+      "input_tokens": 540,
+      "output_tokens": 2,
+      "wallclock_s": 3.587724518030882
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2758,
+      "output_tokens": 220,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.735174142057076
+    }
+  },
+  {
+    "question_id": "marshmallow::from_iso_time",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "from_iso_time",
+    "expected_function_name": "from_iso_time",
+    "needle_description_preview": "\n1. **Purpose**: To convert a string representing a time in ISO8601 format into a time object.\n2. **Input**: A string formatted according to ISO8601 standards, ",
+    "needle_path": "src/marshmallow/utils.py",
+    "config_A_with_cache": {
+      "predicted": "from_iso_time",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 0.22257150104269385,
+      "query_time": 0.6406705498229712,
+      "cache_hit": true,
+      "input_tokens": 631,
+      "output_tokens": 3,
+      "wallclock_s": 0.8635554721113294
+    },
+    "config_B_without_cache": {
+      "predicted": "from_iso_time",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 1.8930123038589954,
+      "query_time": 1.3664249889552593,
+      "cache_hit": false,
+      "input_tokens": 631,
+      "output_tokens": 3,
+      "wallclock_s": 3.259803761029616
+    },
+    "config_C_full_text": {
+      "predicted": "ValueError",
+      "exact": false,
+      "input_tokens": 2736,
+      "output_tokens": 254,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.444266892038286
+    }
+  },
+  {
+    "question_id": "marshmallow::normalized_messages",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "normalized_messages",
+    "expected_function_name": "normalized_messages",
+    "needle_description_preview": "\n1. **Purpose**: To format error messages in a consistent dictionary structure, facilitating easier error handling and display.\n2. **Input**: This method does n",
+    "needle_path": "src/marshmallow/exceptions.py",
+    "config_A_with_cache": {
+      "predicted": "store_error",
+      "exact": false,
+      "n_candidates": 257,
+      "extraction_time": 0.114405452972278,
+      "query_time": 0.7918094450142235,
+      "cache_hit": true,
+      "input_tokens": 632,
+      "output_tokens": 2,
+      "wallclock_s": 0.9066363230813295
+    },
+    "config_B_without_cache": {
+      "predicted": "store_error",
+      "exact": false,
+      "n_candidates": 257,
+      "extraction_time": 0.76304618595168,
+      "query_time": 1.4998117871582508,
+      "cache_hit": false,
+      "input_tokens": 632,
+      "output_tokens": 2,
+      "wallclock_s": 2.2632580720819533
+    },
+    "config_C_full_text": {
+      "predicted": "Schema",
+      "exact": false,
+      "input_tokens": 2733,
+      "output_tokens": 298,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.371223136084154
+    }
+  },
+  {
+    "question_id": "marshmallow::options",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "options",
+    "expected_function_name": "options",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to generate a sequence of pairs, each consisting of a string representation of a choice and its corresponding label. T",
+    "needle_path": "src/marshmallow/validate.py",
+    "config_A_with_cache": {
+      "predicted": "options",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 1.1852239018771797,
+      "query_time": 0.6918626290280372,
+      "cache_hit": true,
+      "input_tokens": 687,
+      "output_tokens": 1,
+      "wallclock_s": 1.8774747429415584
+    },
+    "config_B_without_cache": {
+      "predicted": "options",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 2.174238142790273,
+      "query_time": 1.8239992088638246,
+      "cache_hit": false,
+      "input_tokens": 687,
+      "output_tokens": 1,
+      "wallclock_s": 3.9985745998565108
+    },
+    "config_C_full_text": {
+      "predicted": "marshmallow",
+      "exact": false,
+      "input_tokens": 2725,
+      "output_tokens": 421,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 15.59641841892153
+    }
+  },
+  {
+    "question_id": "marshmallow::register",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "register",
+    "expected_function_name": "register",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to add a serializer class to a centralized registry, allowing for string-based lookup of these classes, which is parti",
+    "needle_path": "src/marshmallow/class_registry.py",
+    "config_A_with_cache": {
+      "predicted": "register",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 1.1615675778593868,
+      "query_time": 1.4930923460051417,
+      "cache_hit": true,
+      "input_tokens": 661,
+      "output_tokens": 1,
+      "wallclock_s": 2.655010991031304
+    },
+    "config_B_without_cache": {
+      "predicted": "register",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 2.3425717258360237,
+      "query_time": 3.9030785479117185,
+      "cache_hit": false,
+      "input_tokens": 661,
+      "output_tokens": 1,
+      "wallclock_s": 6.246118316194043
+    },
+    "config_C_full_text": {
+      "predicted": "register",
+      "exact": true,
+      "input_tokens": 2726,
+      "output_tokens": 467,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.021609281888232
+    }
+  },
+  {
+    "question_id": "marshmallow::store_error",
+    "repo": "marshmallow-code/marshmallow",
+    "needle_function": "store_error",
+    "expected_function_name": "store_error",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to accumulate error messages related to data serialization, categorizing them by field name or schema, and optionally ",
+    "needle_path": "src/marshmallow/error_store.py",
+    "config_A_with_cache": {
+      "predicted": "store_error",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 1.0050252929795533,
+      "query_time": 0.9474841509945691,
+      "cache_hit": false,
+      "input_tokens": 659,
+      "output_tokens": 2,
+      "wallclock_s": 1.952874612994492
+    },
+    "config_B_without_cache": {
+      "predicted": "store_error",
+      "exact": true,
+      "n_candidates": 257,
+      "extraction_time": 3.24830294190906,
+      "query_time": 4.098715278087184,
+      "cache_hit": false,
+      "input_tokens": 659,
+      "output_tokens": 2,
+      "wallclock_s": 7.348339399090037
+    },
+    "config_C_full_text": {
+      "predicted": "error",
+      "exact": false,
+      "input_tokens": 2716,
+      "output_tokens": 340,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.68176606297493
+    }
+  },
+  {
+    "question_id": "mlc-llm::contain_symbolic_var",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "contain_symbolic_var",
+    "expected_function_name": "contain_symbolic_var",
+    "needle_description_preview": "\n1. **Purpose**: The function checks if a tensor's shape contains any symbolic (non-constant) variables.\n2. **Input**: A structure containing information about ",
+    "needle_path": "mlc_llm/transform/lift_tir_global_buffer_alloc.py",
+    "config_A_with_cache": {
+      "predicted": "contain_symbolic_var",
+      "exact": true,
+      "n_candidates": 981,
+      "extraction_time": 3.82706077513285,
+      "query_time": 0.9643259649164975,
+      "cache_hit": true,
+      "input_tokens": 642,
+      "output_tokens": 4,
+      "wallclock_s": 4.792632676893845
+    },
+    "config_B_without_cache": {
+      "predicted": "contain_symbolic_var",
+      "exact": true,
+      "n_candidates": 981,
+      "extraction_time": 33.43191150599159,
+      "query_time": 2.0419351030141115,
+      "cache_hit": false,
+      "input_tokens": 642,
+      "output_tokens": 4,
+      "wallclock_s": 35.47517010010779
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2699,
+      "output_tokens": 212,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.642675379989669
+    }
+  },
+  {
+    "question_id": "mlc-llm::f_quantize",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "f_quantize",
+    "expected_function_name": "f_quantize",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to quantize and preprocess neural network weights for optimized processing on specific GPU architectures, particularly",
+    "needle_path": "mlc_llm/quantization/ft_quantization.py",
+    "config_A_with_cache": {
+      "predicted": "get_quantize_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 3.201722238911316,
+      "query_time": 0.8550478061661124,
+      "cache_hit": true,
+      "input_tokens": 670,
+      "output_tokens": 4,
+      "wallclock_s": 4.057853609090671
+    },
+    "config_B_without_cache": {
+      "predicted": "get_quantize_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 28.85125897009857,
+      "query_time": 1.7442215359769762,
+      "cache_hit": false,
+      "input_tokens": 670,
+      "output_tokens": 4,
+      "wallclock_s": 30.60000035399571
+    },
+    "config_C_full_text": {
+      "predicted": "quantization",
+      "exact": false,
+      "input_tokens": 2680,
+      "output_tokens": 324,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.556195798097178
+    }
+  },
+  {
+    "question_id": "mlc-llm::fused_NT_matmul3_add1_before",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "fused_NT_matmul3_add1_before",
+    "expected_function_name": "fused_NT_matmul3_add1_before",
+    "needle_description_preview": "\n1. **Purpose**: The function performs a matrix multiplication followed by an addition operation. It is designed to compute the result of multiplying a matrix w",
+    "needle_path": "mlc_llm/dispatch/llama/main.py",
+    "config_A_with_cache": {
+      "predicted": "f_compute_relax_param",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 1.8910563050303608,
+      "query_time": 1.8797864611260593,
+      "cache_hit": true,
+      "input_tokens": 731,
+      "output_tokens": 5,
+      "wallclock_s": 3.7720057230908424
+    },
+    "config_B_without_cache": {
+      "predicted": "f_compute_relax_param",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 33.96541390917264,
+      "query_time": 1.4588204219471663,
+      "cache_hit": false,
+      "input_tokens": 731,
+      "output_tokens": 5,
+      "wallclock_s": 35.428725354140624
+    },
+    "config_C_full_text": {
+      "predicted": "matrix",
+      "exact": false,
+      "input_tokens": 2705,
+      "output_tokens": 411,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.88496248004958
+    }
+  },
+  {
+    "question_id": "mlc-llm::fused_decode3_matmul1_fp16_before",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "fused_decode3_matmul1_fp16_before",
+    "expected_function_name": "fused_decode3_matmul1_fp16_before",
+    "needle_description_preview": "\n1. **Purpose**: The function performs a decoding operation followed by a matrix multiplication, primarily working with 16-bit floating-point precision. This is",
+    "needle_path": "mlc_llm/dispatch/llama/main.py",
+    "config_A_with_cache": {
+      "predicted": "get_dequantize_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 3.6925598059315234,
+      "query_time": 1.2309246570803225,
+      "cache_hit": false,
+      "input_tokens": 733,
+      "output_tokens": 5,
+      "wallclock_s": 4.92901100916788
+    },
+    "config_B_without_cache": {
+      "predicted": "get_dequantize_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 34.84877848112956,
+      "query_time": 2.453323286958039,
+      "cache_hit": false,
+      "input_tokens": 733,
+      "output_tokens": 5,
+      "wallclock_s": 37.30322658712976
+    },
+    "config_C_full_text": {
+      "predicted": "mlc_llm",
+      "exact": false,
+      "input_tokens": 2683,
+      "output_tokens": 378,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 9.824591488111764
+    }
+  },
+  {
+    "question_id": "mlc-llm::fused_decode4_matmul5_int3_fp16_before",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "fused_decode4_matmul5_int3_fp16_before",
+    "expected_function_name": "fused_decode4_matmul5_int3_fp16_before",
+    "needle_description_preview": "\n1. **Purpose**: The function performs a decoding operation followed by a matrix multiplication, primarily working with 16-bit floating-point and 32-bit unsigne",
+    "needle_path": "mlc_llm/dispatch/llama/main.py",
+    "config_A_with_cache": {
+      "predicted": "get_dequantize_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 3.133216222980991,
+      "query_time": 2.55030375206843,
+      "cache_hit": true,
+      "input_tokens": 778,
+      "output_tokens": 5,
+      "wallclock_s": 5.684719453100115
+    },
+    "config_B_without_cache": {
+      "predicted": "get_dequantize_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 33.50643334095366,
+      "query_time": 1.6305906579364091,
+      "cache_hit": false,
+      "input_tokens": 778,
+      "output_tokens": 5,
+      "wallclock_s": 35.142478639958426
+    },
+    "config_C_full_text": {
+      "predicted": "relax_model",
+      "exact": false,
+      "input_tokens": 2717,
+      "output_tokens": 415,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 12.915802513016388
+    }
+  },
+  {
+    "question_id": "mlc-llm::fused_decode4_matmul5_int3_int16_fp16_before",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "fused_decode4_matmul5_int3_int16_fp16_before",
+    "expected_function_name": "fused_decode4_matmul5_int3_int16_fp16_before",
+    "needle_description_preview": "\n1. **Purpose**: The function performs a decoding operation followed by a matrix multiplication. The decoding involves extracting and transforming elements from",
+    "needle_path": "mlc_llm/dispatch/llama/main.py",
+    "config_A_with_cache": {
+      "predicted": "get_dequantize_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 2.166148655116558,
+      "query_time": 0.9052012171596289,
+      "cache_hit": true,
+      "input_tokens": 770,
+      "output_tokens": 5,
+      "wallclock_s": 3.0724440610501915
+    },
+    "config_B_without_cache": {
+      "predicted": "get_dequantize_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 32.93080382910557,
+      "query_time": 13.656391761032864,
+      "cache_hit": false,
+      "input_tokens": 770,
+      "output_tokens": 5,
+      "wallclock_s": 46.58847168809734
+    },
+    "config_C_full_text": {
+      "predicted": "grep",
+      "exact": false,
+      "input_tokens": 2713,
+      "output_tokens": 427,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 12.403978393180296
+    }
+  },
+  {
+    "question_id": "mlc-llm::fused_fused_decode7_matmul4",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "fused_fused_decode7_matmul4",
+    "expected_function_name": "fused_fused_decode7_matmul4",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to perform a matrix multiplication operation after decoding and transforming the input data. It is likely used in a ne",
+    "needle_path": "mlc_llm/dispatch/dispatch_tir_operator_adreno.py",
+    "config_A_with_cache": {
+      "predicted": "transform_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 3.776922756107524,
+      "query_time": 1.013822658918798,
+      "cache_hit": true,
+      "input_tokens": 809,
+      "output_tokens": 2,
+      "wallclock_s": 4.791813102085143
+    },
+    "config_B_without_cache": {
+      "predicted": "transform_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 33.2535016820766,
+      "query_time": 2.613773546181619,
+      "cache_hit": false,
+      "input_tokens": 809,
+      "output_tokens": 2,
+      "wallclock_s": 35.868371312040836
+    },
+    "config_C_full_text": {
+      "predicted": "tvm",
+      "exact": false,
+      "input_tokens": 2699,
+      "output_tokens": 502,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.454941923031583
+    }
+  },
+  {
+    "question_id": "mlc-llm::fused_fused_decode9_matmul7",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "fused_fused_decode9_matmul7",
+    "expected_function_name": "fused_fused_decode9_matmul7",
+    "needle_description_preview": "\n1. **Purpose**: The function performs a decoding operation followed by a matrix multiplication. The decoding involves extracting and transforming elements from",
+    "needle_path": "mlc_llm/dispatch/dispatch_tir_operator_adreno.py",
+    "config_A_with_cache": {
+      "predicted": "fused_decode4_matmul3",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 3.5525889059063047,
+      "query_time": 0.9083395260386169,
+      "cache_hit": true,
+      "input_tokens": 801,
+      "output_tokens": 7,
+      "wallclock_s": 4.4621886210516095
+    },
+    "config_B_without_cache": {
+      "predicted": "fused_decode4_matmul3",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 32.32654271204956,
+      "query_time": 2.809206265024841,
+      "cache_hit": false,
+      "input_tokens": 801,
+      "output_tokens": 7,
+      "wallclock_s": 35.14086784911342
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2692,
+      "output_tokens": 411,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.8436700908932835
+    }
+  },
+  {
+    "question_id": "mlc-llm::get_param_set_item",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "get_param_set_item",
+    "expected_function_name": "get_param_set_item",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to provide a mechanism for lazy loading of parameters in a machine learning model, specifically for use with a paramet",
+    "needle_path": "mlc_llm/relax_model/param_manager.py",
+    "config_A_with_cache": {
+      "predicted": "set_param_loading_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 3.609782125800848,
+      "query_time": 1.088273148983717,
+      "cache_hit": true,
+      "input_tokens": 824,
+      "output_tokens": 4,
+      "wallclock_s": 4.699084123130888
+    },
+    "config_B_without_cache": {
+      "predicted": "set_param_loading_func",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 33.7208027089946,
+      "query_time": 4.948065761011094,
+      "cache_hit": false,
+      "input_tokens": 824,
+      "output_tokens": 4,
+      "wallclock_s": 38.67597861401737
+    },
+    "config_C_full_text": {
+      "predicted": "param_manager",
+      "exact": false,
+      "input_tokens": 2690,
+      "output_tokens": 295,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.203572242055088
+    }
+  },
+  {
+    "question_id": "mlc-llm::softmax_1xn_sch_func",
+    "repo": "mlc-ai/mlc-llm",
+    "needle_function": "softmax_1xn_sch_func",
+    "expected_function_name": "softmax_1xn_sch_func",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to optimize the execution of a softmax operation on a 1xN input tensor, potentially casting the results to a lower pre",
+    "needle_path": "mlc_llm/dispatch/llama/main.py",
+    "config_A_with_cache": {
+      "predicted": "forward",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 2.0473322719335556,
+      "query_time": 1.0920066148974001,
+      "cache_hit": true,
+      "input_tokens": 779,
+      "output_tokens": 1,
+      "wallclock_s": 3.140633880160749
+    },
+    "config_B_without_cache": {
+      "predicted": "forward",
+      "exact": false,
+      "n_candidates": 981,
+      "extraction_time": 33.137952886056155,
+      "query_time": 2.8141518039628863,
+      "cache_hit": false,
+      "input_tokens": 779,
+      "output_tokens": 1,
+      "wallclock_s": 35.959815572947264
+    },
+    "config_C_full_text": {
+      "predicted": "mlc_llm",
+      "exact": false,
+      "input_tokens": 2679,
+      "output_tokens": 375,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.089564127847552
+    }
+  },
+  {
+    "question_id": "openai-python::__getattr__",
+    "repo": "openai/openai-python",
+    "needle_function": "__getattr__",
+    "expected_function_name": "__getattr__",
+    "needle_description_preview": "\n1. **Purpose**: To dynamically handle attribute access on instances that do not explicitly define those attributes, effectively forwarding the attribute access",
+    "needle_path": "src/openai/_utils/_proxy.py",
+    "config_A_with_cache": {
+      "predicted": "model_dump_json",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 0.8651597918942571,
+      "query_time": 1.2152168140746653,
+      "cache_hit": true,
+      "input_tokens": 685,
+      "output_tokens": 3,
+      "wallclock_s": 2.081520348088816
+    },
+    "config_B_without_cache": {
+      "predicted": "model_dump_json",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 8.02438241103664,
+      "query_time": 6.132224309025332,
+      "cache_hit": false,
+      "input_tokens": 685,
+      "output_tokens": 3,
+      "wallclock_s": 14.157792697893456
+    },
+    "config_C_full_text": {
+      "predicted": "__getattr__",
+      "exact": true,
+      "input_tokens": 2875,
+      "output_tokens": 396,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.533600832801312
+    }
+  },
+  {
+    "question_id": "openai-python::_basic_config",
+    "repo": "openai/openai-python",
+    "needle_function": "_basic_config",
+    "expected_function_name": "_basic_config",
+    "needle_description_preview": "\n1. **Purpose**: To configure the default logging settings for the application, ensuring that log messages are formatted and timestamped consistently.\n2. **Inpu",
+    "needle_path": "src/openai/_utils/_logs.py",
+    "config_A_with_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 0.4928727960214019,
+      "query_time": 0.9984866648446769,
+      "cache_hit": true,
+      "input_tokens": 648,
+      "output_tokens": 1,
+      "wallclock_s": 1.4926339669618756
+    },
+    "config_B_without_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 8.374915106920525,
+      "query_time": 5.169538819929585,
+      "cache_hit": false,
+      "input_tokens": 648,
+      "output_tokens": 1,
+      "wallclock_s": 13.545728210825473
+    },
+    "config_C_full_text": {
+      "predicted": "_utils",
+      "exact": false,
+      "input_tokens": 2888,
+      "output_tokens": 245,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.689625660888851
+    }
+  },
+  {
+    "question_id": "openai-python::_construct_field",
+    "repo": "openai/openai-python",
+    "needle_function": "_construct_field",
+    "expected_function_name": "_construct_field",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to construct and return an object of a specified type based on the provided value and field metadata.\n2. **Input**: Th",
+    "needle_path": "src/openai/_models.py",
+    "config_A_with_cache": {
+      "predicted": "_create_",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 0.6121255001053214,
+      "query_time": 0.8746955438982695,
+      "cache_hit": true,
+      "input_tokens": 773,
+      "output_tokens": 2,
+      "wallclock_s": 1.487997106043622
+    },
+    "config_B_without_cache": {
+      "predicted": "_create_",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 7.731452496023849,
+      "query_time": 4.649150034878403,
+      "cache_hit": false,
+      "input_tokens": 773,
+      "output_tokens": 2,
+      "wallclock_s": 12.381715422030538
+    },
+    "config_C_full_text": {
+      "predicted": "None",
+      "exact": false,
+      "input_tokens": 2869,
+      "output_tokens": 283,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.229516207007691
+    }
+  },
+  {
+    "question_id": "openai-python::_enforce_trailing_slash",
+    "repo": "openai/openai-python",
+    "needle_function": "_enforce_trailing_slash",
+    "expected_function_name": "_enforce_trailing_slash",
+    "needle_description_preview": "\n1. **Purpose**: Ensures that a given URL ends with a slash, which is often required for proper URL formation in web requests.\n2. **Input**: A URL object repres",
+    "needle_path": "src/openai/_base_client.py",
+    "config_A_with_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 2.872670059092343,
+      "query_time": 0.8072791318409145,
+      "cache_hit": true,
+      "input_tokens": 650,
+      "output_tokens": 1,
+      "wallclock_s": 3.681155080907047
+    },
+    "config_B_without_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 9.727877426892519,
+      "query_time": 3.8201776980422437,
+      "cache_hit": false,
+      "input_tokens": 650,
+      "output_tokens": 1,
+      "wallclock_s": 13.549075457965955
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2900,
+      "output_tokens": 267,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 9.938916001934558
+    }
+  },
+  {
+    "question_id": "openai-python::_get_arch",
+    "repo": "openai/openai-python",
+    "needle_function": "_get_arch",
+    "expected_function_name": "_get_arch",
+    "needle_description_preview": "\n1. **Purpose**: The function determines the architecture of the system on which the script is running and maps it to a standardized format used for identifying",
+    "needle_path": "src/openai/cli/_tools/migrate.py",
+    "config_A_with_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 2.9044243739917874,
+      "query_time": 0.794504513964057,
+      "cache_hit": false,
+      "input_tokens": 657,
+      "output_tokens": 1,
+      "wallclock_s": 3.700318966060877
+    },
+    "config_B_without_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 9.818354841088876,
+      "query_time": 3.8631560378707945,
+      "cache_hit": false,
+      "input_tokens": 657,
+      "output_tokens": 1,
+      "wallclock_s": 13.683617766015232
+    },
+    "config_C_full_text": {
+      "predicted": "platform",
+      "exact": false,
+      "input_tokens": 2863,
+      "output_tokens": 358,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.273359054001048
+    }
+  },
+  {
+    "question_id": "openai-python::_primitive_value_to_str",
+    "repo": "openai/openai-python",
+    "needle_function": "_primitive_value_to_str",
+    "expected_function_name": "_primitive_value_to_str",
+    "needle_description_preview": "\n1. **Purpose**: Converts basic data types to their string representations for use in URL query strings.\n2. **Input**: A single value which can be a boolean, No",
+    "needle_path": "src/openai/_qs.py",
+    "config_A_with_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 0.7878336620051414,
+      "query_time": 4.8481152430176735,
+      "cache_hit": true,
+      "input_tokens": 708,
+      "output_tokens": 1,
+      "wallclock_s": 5.637192779919133
+    },
+    "config_B_without_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 8.260936839040369,
+      "query_time": 4.565802927128971,
+      "cache_hit": false,
+      "input_tokens": 708,
+      "output_tokens": 1,
+      "wallclock_s": 12.82781655085273
+    },
+    "config_C_full_text": {
+      "predicted": "True",
+      "exact": false,
+      "input_tokens": 2897,
+      "output_tokens": 264,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.055000469088554
+    }
+  },
+  {
+    "question_id": "openai-python::_transform_value",
+    "repo": "openai/openai-python",
+    "needle_function": "_transform_value",
+    "expected_function_name": "_transform_value",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to modify data based on specific formatting rules defined in type annotations.\n2. **Input**: The function takes two pa",
+    "needle_path": "src/openai/_utils/_transform.py",
+    "config_A_with_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 0.6083315690048039,
+      "query_time": 0.6480285529978573,
+      "cache_hit": true,
+      "input_tokens": 694,
+      "output_tokens": 1,
+      "wallclock_s": 1.2574014361016452
+    },
+    "config_B_without_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 7.228069616947323,
+      "query_time": 4.708481532055885,
+      "cache_hit": false,
+      "input_tokens": 694,
+      "output_tokens": 1,
+      "wallclock_s": 11.937749628908932
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2863,
+      "output_tokens": 302,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 12.002065400127321
+    }
+  },
+  {
+    "question_id": "openai-python::make_request_options",
+    "repo": "openai/openai-python",
+    "needle_function": "make_request_options",
+    "expected_function_name": "make_request_options",
+    "needle_description_preview": "\n1. **Purpose**: To construct a dictionary of request options for HTTP operations, filtering out any parameters that are not provided or are marked as not given",
+    "needle_path": "src/openai/_base_client.py",
+    "config_A_with_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 2.338102199137211,
+      "query_time": 1.3183368830941617,
+      "cache_hit": true,
+      "input_tokens": 698,
+      "output_tokens": 1,
+      "wallclock_s": 3.6574853959027678
+    },
+    "config_B_without_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 9.924390252912417,
+      "query_time": 5.51143759698607,
+      "cache_hit": false,
+      "input_tokens": 698,
+      "output_tokens": 1,
+      "wallclock_s": 15.437332334928215
+    },
+    "config_C_full_text": {
+      "predicted": "construct_request_options",
+      "exact": false,
+      "input_tokens": 2854,
+      "output_tokens": 314,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.5643459090497345
+    }
+  },
+  {
+    "question_id": "openai-python::to_custom_raw_response_wrapper",
+    "repo": "openai/openai-python",
+    "needle_function": "to_custom_raw_response_wrapper",
+    "expected_function_name": "to_custom_raw_response_wrapper",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to modify an API method so that it returns a specific type of API response directly, rather than the default response ",
+    "needle_path": "src/openai/_response.py",
+    "config_A_with_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 2.9911135928705335,
+      "query_time": 1.119618855183944,
+      "cache_hit": true,
+      "input_tokens": 698,
+      "output_tokens": 1,
+      "wallclock_s": 4.111822280101478
+    },
+    "config_B_without_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 10.508136634947732,
+      "query_time": 5.086751583963633,
+      "cache_hit": false,
+      "input_tokens": 698,
+      "output_tokens": 1,
+      "wallclock_s": 15.595683543011546
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2871,
+      "output_tokens": 333,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 9.405241884989664
+    }
+  },
+  {
+    "question_id": "openai-python::transcribe",
+    "repo": "openai/openai-python",
+    "needle_function": "transcribe",
+    "expected_function_name": "transcribe",
+    "needle_description_preview": "\n1. **Purpose**: Converts spoken language in an audio file into written text using a specified machine learning model.\n2. **Input**: An audio file, a model iden",
+    "needle_path": "src/openai/cli/_api/audio.py",
+    "config_A_with_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 2.9634236230049282,
+      "query_time": 0.7345910258591175,
+      "cache_hit": true,
+      "input_tokens": 634,
+      "output_tokens": 1,
+      "wallclock_s": 3.699097548145801
+    },
+    "config_B_without_cache": {
+      "predicted": "create",
+      "exact": false,
+      "n_candidates": 929,
+      "extraction_time": 6.9903491290751845,
+      "query_time": 5.014360842993483,
+      "cache_hit": false,
+      "input_tokens": 634,
+      "output_tokens": 1,
+      "wallclock_s": 12.006079585989937
+    },
+    "config_C_full_text": {
+      "predicted": "audio",
+      "exact": false,
+      "input_tokens": 2882,
+      "output_tokens": 260,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.226713660173118
+    }
+  },
+  {
+    "question_id": "poetry::_display_complete_info",
+    "repo": "python-poetry/poetry",
+    "needle_function": "_display_complete_info",
+    "expected_function_name": "_display_complete_info",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to display detailed information about the current Python environment and its base environment, including versions, pat",
+    "needle_path": "src/poetry/console/commands/env/info.py",
+    "config_A_with_cache": {
+      "predicted": "get_system_env",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 2.8816756850574166,
+      "query_time": 7.459117885213345,
+      "cache_hit": true,
+      "input_tokens": 645,
+      "output_tokens": 3,
+      "wallclock_s": 10.35548103414476
+    },
+    "config_B_without_cache": {
+      "predicted": "get_system_env",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 6.469907155027613,
+      "query_time": 3.1477651870809495,
+      "cache_hit": false,
+      "input_tokens": 645,
+      "output_tokens": 3,
+      "wallclock_s": 9.618852311978117
+    },
+    "config_C_full_text": {
+      "predicted": "print",
+      "exact": false,
+      "input_tokens": 2559,
+      "output_tokens": 289,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.173529240069911
+    }
+  },
+  {
+    "question_id": "poetry::_do_execute_operation",
+    "repo": "python-poetry/poetry",
+    "needle_function": "_do_execute_operation",
+    "expected_function_name": "_do_execute_operation",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to manage the execution of a specified operation, handling its completion, skipping, or failure based on the operation",
+    "needle_path": "src/poetry/installation/executor.py",
+    "config_A_with_cache": {
+      "predicted": "execute",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 0.025637740967795253,
+      "query_time": 1.05953564401716,
+      "cache_hit": true,
+      "input_tokens": 627,
+      "output_tokens": 1,
+      "wallclock_s": 1.0861048658844084
+    },
+    "config_B_without_cache": {
+      "predicted": "execute",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 6.976992476964369,
+      "query_time": 3.02341411402449,
+      "cache_hit": false,
+      "input_tokens": 627,
+      "output_tokens": 1,
+      "wallclock_s": 10.00150725711137
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2574,
+      "output_tokens": 418,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.805971017107368
+    }
+  },
+  {
+    "question_id": "poetry::_find_best_version_for_package",
+    "repo": "python-poetry/poetry",
+    "needle_function": "_find_best_version_for_package",
+    "expected_function_name": "_find_best_version_for_package",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to determine the most suitable version of a software package based on given criteria, ensuring compatibility and meeti",
+    "needle_path": "src/poetry/console/commands/init.py",
+    "config_A_with_cache": {
+      "predicted": "_choose_package_version",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 2.140523100970313,
+      "query_time": 8.224704979918897,
+      "cache_hit": false,
+      "input_tokens": 672,
+      "output_tokens": 3,
+      "wallclock_s": 10.366772112902254
+    },
+    "config_B_without_cache": {
+      "predicted": "_choose_package_version",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 7.269076927099377,
+      "query_time": 3.942555736983195,
+      "cache_hit": false,
+      "input_tokens": 672,
+      "output_tokens": 3,
+      "wallclock_s": 11.213613511063159
+    },
+    "config_C_full_text": {
+      "predicted": "select_version",
+      "exact": false,
+      "input_tokens": 2565,
+      "output_tokens": 299,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 3.8137286719866097
+    }
+  },
+  {
+    "question_id": "poetry::_get_directory_from_hash",
+    "repo": "python-poetry/poetry",
+    "needle_function": "_get_directory_from_hash",
+    "expected_function_name": "_get_directory_from_hash",
+    "needle_description_preview": "\n1. **Purpose**: To generate a directory path based on a hashed representation of key components, ensuring organized and consistent storage of cached data.\n2. *",
+    "needle_path": "src/poetry/utils/cache.py",
+    "config_A_with_cache": {
+      "predicted": "_get_content_hash",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 0.035648050950840116,
+      "query_time": 1.0750465570017695,
+      "cache_hit": true,
+      "input_tokens": 661,
+      "output_tokens": 3,
+      "wallclock_s": 1.1119200820103288
+    },
+    "config_B_without_cache": {
+      "predicted": "_get_content_hash",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 6.821447108872235,
+      "query_time": 3.380989375989884,
+      "cache_hit": false,
+      "input_tokens": 661,
+      "output_tokens": 3,
+      "wallclock_s": 10.203550784150138
+    },
+    "config_C_full_text": {
+      "predicted": "Path",
+      "exact": false,
+      "input_tokens": 2575,
+      "output_tokens": 286,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.126597563968971
+    }
+  },
+  {
+    "question_id": "poetry::_validate_group_options",
+    "repo": "python-poetry/poetry",
+    "needle_function": "_validate_group_options",
+    "expected_function_name": "_validate_group_options",
+    "needle_description_preview": "\n1. **Purpose**: The function ensures that specified dependency groups are valid according to the project configuration.\n2. **Input**: A dictionary where keys a",
+    "needle_path": "src/poetry/console/commands/group_command.py",
+    "config_A_with_cache": {
+      "predicted": "_validate_group_options",
+      "exact": true,
+      "n_candidates": 1029,
+      "extraction_time": 2.6094873079564422,
+      "query_time": 9.367804626002908,
+      "cache_hit": true,
+      "input_tokens": 638,
+      "output_tokens": 3,
+      "wallclock_s": 11.978144303197041
+    },
+    "config_B_without_cache": {
+      "predicted": "_validate_group_options",
+      "exact": true,
+      "n_candidates": 1029,
+      "extraction_time": 6.6935680019669235,
+      "query_time": 4.324958767974749,
+      "cache_hit": false,
+      "input_tokens": 638,
+      "output_tokens": 3,
+      "wallclock_s": 11.019622785970569
+    },
+    "config_C_full_text": {
+      "predicted": "Config",
+      "exact": false,
+      "input_tokens": 2578,
+      "output_tokens": 377,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.811631712829694
+    }
+  },
+  {
+    "question_id": "poetry::_validate_readme",
+    "repo": "python-poetry/poetry",
+    "needle_function": "_validate_readme",
+    "expected_function_name": "_validate_readme",
+    "needle_description_preview": "\n1. **Purpose**: To verify the existence of README files referenced in a project configuration file.\n2. **Input**: A string or list of strings representing READ",
+    "needle_path": "src/poetry/console/commands/check.py",
+    "config_A_with_cache": {
+      "predicted": "_validate_readme",
+      "exact": true,
+      "n_candidates": 1029,
+      "extraction_time": 0.23081118916161358,
+      "query_time": 0.8282212479971349,
+      "cache_hit": true,
+      "input_tokens": 606,
+      "output_tokens": 3,
+      "wallclock_s": 1.0602216951083392
+    },
+    "config_B_without_cache": {
+      "predicted": "_validate_readme",
+      "exact": true,
+      "n_candidates": 1029,
+      "extraction_time": 8.171062011970207,
+      "query_time": 2.776201199973002,
+      "cache_hit": false,
+      "input_tokens": 606,
+      "output_tokens": 3,
+      "wallclock_s": 10.9486449949909
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2581,
+      "output_tokens": 319,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.542650138027966
+    }
+  },
+  {
+    "question_id": "poetry::_write_lock_file",
+    "repo": "python-poetry/poetry",
+    "needle_function": "_write_lock_file",
+    "expected_function_name": "_write_lock_file",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to update and save the project's dependency lock file based on the current state of a repository that tracks locked de",
+    "needle_path": "src/poetry/installation/installer.py",
+    "config_A_with_cache": {
+      "predicted": "lock",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 0.025783517863601446,
+      "query_time": 0.8984309991355985,
+      "cache_hit": true,
+      "input_tokens": 569,
+      "output_tokens": 1,
+      "wallclock_s": 0.9253419230226427
+    },
+    "config_B_without_cache": {
+      "predicted": "lock",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 6.959174193907529,
+      "query_time": 3.5771132400259376,
+      "cache_hit": false,
+      "input_tokens": 569,
+      "output_tokens": 1,
+      "wallclock_s": 10.53765125083737
+    },
+    "config_C_full_text": {
+      "predicted": "update_lock",
+      "exact": false,
+      "input_tokens": 2565,
+      "output_tokens": 279,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 42.1870150861796
+    }
+  },
+  {
+    "question_id": "poetry::base",
+    "repo": "python-poetry/poetry",
+    "needle_function": "base",
+    "expected_function_name": "base",
+    "needle_description_preview": "\n1. **Purpose**: The purpose of this attribute is to provide the root directory of the Python environment, which may differ from the active environment's direct",
+    "needle_path": "src/poetry/utils/env/base_env.py",
+    "config_A_with_cache": {
+      "predicted": "basedir",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 1.3885371971409768,
+      "query_time": 0.8179345419630408,
+      "cache_hit": true,
+      "input_tokens": 612,
+      "output_tokens": 2,
+      "wallclock_s": 2.2090127270203084
+    },
+    "config_B_without_cache": {
+      "predicted": "basedir",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 6.07562403799966,
+      "query_time": 4.430342441890389,
+      "cache_hit": false,
+      "input_tokens": 612,
+      "output_tokens": 2,
+      "wallclock_s": 10.50709879398346
+    },
+    "config_C_full_text": {
+      "predicted": "Config",
+      "exact": false,
+      "input_tokens": 2573,
+      "output_tokens": 293,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.485117361880839
+    }
+  },
+  {
+    "question_id": "poetry::candidates",
+    "repo": "python-poetry/poetry",
+    "needle_function": "candidates",
+    "expected_function_name": "candidates",
+    "needle_description_preview": "\n1. **Purpose**: To compile a list of potential directories where Python packages can be installed.\n2. **Input**: Directories specified for pure Python librarie",
+    "needle_path": "src/poetry/utils/env/site_packages.py",
+    "config_A_with_cache": {
+      "predicted": "get_package_paths",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 2.770528256893158,
+      "query_time": 8.313461499055848,
+      "cache_hit": true,
+      "input_tokens": 547,
+      "output_tokens": 3,
+      "wallclock_s": 11.084805308841169
+    },
+    "config_B_without_cache": {
+      "predicted": "get_package_paths",
+      "exact": false,
+      "n_candidates": 1029,
+      "extraction_time": 8.11282486608252,
+      "query_time": 3.1822682530619204,
+      "cache_hit": false,
+      "input_tokens": 547,
+      "output_tokens": 3,
+      "wallclock_s": 11.296177020063624
+    },
+    "config_C_full_text": {
+      "predicted": "Config",
+      "exact": false,
+      "input_tokens": 2564,
+      "output_tokens": 296,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.298191245878115
+    }
+  },
+  {
+    "question_id": "poetry::get_package_vcs_properties_from_path",
+    "repo": "python-poetry/poetry",
+    "needle_function": "get_package_vcs_properties_from_path",
+    "expected_function_name": "get_package_vcs_properties_from_path",
+    "needle_description_preview": "\n1. **Purpose**: To retrieve version control system (VCS) details for a given package directory, specifically identifying the type of VCS, its remote origin URL",
+    "needle_path": "src/poetry/repositories/installed_repository.py",
+    "config_A_with_cache": {
+      "predicted": "get_package_vcs_properties_from_path",
+      "exact": true,
+      "n_candidates": 1029,
+      "extraction_time": 2.396335591096431,
+      "query_time": 7.770905987825245,
+      "cache_hit": true,
+      "input_tokens": 685,
+      "output_tokens": 7,
+      "wallclock_s": 10.168742968002334
+    },
+    "config_B_without_cache": {
+      "predicted": "get_package_vcs_properties_from_path",
+      "exact": true,
+      "n_candidates": 1029,
+      "extraction_time": 5.485245649004355,
+      "query_time": 3.8561608570162207,
+      "cache_hit": false,
+      "input_tokens": 685,
+      "output_tokens": 7,
+      "wallclock_s": 9.342482964973897
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2590,
+      "output_tokens": 342,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.294361837906763
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::__collate__",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "__collate__",
+    "expected_function_name": "__collate__",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to generate mini-batches of subgraphs from a larger graph, focusing on a localized neighborhood around specified nodes",
+    "needle_path": "torch_geometric/loader/shadow.py",
+    "config_A_with_cache": {
+      "predicted": "k_hop_subgraph",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 12.87147997901775,
+      "query_time": 1.2030141360592097,
+      "cache_hit": true,
+      "input_tokens": 851,
+      "output_tokens": 5,
+      "wallclock_s": 14.078369961120188
+    },
+    "config_B_without_cache": {
+      "predicted": "k_hop_subgraph",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 39.42270494205877,
+      "query_time": 7.640651731053367,
+      "cache_hit": false,
+      "input_tokens": 851,
+      "output_tokens": 5,
+      "wallclock_s": 47.06803165888414
+    },
+    "config_C_full_text": {
+      "predicted": "torch_geometric",
+      "exact": false,
+      "input_tokens": 2751,
+      "output_tokens": 339,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.169885640032589
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::_to_edge_mask",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "_to_edge_mask",
+    "expected_function_name": "_to_edge_mask",
+    "needle_description_preview": "\n1. **Purpose**: The function generates a tensor representing a mask for edges in a graph, where each edge is initially considered equally important.\n2. **Input",
+    "needle_path": "torch_geometric/explain/algorithm/captum.py",
+    "config_A_with_cache": {
+      "predicted": "num_events",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 14.253864914178848,
+      "query_time": 0.7281156599055976,
+      "cache_hit": true,
+      "input_tokens": 702,
+      "output_tokens": 2,
+      "wallclock_s": 14.985330797964707
+    },
+    "config_B_without_cache": {
+      "predicted": "num_events",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 38.93578209797852,
+      "query_time": 9.042617539176717,
+      "cache_hit": false,
+      "input_tokens": 702,
+      "output_tokens": 2,
+      "wallclock_s": 47.98309134016745
+    },
+    "config_C_full_text": {
+      "predicted": "torch_geometric",
+      "exact": false,
+      "input_tokens": 2789,
+      "output_tokens": 378,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.013284787070006
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::get_self_loop_attr",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "get_self_loop_attr",
+    "expected_function_name": "get_self_loop_attr",
+    "needle_description_preview": "\n1. **Purpose**: The function retrieves the attributes or weights of self-loops (edges that connect a node to itself) for each node in a graph. If a self-loop i",
+    "needle_path": "torch_geometric/utils/loop.py",
+    "config_A_with_cache": {
+      "predicted": "get_self_loop_attr",
+      "exact": true,
+      "n_candidates": 3934,
+      "extraction_time": 14.700214588083327,
+      "query_time": 0.9371389250736684,
+      "cache_hit": true,
+      "input_tokens": 853,
+      "output_tokens": 4,
+      "wallclock_s": 15.641341508831829
+    },
+    "config_B_without_cache": {
+      "predicted": "get_self_loop_attr",
+      "exact": true,
+      "n_candidates": 3934,
+      "extraction_time": 36.30041237198748,
+      "query_time": 11.182650125119835,
+      "cache_hit": false,
+      "input_tokens": 853,
+      "output_tokens": 4,
+      "wallclock_s": 47.48778503900394
+    },
+    "config_C_full_text": {
+      "predicted": "edge_index",
+      "exact": false,
+      "input_tokens": 2785,
+      "output_tokens": 357,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.954730869969353
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::maybe_init_stream",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "maybe_init_stream",
+    "expected_function_name": "maybe_init_stream",
+    "needle_description_preview": "\n1. **Purpose**: The function initializes a GPU stream if the device being used supports GPU operations. This allows for asynchronous operations on the GPU, whi",
+    "needle_path": "torch_geometric/loader/prefetch.py",
+    "config_A_with_cache": {
+      "predicted": "set_experimental_mode_enabled",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 8.336085135815665,
+      "query_time": 0.9421896429266781,
+      "cache_hit": false,
+      "input_tokens": 669,
+      "output_tokens": 5,
+      "wallclock_s": 9.293850912014022
+    },
+    "config_B_without_cache": {
+      "predicted": "set_experimental_mode_enabled",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 34.21392760891467,
+      "query_time": 14.542268742108718,
+      "cache_hit": false,
+      "input_tokens": 669,
+      "output_tokens": 5,
+      "wallclock_s": 48.761354183079675
+    },
+    "config_C_full_text": {
+      "predicted": "with",
+      "exact": false,
+      "input_tokens": 2763,
+      "output_tokens": 302,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.4062129280064255
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::num_node_labels",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "num_node_labels",
+    "expected_function_name": "num_node_labels",
+    "needle_description_preview": "\n1. **Purpose**: To retrieve the total number of distinct labels that can be assigned to nodes within the graphs of a dataset.\n2. **Input**: This method does no",
+    "needle_path": "torch_geometric/datasets/tu_dataset.py",
+    "config_A_with_cache": {
+      "predicted": "to_hetero_with_bases",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 12.91135020996444,
+      "query_time": 1.131165032973513,
+      "cache_hit": true,
+      "input_tokens": 710,
+      "output_tokens": 7,
+      "wallclock_s": 14.045232190052047
+    },
+    "config_B_without_cache": {
+      "predicted": "to_hetero_with_bases",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 35.371954741189256,
+      "query_time": 7.727998069953173,
+      "cache_hit": false,
+      "input_tokens": 710,
+      "output_tokens": 7,
+      "wallclock_s": 43.10468241502531
+    },
+    "config_C_full_text": {
+      "predicted": "labels",
+      "exact": false,
+      "input_tokens": 2785,
+      "output_tokens": 294,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 56.62049121293239
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::positive_sampling",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "positive_sampling",
+    "expected_function_name": "positive_sampling",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to randomly select a subset of existing edges from a graph, which can be used to train models that require a sample of",
+    "needle_path": "torch_geometric/nn/conv/supergat_conv.py",
+    "config_A_with_cache": {
+      "predicted": "dropout_edge",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 10.29537980700843,
+      "query_time": 1.1051557019818574,
+      "cache_hit": true,
+      "input_tokens": 693,
+      "output_tokens": 3,
+      "wallclock_s": 11.404599652858451
+    },
+    "config_B_without_cache": {
+      "predicted": "dropout_edge",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 40.172570690046996,
+      "query_time": 10.006749633001164,
+      "cache_hit": false,
+      "input_tokens": 693,
+      "output_tokens": 3,
+      "wallclock_s": 50.18401138600893
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2774,
+      "output_tokens": 368,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.101177372038364
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::read_from_memlab",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "read_from_memlab",
+    "expected_function_name": "read_from_memlab",
+    "needle_description_preview": "\n1. **Purpose**: To extract and convert specific memory usage statistics from profiling data into a more readable format, specifically in megabytes.\n2. **Input*",
+    "needle_path": "torch_geometric/profile/profile.py",
+    "config_A_with_cache": {
+      "predicted": "_layer_trace",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 9.312308471184224,
+      "query_time": 1.0777882558759302,
+      "cache_hit": true,
+      "input_tokens": 673,
+      "output_tokens": 2,
+      "wallclock_s": 10.39442173880525
+    },
+    "config_B_without_cache": {
+      "predicted": "_layer_trace",
+      "exact": false,
+      "n_candidates": 3934,
+      "extraction_time": 41.91156093101017,
+      "query_time": 11.392427269136533,
+      "cache_hit": false,
+      "input_tokens": 673,
+      "output_tokens": 2,
+      "wallclock_s": 53.30773837398738
+    },
+    "config_C_full_text": {
+      "predicted": "extract_memory_stats",
+      "exact": false,
+      "input_tokens": 2778,
+      "output_tokens": 237,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.075100917136297
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::set_tuple_item",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "set_tuple_item",
+    "expected_function_name": "set_tuple_item",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to replace an item in a tuple with a new value at a specified index, since tuples are immutable in Python.\n2. **Input*",
+    "needle_path": "torch_geometric/edge_index.py",
+    "config_A_with_cache": {
+      "predicted": "set_tuple_item",
+      "exact": true,
+      "n_candidates": 3934,
+      "extraction_time": 13.86535913310945,
+      "query_time": 0.8461689660325646,
+      "cache_hit": true,
+      "input_tokens": 729,
+      "output_tokens": 3,
+      "wallclock_s": 14.714867133880034
+    },
+    "config_B_without_cache": {
+      "predicted": "set_tuple_item",
+      "exact": true,
+      "n_candidates": 3934,
+      "extraction_time": 40.09416323201731,
+      "query_time": 7.753142197150737,
+      "cache_hit": false,
+      "input_tokens": 729,
+      "output_tokens": 3,
+      "wallclock_s": 47.85099933389574
+    },
+    "config_C_full_text": {
+      "predicted": "replace_tuple_item",
+      "exact": false,
+      "input_tokens": 2776,
+      "output_tokens": 260,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.111201289808378
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::to_scipy_sparse_matrix",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "to_scipy_sparse_matrix",
+    "expected_function_name": "to_scipy_sparse_matrix",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to convert a graph representation from edge indices and optional edge attributes into a sparse matrix format, which is",
+    "needle_path": "torch_geometric/utils/convert.py",
+    "config_A_with_cache": {
+      "predicted": "to_scipy_sparse_matrix",
+      "exact": true,
+      "n_candidates": 3934,
+      "extraction_time": 12.049534851917997,
+      "query_time": 2.153346108039841,
+      "cache_hit": true,
+      "input_tokens": 824,
+      "output_tokens": 6,
+      "wallclock_s": 14.205897893058136
+    },
+    "config_B_without_cache": {
+      "predicted": "to_scipy_sparse_matrix",
+      "exact": true,
+      "n_candidates": 3934,
+      "extraction_time": 39.76264721620828,
+      "query_time": 10.081917715957388,
+      "cache_hit": false,
+      "input_tokens": 824,
+      "output_tokens": 6,
+      "wallclock_s": 49.8478901530616
+    },
+    "config_C_full_text": {
+      "predicted": "to_sparse_matrix",
+      "exact": false,
+      "input_tokens": 2746,
+      "output_tokens": 327,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 9.460596853168681
+    }
+  },
+  {
+    "question_id": "pytorch_geometric::tree",
+    "repo": "pyg-team/pytorch_geometric",
+    "needle_function": "tree",
+    "expected_function_name": "tree",
+    "needle_description_preview": "\n1. **Purpose**: The function generates a tree graph with specified depth and branching factor, optionally making it undirected, and provides node-level depth i",
+    "needle_path": "torch_geometric/datasets/graph_generator/tree_graph.py",
+    "config_A_with_cache": {
+      "predicted": "tree",
+      "exact": true,
+      "n_candidates": 3934,
+      "extraction_time": 11.096249197144061,
+      "query_time": 1.2801163480617106,
+      "cache_hit": true,
+      "input_tokens": 824,
+      "output_tokens": 1,
+      "wallclock_s": 12.379912500968203
+    },
+    "config_B_without_cache": {
+      "predicted": "tree",
+      "exact": true,
+      "n_candidates": 3934,
+      "extraction_time": 39.95783775183372,
+      "query_time": 8.767804146045819,
+      "cache_hit": false,
+      "input_tokens": 824,
+      "output_tokens": 1,
+      "wallclock_s": 48.78085876395926
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2774,
+      "output_tokens": 307,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.199296306818724
+    }
+  },
+  {
+    "question_id": "reactpy::_equal_files",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "_equal_files",
+    "expected_function_name": "_equal_files",
+    "needle_description_preview": "\n1. **Purpose**: To determine if two specified files are identical.\n2. **Input**: Two file paths.\n3. **Output**: A boolean value indicating whether the files ar",
+    "needle_path": "src/py/reactpy/reactpy/web/module.py",
+    "config_A_with_cache": {
+      "predicted": "strictly_equal",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 0.8876614230684936,
+      "query_time": 1.1852772599086165,
+      "cache_hit": true,
+      "input_tokens": 697,
+      "output_tokens": 3,
+      "wallclock_s": 2.0733701798599213
+    },
+    "config_B_without_cache": {
+      "predicted": "strictly_equal",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 3.2094347551465034,
+      "query_time": 2.930855578975752,
+      "cache_hit": false,
+      "input_tokens": 697,
+      "output_tokens": 3,
+      "wallclock_s": 6.1408460470847785
+    },
+    "config_C_full_text": {
+      "predicted": "pathlib",
+      "exact": false,
+      "input_tokens": 2790,
+      "output_tokens": 266,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.290719175012782
+    }
+  },
+  {
+    "question_id": "reactpy::all_implementations",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "all_implementations",
+    "expected_function_name": "all_implementations",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to iterate through and provide all available server backend implementations supported by a Python library.\n2. **Input*",
+    "needle_path": "src/py/reactpy/reactpy/backend/utils.py",
+    "config_A_with_cache": {
+      "predicted": "all_implementations",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 1.2608699980191886,
+      "query_time": 0.9794100120197982,
+      "cache_hit": true,
+      "input_tokens": 730,
+      "output_tokens": 4,
+      "wallclock_s": 2.2407100568525493
+    },
+    "config_B_without_cache": {
+      "predicted": "all_implementations",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 4.483973450958729,
+      "query_time": 3.88347578397952,
+      "cache_hit": false,
+      "input_tokens": 730,
+      "output_tokens": 4,
+      "wallclock_s": 8.367909686872736
+    },
+    "config_C_full_text": {
+      "predicted": "backend",
+      "exact": false,
+      "input_tokens": 2768,
+      "output_tokens": 263,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.594176984857768
+    }
+  },
+  {
+    "question_id": "reactpy::boolean",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "boolean",
+    "expected_function_name": "boolean",
+    "needle_description_preview": "\n1. **Purpose**: To convert various data types into a boolean value based on predefined true and false representations.\n2. **Input**: Accepts a string, boolean,",
+    "needle_path": "src/py/reactpy/reactpy/config.py",
+    "config_A_with_cache": {
+      "predicted": "boolean",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 1.8366387661080807,
+      "query_time": 1.141542067984119,
+      "cache_hit": true,
+      "input_tokens": 658,
+      "output_tokens": 1,
+      "wallclock_s": 2.978532426059246
+    },
+    "config_B_without_cache": {
+      "predicted": "boolean",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 2.9030183679424226,
+      "query_time": 4.748372141038999,
+      "cache_hit": false,
+      "input_tokens": 658,
+      "output_tokens": 1,
+      "wallclock_s": 7.65176803804934
+    },
+    "config_C_full_text": {
+      "predicted": "False",
+      "exact": false,
+      "input_tokens": 2794,
+      "output_tokens": 307,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 7.963909977115691
+    }
+  },
+  {
+    "question_id": "reactpy::create_context",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "create_context",
+    "expected_function_name": "create_context",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to generate a new context type that can be utilized within a specific context management function to share data across",
+    "needle_path": "src/py/reactpy/reactpy/core/hooks.py",
+    "config_A_with_cache": {
+      "predicted": "set_context_provider",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 1.5536000959109515,
+      "query_time": 1.6551389291416854,
+      "cache_hit": true,
+      "input_tokens": 733,
+      "output_tokens": 3,
+      "wallclock_s": 3.2091424548998475
+    },
+    "config_B_without_cache": {
+      "predicted": "set_context_provider",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 3.5283145238645375,
+      "query_time": 4.679162129061297,
+      "cache_hit": false,
+      "input_tokens": 733,
+      "output_tokens": 3,
+      "wallclock_s": 8.208010401111096
+    },
+    "config_C_full_text": {
+      "predicted": "create_context",
+      "exact": true,
+      "input_tokens": 2763,
+      "output_tokens": 225,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.139313516905531
+    }
+  },
+  {
+    "question_id": "reactpy::custom_vdom_constructor",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "custom_vdom_constructor",
+    "expected_function_name": "custom_vdom_constructor",
+    "needle_description_preview": "\n1. **Purpose**: To transform a given function into a specialized constructor that creates virtual DOM (VDOM) dictionaries, ensuring that the function adheres t",
+    "needle_path": "src/py/reactpy/reactpy/core/vdom.py",
+    "config_A_with_cache": {
+      "predicted": "vdom",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 0.8959512019064277,
+      "query_time": 0.7968604199122638,
+      "cache_hit": true,
+      "input_tokens": 787,
+      "output_tokens": 2,
+      "wallclock_s": 1.6933644451200962
+    },
+    "config_B_without_cache": {
+      "predicted": "vdom",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 4.375253224046901,
+      "query_time": 4.557230192003772,
+      "cache_hit": false,
+      "input_tokens": 787,
+      "output_tokens": 2,
+      "wallclock_s": 8.933014590060338
+    },
+    "config_C_full_text": {
+      "predicted": "vdom",
+      "exact": false,
+      "input_tokens": 2768,
+      "output_tokens": 318,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.50128292478621
+    }
+  },
+  {
+    "question_id": "reactpy::image",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "image",
+    "expected_function_name": "image",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to create an HTML image element from a provided string or bytes, encoding the data into base64 format suitable for emb",
+    "needle_path": "src/py/reactpy/reactpy/widgets.py",
+    "config_A_with_cache": {
+      "predicted": "image",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 0.9189666090533137,
+      "query_time": 1.2899255300872028,
+      "cache_hit": true,
+      "input_tokens": 788,
+      "output_tokens": 1,
+      "wallclock_s": 2.209490149980411
+    },
+    "config_B_without_cache": {
+      "predicted": "image",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 3.4926347478758544,
+      "query_time": 3.8263075358700007,
+      "cache_hit": false,
+      "input_tokens": 788,
+      "output_tokens": 1,
+      "wallclock_s": 7.319485012209043
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2777,
+      "output_tokens": 323,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.757848921930417
+    }
+  },
+  {
+    "question_id": "reactpy::set_context_provider",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "set_context_provider",
+    "expected_function_name": "set_context_provider",
+    "needle_description_preview": "\n1. **Purpose**: To assign a context provider to the hook, enabling it to supply state to any child components that request a context of the same type.\n2. **Inp",
+    "needle_path": "src/py/reactpy/reactpy/core/_life_cycle_hook.py",
+    "config_A_with_cache": {
+      "predicted": "set_context_provider",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 1.8040400419849902,
+      "query_time": 0.9615475630853325,
+      "cache_hit": true,
+      "input_tokens": 659,
+      "output_tokens": 3,
+      "wallclock_s": 2.7660248652100563
+    },
+    "config_B_without_cache": {
+      "predicted": "set_context_provider",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 3.7264277760405093,
+      "query_time": 4.954116292996332,
+      "cache_hit": false,
+      "input_tokens": 659,
+      "output_tokens": 3,
+      "wallclock_s": 8.680998553987592
+    },
+    "config_C_full_text": {
+      "predicted": "create_context",
+      "exact": false,
+      "input_tokens": 2774,
+      "output_tokens": 208,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.820642268983647
+    }
+  },
+  {
+    "question_id": "reactpy::stop_server",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "stop_server",
+    "expected_function_name": "stop_server",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to terminate a running asynchronous server task gracefully within a specified timeout period.\n2. **Input**: There are ",
+    "needle_path": "src/py/reactpy/reactpy/testing/backend.py",
+    "config_A_with_cache": {
+      "predicted": "run_server",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 2.2113047789316624,
+      "query_time": 0.8231641699094325,
+      "cache_hit": true,
+      "input_tokens": 656,
+      "output_tokens": 2,
+      "wallclock_s": 3.035073393024504
+    },
+    "config_B_without_cache": {
+      "predicted": "run_server",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 1.9057635010685772,
+      "query_time": 6.118433183990419,
+      "cache_hit": false,
+      "input_tokens": 656,
+      "output_tokens": 2,
+      "wallclock_s": 8.02470346307382
+    },
+    "config_C_full_text": {
+      "predicted": "asyncio",
+      "exact": false,
+      "input_tokens": 2769,
+      "output_tokens": 315,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 10.496672185137868
+    }
+  },
+  {
+    "question_id": "reactpy::sync_function",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "sync_function",
+    "expected_function_name": "sync_function",
+    "needle_description_preview": "\n1. **Purpose**: To execute a synchronous version of an asynchronous effect function, potentially including a cleanup process.\n2. **Input**: An asynchronous fun",
+    "needle_path": "src/py/reactpy/reactpy/core/hooks.py",
+    "config_A_with_cache": {
+      "predicted": "sync_function",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 0.8870347470510751,
+      "query_time": 1.2686253050342202,
+      "cache_hit": false,
+      "input_tokens": 683,
+      "output_tokens": 2,
+      "wallclock_s": 2.156318170018494
+    },
+    "config_B_without_cache": {
+      "predicted": "sync_function",
+      "exact": true,
+      "n_candidates": 334,
+      "extraction_time": 6.105000900104642,
+      "query_time": 4.620105657959357,
+      "cache_hit": false,
+      "input_tokens": 683,
+      "output_tokens": 2,
+      "wallclock_s": 10.72573691001162
+    },
+    "config_C_full_text": {
+      "predicted": "run",
+      "exact": false,
+      "input_tokens": 2764,
+      "output_tokens": 331,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.658508928958327
+    }
+  },
+  {
+    "question_id": "reactpy::use",
+    "repo": "reactive-python/reactpy",
+    "needle_function": "use",
+    "expected_function_name": "use",
+    "needle_description_preview": "\n1. **Purpose**: To create an event handler that is associated with a unique identifier, which can be configured to stop propagation or prevent default actions ",
+    "needle_path": "src/py/reactpy/reactpy/testing/common.py",
+    "config_A_with_cache": {
+      "predicted": "event",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 2.2838908380363137,
+      "query_time": 1.0021054928656667,
+      "cache_hit": true,
+      "input_tokens": 641,
+      "output_tokens": 1,
+      "wallclock_s": 3.2864128081128
+    },
+    "config_B_without_cache": {
+      "predicted": "event",
+      "exact": false,
+      "n_candidates": 334,
+      "extraction_time": 3.118963013170287,
+      "query_time": 5.2692608130164444,
+      "cache_hit": false,
+      "input_tokens": 641,
+      "output_tokens": 1,
+      "wallclock_s": 8.388821055181324
+    },
+    "config_C_full_text": {
+      "predicted": "event",
+      "exact": false,
+      "input_tokens": 2761,
+      "output_tokens": 282,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 3.6931791859678924
+    }
+  },
+  {
+    "question_id": "web3.py::_get_response_for_request_id",
+    "repo": "ethereum/web3.py",
+    "needle_function": "_get_response_for_request_id",
+    "expected_function_name": "_get_response_for_request_id",
+    "needle_description_preview": "\n1. **Purpose**: To retrieve the response associated with a specific request identifier from a cache, with a mechanism to handle timeouts if the response is not",
+    "needle_path": "web3/providers/persistent/persistent.py",
+    "config_A_with_cache": {
+      "predicted": "_get_response_for_request_id",
+      "exact": true,
+      "n_candidates": 1391,
+      "extraction_time": 0.3767764850053936,
+      "query_time": 0.8602075530216098,
+      "cache_hit": true,
+      "input_tokens": 595,
+      "output_tokens": 5,
+      "wallclock_s": 1.2382369870319963
+    },
+    "config_B_without_cache": {
+      "predicted": "_get_response_for_request_id",
+      "exact": true,
+      "n_candidates": 1391,
+      "extraction_time": 12.827819783007726,
+      "query_time": 3.100009156158194,
+      "cache_hit": false,
+      "input_tokens": 595,
+      "output_tokens": 5,
+      "wallclock_s": 15.93219785601832
+    },
+    "config_C_full_text": {
+      "predicted": "timeout",
+      "exact": false,
+      "input_tokens": 2821,
+      "output_tokens": 313,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 5.6760266539640725
+    }
+  },
+  {
+    "question_id": "web3.py::_get_transaction",
+    "repo": "ethereum/web3.py",
+    "needle_function": "_get_transaction",
+    "expected_function_name": "_get_transaction",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to prepare transaction parameters for deploying a smart contract, ensuring all necessary data is included and formatte",
+    "needle_path": "web3/contract/base_contract.py",
+    "config_A_with_cache": {
+      "predicted": "build_transaction_for_function",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 0.7915922668762505,
+      "query_time": 0.8291882809717208,
+      "cache_hit": true,
+      "input_tokens": 613,
+      "output_tokens": 4,
+      "wallclock_s": 1.6222484658937901
+    },
+    "config_B_without_cache": {
+      "predicted": "build_transaction_for_function",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 12.212897371966392,
+      "query_time": 4.077212266158313,
+      "cache_hit": false,
+      "input_tokens": 613,
+      "output_tokens": 4,
+      "wallclock_s": 16.291947687976062
+    },
+    "config_C_full_text": {
+      "predicted": "prepare_transaction_parameters",
+      "exact": false,
+      "input_tokens": 2812,
+      "output_tokens": 277,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 4.736655168933794
+    }
+  },
+  {
+    "question_id": "web3.py::_make_get_request",
+    "repo": "ethereum/web3.py",
+    "needle_function": "_make_get_request",
+    "expected_function_name": "_make_get_request",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to fetch data from a specified server endpoint and return the response in a structured format.\n2. **Input**: It takes ",
+    "needle_path": "web3/beacon/beacon.py",
+    "config_A_with_cache": {
+      "predicted": "_mock_specific_request",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 1.5118313960265368,
+      "query_time": 1.0812372020445764,
+      "cache_hit": true,
+      "input_tokens": 555,
+      "output_tokens": 3,
+      "wallclock_s": 2.5944549560081214
+    },
+    "config_B_without_cache": {
+      "predicted": "_mock_specific_request",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 14.17279381887056,
+      "query_time": 1.6861793010029942,
+      "cache_hit": false,
+      "input_tokens": 555,
+      "output_tokens": 3,
+      "wallclock_s": 15.863872045185417
+    },
+    "config_C_full_text": {
+      "predicted": "HTTPProvider",
+      "exact": false,
+      "input_tokens": 2837,
+      "output_tokens": 325,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 8.732974882004783
+    }
+  },
+  {
+    "question_id": "web3.py::data_tree_map",
+    "repo": "ethereum/web3.py",
+    "needle_function": "data_tree_map",
+    "expected_function_name": "data_tree_map",
+    "needle_description_preview": "\n1. **Purpose**: The function is designed to apply a given transformation function to each element within a structured data tree, where each element is associat",
+    "needle_path": "web3/_utils/abi.py",
+    "config_A_with_cache": {
+      "predicted": "data_tree_map",
+      "exact": true,
+      "n_candidates": 1391,
+      "extraction_time": 0.942097099032253,
+      "query_time": 0.9333990479353815,
+      "cache_hit": true,
+      "input_tokens": 747,
+      "output_tokens": 3,
+      "wallclock_s": 1.8769190600141883
+    },
+    "config_B_without_cache": {
+      "predicted": "data_tree_map",
+      "exact": true,
+      "n_candidates": 1391,
+      "extraction_time": 14.480652447091416,
+      "query_time": 2.172318563098088,
+      "cache_hit": false,
+      "input_tokens": 747,
+      "output_tokens": 3,
+      "wallclock_s": 16.655050609027967
+    },
+    "config_C_full_text": {
+      "predicted": "recursive_map",
+      "exact": false,
+      "input_tokens": 2810,
+      "output_tokens": 250,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.244609276065603
+    }
+  },
+  {
+    "question_id": "web3.py::get_default_middlewares",
+    "repo": "ethereum/web3.py",
+    "needle_function": "get_default_middlewares",
+    "expected_function_name": "get_default_middlewares",
+    "needle_description_preview": "\n1. **Purpose**: To provide a list of default middleware components that are essential for processing and managing blockchain requests.\n2. **Input**: None, as t",
+    "needle_path": "web3/manager.py",
+    "config_A_with_cache": {
+      "predicted": "get_default_middlewares",
+      "exact": true,
+      "n_candidates": 1391,
+      "extraction_time": 0.5967432691249996,
+      "query_time": 5.015255904989317,
+      "cache_hit": true,
+      "input_tokens": 543,
+      "output_tokens": 4,
+      "wallclock_s": 5.613491574069485
+    },
+    "config_B_without_cache": {
+      "predicted": "get_default_middlewares",
+      "exact": true,
+      "n_candidates": 1391,
+      "extraction_time": 12.971856754971668,
+      "query_time": 3.610401933081448,
+      "cache_hit": false,
+      "input_tokens": 543,
+      "output_tokens": 4,
+      "wallclock_s": 16.65327506395988
+    },
+    "config_C_full_text": {
+      "predicted": "get_default_middleware",
+      "exact": false,
+      "input_tokens": 2828,
+      "output_tokens": 246,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 9.491525748046115
+    }
+  },
+  {
+    "question_id": "web3.py::test_async_eth_sign_transaction_legacy",
+    "repo": "ethereum/web3.py",
+    "needle_function": "test_async_eth_sign_transaction_legacy",
+    "expected_function_name": "test_async_eth_sign_transaction_legacy",
+    "needle_description_preview": "\n1. **Purpose**: To verify the correct signing and recovery of a transaction using legacy parameters in an asynchronous environment.\n2. **Input**: Transaction p",
+    "needle_path": "web3/_utils/module_testing/eth_module.py",
+    "config_A_with_cache": {
+      "predicted": "_",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 1.0905001279897988,
+      "query_time": 0.7888616400305182,
+      "cache_hit": true,
+      "input_tokens": 538,
+      "output_tokens": 1,
+      "wallclock_s": 1.8806565920822322
+    },
+    "config_B_without_cache": {
+      "predicted": "_",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 14.218180854106322,
+      "query_time": 2.364690126152709,
+      "cache_hit": false,
+      "input_tokens": 538,
+      "output_tokens": 1,
+      "wallclock_s": 16.58659230894409
+    },
+    "config_C_full_text": {
+      "predicted": "web3",
+      "exact": false,
+      "input_tokens": 2823,
+      "output_tokens": 435,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 10.172328392975032
+    }
+  },
+  {
+    "question_id": "web3.py::test_eth_call_revert_custom_error_with_msg",
+    "repo": "ethereum/web3.py",
+    "needle_function": "test_eth_call_revert_custom_error_with_msg",
+    "expected_function_name": "test_eth_call_revert_custom_error_with_msg",
+    "needle_description_preview": "\n1. **Purpose**: To verify that a specific Ethereum smart contract function correctly raises a custom error with a predefined message when called under unauthor",
+    "needle_path": "web3/_utils/module_testing/eth_module.py",
+    "config_A_with_cache": {
+      "predicted": "test_eth_call_custom_error_revert_without_msg",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 1.3607838288880885,
+      "query_time": 1.275592472171411,
+      "cache_hit": true,
+      "input_tokens": 634,
+      "output_tokens": 9,
+      "wallclock_s": 2.638091946952045
+    },
+    "config_B_without_cache": {
+      "predicted": "test_eth_call_custom_error_revert_without_msg",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 13.997639286099002,
+      "query_time": 2.2507198909297585,
+      "cache_hit": false,
+      "input_tokens": 634,
+      "output_tokens": 9,
+      "wallclock_s": 16.250312990974635
+    },
+    "config_C_full_text": {
+      "predicted": "pytest",
+      "exact": false,
+      "input_tokens": 2812,
+      "output_tokens": 316,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 10.660162579966709
+    }
+  },
+  {
+    "question_id": "web3.py::test_eth_estimate_gas_revert_with_msg",
+    "repo": "ethereum/web3.py",
+    "needle_function": "test_eth_estimate_gas_revert_with_msg",
+    "expected_function_name": "test_eth_estimate_gas_revert_with_msg",
+    "needle_description_preview": "\n1. **Purpose**: To verify that the system correctly identifies and handles a transaction that is expected to revert due to a specific error message in a smart ",
+    "needle_path": "web3/_utils/module_testing/eth_module.py",
+    "config_A_with_cache": {
+      "predicted": "test_eth_estimate_gas_revert_with_msg",
+      "exact": true,
+      "n_candidates": 1391,
+      "extraction_time": 1.4038506320212036,
+      "query_time": 0.9336805359926075,
+      "cache_hit": true,
+      "input_tokens": 652,
+      "output_tokens": 10,
+      "wallclock_s": 2.3388977819122374
+    },
+    "config_B_without_cache": {
+      "predicted": "test_eth_estimate_gas_revert_with_msg",
+      "exact": true,
+      "n_candidates": 1391,
+      "extraction_time": 13.788624237990007,
+      "query_time": 2.100833912845701,
+      "cache_hit": false,
+      "input_tokens": 652,
+      "output_tokens": 10,
+      "wallclock_s": 15.890991995111108
+    },
+    "config_C_full_text": {
+      "predicted": "pytest",
+      "exact": false,
+      "input_tokens": 2823,
+      "output_tokens": 345,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 6.337084488943219
+    }
+  },
+  {
+    "question_id": "web3.py::test_eth_get_logs_with_logs_none_topic_args",
+    "repo": "ethereum/web3.py",
+    "needle_function": "test_eth_get_logs_with_logs_none_topic_args",
+    "expected_function_name": "test_eth_get_logs_with_logs_none_topic_args",
+    "needle_description_preview": "\n1. **Purpose**: To verify that querying blockchain logs with a filter containing only `None` values for topics results in no logs being returned.\n2. **Input**:",
+    "needle_path": "web3/_utils/module_testing/eth_module.py",
+    "config_A_with_cache": {
+      "predicted": "get_logs",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 0.29073157790116966,
+      "query_time": 0.659105712082237,
+      "cache_hit": true,
+      "input_tokens": 561,
+      "output_tokens": 2,
+      "wallclock_s": 0.952075534965843
+    },
+    "config_B_without_cache": {
+      "predicted": "get_logs",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 13.94769441196695,
+      "query_time": 2.8862001241650432,
+      "cache_hit": false,
+      "input_tokens": 561,
+      "output_tokens": 2,
+      "wallclock_s": 16.836287813959643
+    },
+    "config_C_full_text": {
+      "predicted": "None",
+      "exact": false,
+      "input_tokens": 2838,
+      "output_tokens": 290,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 9.672776591964066
+    }
+  },
+  {
+    "question_id": "web3.py::test_gas_price_strategy_hex_value",
+    "repo": "ethereum/web3.py",
+    "needle_function": "test_gas_price_strategy_hex_value",
+    "expected_function_name": "test_gas_price_strategy_hex_value",
+    "needle_description_preview": "\n1. **Purpose**: To verify that the system correctly handles a gas price strategy function returning a hexadecimal string value for the gas price when sending a",
+    "needle_path": "web3/_utils/module_testing/eth_module.py",
+    "config_A_with_cache": {
+      "predicted": "validate_transaction_params",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 1.157352274050936,
+      "query_time": 2.602908395929262,
+      "cache_hit": true,
+      "input_tokens": 614,
+      "output_tokens": 3,
+      "wallclock_s": 3.761548933107406
+    },
+    "config_B_without_cache": {
+      "predicted": "validate_transaction_params",
+      "exact": false,
+      "n_candidates": 1391,
+      "extraction_time": 15.248582071159035,
+      "query_time": 2.279172569978982,
+      "cache_hit": false,
+      "input_tokens": 614,
+      "output_tokens": 3,
+      "wallclock_s": 17.53101074695587
+    },
+    "config_C_full_text": {
+      "predicted": "provided",
+      "exact": false,
+      "input_tokens": 2804,
+      "output_tokens": 274,
+      "chars_in_prompt": 30000,
+      "truncated": true,
+      "wallclock_s": 3.7667690569069237
+    }
+  }
+]
