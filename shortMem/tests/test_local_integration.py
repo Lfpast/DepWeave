@@ -10,7 +10,7 @@ from unittest.mock import patch
 from benchmarks.local_model import LocalQwen3
 from experiments.exp56_repoqa_python_full import _run_cardmem
 from experiments.exp58_v5_depeval_full import process_q
-from shortmem.cache import PixelMemCache
+from core.cache import PixelMemCache
 
 
 class LocalModelTests(unittest.TestCase):

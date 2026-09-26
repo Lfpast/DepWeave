@@ -30,10 +30,10 @@ import json
 from dataclasses import asdict, dataclass, field
 from typing import Any, Optional
 
-from shortmem.plugins import LLMCaller, PluginSet, PromptTemplate
-from shortmem.types import EvidenceBundle, Primitive, TaskSpec
-from shortmem.synth._json_tolerant import parse_json_object
-from shortmem.synth.candidate_aware import (
+from core.plugins import LLMCaller, PluginSet, PromptTemplate
+from core.types import EvidenceBundle, Primitive, TaskSpec
+from core.synth._json_tolerant import parse_json_object
+from core.synth.candidate_aware import (
     SymbolExtractor, _analyze_completion_site, _rank_candidates,
 )
 

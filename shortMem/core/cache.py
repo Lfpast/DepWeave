@@ -33,8 +33,8 @@ from pathlib import Path
 from pixelmem.shard_manager import ShardManager
 from pixelmem.triple_extractor import Triple
 
-from shortmem.plugins import Extractor
-from shortmem.types import Primitive
+from core.plugins import Extractor
+from core.types import Primitive
 
 
 @dataclass

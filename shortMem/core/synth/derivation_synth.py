@@ -6,9 +6,9 @@ reject anything that references a relation not in the schema.
 
 from __future__ import annotations
 
-from shortmem.plugins import DerivationRule, LLMCaller
-from shortmem.synth._json_tolerant import parse_json_object
-from shortmem.synth.schema_designer import SchemaProposal
+from core.plugins import DerivationRule, LLMCaller
+from core.synth._json_tolerant import parse_json_object
+from core.synth.schema_designer import SchemaProposal
 
 
 _SYSTEM_PROMPT = """You produce derivation rules for a PixelMem schema.

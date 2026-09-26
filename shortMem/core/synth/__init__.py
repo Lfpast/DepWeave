@@ -13,12 +13,12 @@ slots in pre-written templates, rather than writing free-form code. This
 keeps the execution path safe without a sandbox.
 """
 
-from shortmem.synth.schema_designer import SchemaDesigner, SchemaProposal
-from shortmem.synth.extractor_synth import ExtractorSynth
-from shortmem.synth.derivation_synth import DerivationSynth
-from shortmem.synth.prompt_synth import PromptSynth
-from shortmem.synth.refine import Refiner, RefinementOutcome
-from shortmem.synth.orchestrator import synthesize_pipeline, SynthesisResult
+from core.synth.schema_designer import SchemaDesigner, SchemaProposal
+from core.synth.extractor_synth import ExtractorSynth
+from core.synth.derivation_synth import DerivationSynth
+from core.synth.prompt_synth import PromptSynth
+from core.synth.refine import Refiner, RefinementOutcome
+from core.synth.orchestrator import synthesize_pipeline, SynthesisResult
 
 __all__ = [
     "SchemaDesigner",

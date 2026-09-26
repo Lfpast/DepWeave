@@ -10,7 +10,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional
 
-from shortmem.harness import EvalReport
+from core.harness import EvalReport
 
 
 # Map from failure category to the synthesis stage responsible.

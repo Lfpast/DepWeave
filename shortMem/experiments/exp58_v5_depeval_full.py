@@ -35,11 +35,11 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from shortmem import TaskCard
-from shortmem.cache import CachedExtractor, PixelMemCache
-from shortmem.pipeline import V5Pipeline
-from shortmem.plugins import PluginSet
-from shortmem.types import Primitive
+from core import TaskCard
+from core.cache import CachedExtractor, PixelMemCache
+from core.pipeline import V5Pipeline
+from core.plugins import PluginSet
+from core.types import Primitive
 from benchmarks.dependeval.python_deps import (
     PythonDependencyEngine,
     PythonDependencyExtractor,

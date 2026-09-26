@@ -9,4 +9,5 @@ dist/
 venv/
 .DS_Store
 .ipynb_checkpoints/
-results/
+shortMem/results/
+shortMem/benchmarks/

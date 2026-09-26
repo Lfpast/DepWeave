@@ -19,14 +19,14 @@ from pixelmem.primitive_extractor import (
 )
 from pixelmem.symbol_resolver import SymbolResolver
 
-from shortmem.plugins import (
+from core.plugins import (
     DerivationEngine,
     DerivationRule,
     Extractor,
     PluginSet,
     PromptTemplate,
 )
-from shortmem.types import EvidenceBundle, Primitive, TaskSpec
+from core.types import EvidenceBundle, Primitive, TaskSpec
 
 
 # ---------------------------------------------------------------------------

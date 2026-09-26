@@ -12,7 +12,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Optional, Protocol, runtime_checkable
 
-from shortmem.types import EvidenceBundle, Primitive, PipelineStats, TaskSpec
+from core.types import EvidenceBundle, Primitive, PipelineStats, TaskSpec
 
 
 # ---------------------------------------------------------------------------

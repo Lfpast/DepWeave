@@ -27,11 +27,11 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from shortmem import TaskCard
-from shortmem.cache import CachedExtractor, PixelMemCache
-from shortmem.pipeline import V5Pipeline
-from shortmem.plugins import PluginSet
-from shortmem.harness import default_input_adapter
+from core import TaskCard
+from core.cache import CachedExtractor, PixelMemCache
+from core.pipeline import V5Pipeline
+from core.plugins import PluginSet
+from core.harness import default_input_adapter
 
 from benchmarks.local_model import LocalQwen3, MODEL_NAME, RESULTS_DIR, add_model_arguments
 from benchmarks.repoqa import REPOQA_JSON, RepoQAFunctionExtractor, RepoQASearchPrompt

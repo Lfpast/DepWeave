@@ -39,11 +39,11 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from shortmem import TaskCard
-from shortmem.pipeline import V5Pipeline
-from shortmem.plugins import Extractor, PluginSet, PromptTemplate
-from shortmem.types import EvidenceBundle, PipelineStats, Primitive, TaskSpec
-from shortmem.harness import default_input_adapter
+from core import TaskCard
+from core.pipeline import V5Pipeline
+from core.plugins import Extractor, PluginSet, PromptTemplate
+from core.types import EvidenceBundle, PipelineStats, Primitive, TaskSpec
+from core.harness import default_input_adapter
 from benchmarks.repoqa import REPOQA_JSON, RepoQAFunctionExtractor, RepoQASearchPrompt
 
 from benchmarks.local_model import LocalQwen3, MODEL_NAME, RESULTS_DIR, add_model_arguments

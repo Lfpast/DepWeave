@@ -30,8 +30,8 @@ import re
 from dataclasses import dataclass
 from typing import Any, Optional
 
-from shortmem.plugins import Extractor, PromptTemplate
-from shortmem.types import EvidenceBundle, Primitive, TaskSpec
+from core.plugins import Extractor, PromptTemplate
+from core.types import EvidenceBundle, Primitive, TaskSpec
 
 
 # ---------------------------------------------------------------------------

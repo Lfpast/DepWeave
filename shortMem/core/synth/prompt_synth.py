@@ -19,10 +19,10 @@ import json
 import re
 from typing import Any
 
-from shortmem.plugins import LLMCaller, PromptTemplate
-from shortmem.types import EvidenceBundle, TaskSpec
-from shortmem.synth._json_tolerant import parse_json_object
-from shortmem.synth.schema_designer import SchemaProposal
+from core.plugins import LLMCaller, PromptTemplate
+from core.types import EvidenceBundle, TaskSpec
+from core.synth._json_tolerant import parse_json_object
+from core.synth.schema_designer import SchemaProposal
 
 
 _SYSTEM_PROMPT = """You produce a PROMPT TEMPLATE for a PixelMem memory system.

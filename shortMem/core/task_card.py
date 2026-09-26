@@ -36,7 +36,7 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-from shortmem.types import Example, TaskSpec
+from core.types import Example, TaskSpec
 
 
 def _load_text(path: str | Path) -> str:

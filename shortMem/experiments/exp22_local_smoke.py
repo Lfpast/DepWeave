@@ -25,8 +25,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from shortmem import TaskCard
-from shortmem.plugins import PluginSet
+from core import TaskCard
+from core.plugins import PluginSet
 from benchmarks.dependeval.python_deps import build_python_deps_plugins
 from benchmarks.local_model import LocalQwen3, MODEL_NAME, RESULTS_DIR, add_model_arguments
 
@@ -183,10 +183,10 @@ def _convo_card() -> TaskCard:
 # on a live schema-design LLM call.
 
 def _convo_plugins() -> PluginSet:
-    from shortmem.synth.extractor_synth import (
+    from core.synth.extractor_synth import (
         ExtractionPattern, TemplateExtractor,
     )
-    from shortmem.synth.prompt_synth import SynthesizedPrompt
+    from core.synth.prompt_synth import SynthesizedPrompt
 
     patterns = [
         ExtractionPattern(
@@ -272,9 +272,9 @@ def _kg_card() -> TaskCard:
 
 
 def _kg_plugins() -> PluginSet:
-    from shortmem.plugins import DerivationRule
-    from shortmem.synth.extractor_synth import ExtractionPattern, TemplateExtractor
-    from shortmem.synth.prompt_synth import SynthesizedPrompt
+    from core.plugins import DerivationRule
+    from core.synth.extractor_synth import ExtractionPattern, TemplateExtractor
+    from core.synth.prompt_synth import SynthesizedPrompt
 
     patterns = [
         ExtractionPattern(
@@ -321,10 +321,10 @@ def _kg_plugins() -> PluginSet:
 
 def _parallel_evaluate(card: TaskCard, plugins: PluginSet, llm, max_workers: int = 5):
     """Run TaskCard holdout via TestHarness, parallelizing per-example."""
-    from shortmem.pipeline import V5Pipeline
-    from shortmem.types import PipelineStats
+    from core.pipeline import V5Pipeline
+    from core.types import PipelineStats
     from dataclasses import asdict
-    from shortmem.harness import (
+    from core.harness import (
         FailureCase, EvalReport, _METRICS, _exact_match, _preview,
         classify_failure, default_input_adapter,
     )

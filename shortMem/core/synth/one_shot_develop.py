@@ -26,12 +26,12 @@ import re
 from dataclasses import dataclass, field
 from typing import Any, Callable, Optional
 
-from shortmem.pipeline import V5Pipeline
-from shortmem.plugins import LLMCaller, PluginSet, PromptTemplate
-from shortmem.types import EvidenceBundle, Example, TaskSpec
-from shortmem.harness import _METRICS, _exact_match, default_input_adapter
-from shortmem.synth._json_tolerant import parse_json_object
-from shortmem.synth.extractor_synth import (
+from core.pipeline import V5Pipeline
+from core.plugins import LLMCaller, PluginSet, PromptTemplate
+from core.types import EvidenceBundle, Example, TaskSpec
+from core.harness import _METRICS, _exact_match, default_input_adapter
+from core.synth._json_tolerant import parse_json_object
+from core.synth.extractor_synth import (
     ExtractionPattern, TemplateExtractor, _patterns_to_json,
 )
 

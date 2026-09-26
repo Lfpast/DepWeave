@@ -16,10 +16,10 @@ import re
 from dataclasses import dataclass, field
 from typing import Any, Optional
 
-from shortmem.plugins import Extractor, LLMCaller
-from shortmem.types import Primitive
-from shortmem.synth._json_tolerant import parse_json_object
-from shortmem.synth.schema_designer import SchemaProposal
+from core.plugins import Extractor, LLMCaller
+from core.types import Primitive
+from core.synth._json_tolerant import parse_json_object
+from core.synth.schema_designer import SchemaProposal
 
 
 @dataclass
@@ -175,7 +175,7 @@ class ExtractorSynth:
         list of per-iteration ``ExtractorTestResult`` objects.
         """
         # Deferred import to avoid a cycle (extractor_tester imports Extractor).
-        from shortmem.synth.extractor_tester import test_extractor
+        from core.synth.extractor_tester import test_extractor
 
         sample = few_shot_sample or _first_doc_sample(examples)
         prev_patterns_json = ""
@@ -206,7 +206,7 @@ class ExtractorSynth:
                     print(f"[extractor-synth] iter {it} synth failed: {e}")
                 # Can't test what didn't parse; construct a synthetic
                 # failure feedback and retry.
-                from shortmem.synth.extractor_tester import ExtractorTestResult
+                from core.synth.extractor_tester import ExtractorTestResult
                 trace.append(ExtractorTestResult(
                     passed=False,
                     n_primitives=0, n_docs=0,

@@ -14,9 +14,9 @@ import json
 import re
 from dataclasses import dataclass, field
 
-from shortmem.plugins import LLMCaller
-from shortmem.types import TaskSpec
-from shortmem.synth._json_tolerant import parse_json_object
+from core.plugins import LLMCaller
+from core.types import TaskSpec
+from core.synth._json_tolerant import parse_json_object
 
 
 @dataclass

@@ -19,13 +19,13 @@ from __future__ import annotations
 import time
 from typing import Any, Optional
 
-from shortmem.derivation import DefaultDerivationEngine
-from shortmem.plugins import (
+from core.derivation import DefaultDerivationEngine
+from core.plugins import (
     DerivationEngine,
     LLMCaller,
     PluginSet,
 )
-from shortmem.types import (
+from core.types import (
     EvidenceBundle,
     PipelineStats,
     Primitive,

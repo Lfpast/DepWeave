@@ -6,8 +6,8 @@ import ast as _pyast
 import re
 from typing import Any
 
-from shortmem.plugins import Extractor, PromptTemplate
-from shortmem.types import EvidenceBundle, Primitive, TaskSpec
+from core.plugins import Extractor, PromptTemplate
+from core.types import EvidenceBundle, Primitive, TaskSpec
 
 REPOQA_JSON = "/tmp/repoqa-2024-06-23.json"
 

@@ -16,10 +16,10 @@ from collections import Counter
 from dataclasses import asdict, dataclass, field
 from typing import Any, Callable, Optional
 
-from shortmem.pipeline import V5Pipeline
-from shortmem.plugins import LLMCaller, PluginSet
-from shortmem.types import Example, PipelineStats, Primitive, TaskSpec
-from shortmem.task_card import TaskCard
+from core.pipeline import V5Pipeline
+from core.plugins import LLMCaller, PluginSet
+from core.types import Example, PipelineStats, Primitive, TaskSpec
+from core.task_card import TaskCard
 
 
 # ---------------------------------------------------------------------------

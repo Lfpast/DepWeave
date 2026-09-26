@@ -23,8 +23,8 @@ from __future__ import annotations
 from collections import Counter
 from dataclasses import dataclass, field
 
-from shortmem.plugins import Extractor
-from shortmem.types import Example, Primitive, TaskSpec
+from core.plugins import Extractor
+from core.types import Example, Primitive, TaskSpec
 
 
 @dataclass

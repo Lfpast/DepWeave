@@ -14,8 +14,8 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import Iterable, Optional
 
-from shortmem.plugins import DerivationEngine, DerivationRule
-from shortmem.types import EvidenceBundle, Primitive, TaskSpec
+from core.plugins import DerivationEngine, DerivationRule
+from core.types import EvidenceBundle, Primitive, TaskSpec
 
 
 _MAX_DERIVED_PER_RULE = 5000  # guard against pattern-match blow-up

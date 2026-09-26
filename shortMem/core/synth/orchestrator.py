@@ -21,16 +21,16 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from shortmem.plugins import LLMCaller, PluginSet
-from shortmem.harness import EvalReport, TestHarness
-from shortmem.synth.derivation_synth import DerivationSynth
-from shortmem.synth.extractor_synth import (
+from core.plugins import LLMCaller, PluginSet
+from core.harness import EvalReport, TestHarness
+from core.synth.derivation_synth import DerivationSynth
+from core.synth.extractor_synth import (
     ExtractionPattern, ExtractorSynth, TemplateExtractor,
 )
-from shortmem.synth.prompt_synth import PromptSynth, SynthesizedPrompt
-from shortmem.synth.refine import Refiner, RefinementOutcome
-from shortmem.synth.schema_designer import SchemaDesigner, SchemaProposal
-from shortmem.task_card import TaskCard
+from core.synth.prompt_synth import PromptSynth, SynthesizedPrompt
+from core.synth.refine import Refiner, RefinementOutcome
+from core.synth.schema_designer import SchemaDesigner, SchemaProposal
+from core.task_card import TaskCard
 
 
 # Fallback plugins used when synthesis raises. Not pretty, but keeps the
