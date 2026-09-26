@@ -6,7 +6,7 @@ reject anything that references a relation not in the schema.
 
 from __future__ import annotations
 
-from quill.core.plugins import DerivationRule, LLMCaller
+from quill.plugins import DerivationRule, LLMCaller
 from quill.synth._json_tolerant import parse_json_object
 from quill.synth.schema_designer import SchemaProposal
 

@@ -23,8 +23,8 @@ from __future__ import annotations
 from collections import Counter
 from dataclasses import dataclass, field
 
-from quill.core.plugins import Extractor
-from quill.core.types import Example, Primitive, TaskSpec
+from quill.plugins import Extractor
+from quill.types import Example, Primitive, TaskSpec
 
 
 @dataclass

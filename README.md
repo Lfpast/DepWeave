@@ -10,7 +10,7 @@ more, richer context, it **derives** a compact, task-shaped view and wins on
 
 | Folder | What it is | Runs standalone? |
 |--------|------------|------------------|
-| [`quill/`](quill/) | **CardMem / "Quill"** — the V5 compact-card method (package `quill`), evaluated on DependEval and RepoQA. | **Yes** — the `quill` package plus the vendored `pixelmem` V2–V4 substrate it builds on. `pip install -r requirements.txt` then `PYTHONPATH=. python experiments/exp58_v5_depeval_full.py` (an eval run also needs `OPENAI_API_KEY` + the datasets). |
+| [`quill/`](quill/) | **CardMem / "Quill"** — the compact-card method, evaluated on DependEval and RepoQA. | **Yes** — the `quill` package, a unified flat `pixelmem` package, and task interfaces under `benchmarks/`. See `quill/README.md` for commands and recorded results. |
 | [`codegraph/`](codegraph/) | **code_graph plugin** — a Codebase-Memory-style symbol graph (calls / inherits / uses / imports …) on the same substrate, with token-budgeted navigation and an MCP server. | **Yes** — depends only on `pixelmem/v5/core`; `PYTHONPATH=. python experiments/exp61_code_graph_demo.py` runs offline. |
 
 ## Headline results

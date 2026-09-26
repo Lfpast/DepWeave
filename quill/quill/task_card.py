@@ -36,7 +36,7 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-from quill.core.types import Example, TaskSpec
+from quill.types import Example, TaskSpec
 
 
 def _load_text(path: str | Path) -> str:

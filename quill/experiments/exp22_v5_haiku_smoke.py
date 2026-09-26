@@ -35,8 +35,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from quill import TaskCard
-from quill.core.plugins import PluginSet
-from quill.plugins.python_deps import build_python_deps_plugins
+from quill.plugins import PluginSet
+from benchmarks.dependeval.python_deps import build_python_deps_plugins
 
 
 # ---------------------------------------------------------------------------
@@ -351,7 +351,7 @@ def _kg_card() -> TaskCard:
 
 
 def _kg_plugins() -> PluginSet:
-    from quill.core.plugins import DerivationRule
+    from quill.plugins import DerivationRule
     from quill.synth.extractor_synth import ExtractionPattern, TemplateExtractor
     from quill.synth.prompt_synth import SynthesizedPrompt
 
@@ -400,8 +400,8 @@ def _kg_plugins() -> PluginSet:
 
 def _parallel_evaluate(card: TaskCard, plugins: PluginSet, llm, max_workers: int = 5):
     """Run TaskCard holdout via TestHarness, parallelizing per-example."""
-    from quill.core.pipeline import V5Pipeline
-    from quill.core.types import PipelineStats
+    from quill.pipeline import V5Pipeline
+    from quill.types import PipelineStats
     from dataclasses import asdict
     from quill.harness import (
         FailureCase, EvalReport, _METRICS, _exact_match, _preview,

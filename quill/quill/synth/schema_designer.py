@@ -14,8 +14,8 @@ import json
 import re
 from dataclasses import dataclass, field
 
-from quill.core.plugins import LLMCaller
-from quill.core.types import TaskSpec
+from quill.plugins import LLMCaller
+from quill.types import TaskSpec
 from quill.synth._json_tolerant import parse_json_object
 
 

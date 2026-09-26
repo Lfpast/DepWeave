@@ -33,13 +33,12 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from openai import OpenAI
 
-from experiments.exp37_v5_repoqa import RepoQAFunctionExtractor
+from benchmarks.repoqa import REPOQA_JSON, RepoQAFunctionExtractor
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
-REPOQA_JSON = "/tmp/repoqa-2024-06-23.json"
 RESULTS_PATH = str(REPO_ROOT / "results" / "exp60_repoqa_primitive_dump.json")
 SUMMARY_PATH = str(REPO_ROOT / "results" / "exp60_repoqa_primitive_dump_summary.json")
 

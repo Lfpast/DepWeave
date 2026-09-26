@@ -1,5 +1,7 @@
 # PixelMem V4: 81% on DependEval — Current State and Remaining Failures
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 ## Results Summary
 
 | Method | Accuracy | 3-file | 4-file | 5-file | Tokens |

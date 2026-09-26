@@ -1,5 +1,7 @@
 # V5 Findings — Complete Story
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 Consolidated from exp22 through exp36. This doc replaces the scattered
 per-experiment notes for anyone coming in fresh.
 

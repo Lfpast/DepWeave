@@ -1,5 +1,7 @@
 # V5 Benchmark Fit — Which Benchmarks Match the Method
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 Updated after exp34 (DependEval Task 4 one-shot = 0/5).
 
 ## Rule of thumb

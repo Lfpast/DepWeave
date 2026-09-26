@@ -16,8 +16,8 @@ import re
 from dataclasses import dataclass, field
 from typing import Any, Optional
 
-from quill.core.plugins import Extractor, LLMCaller
-from quill.core.types import Primitive
+from quill.plugins import Extractor, LLMCaller
+from quill.types import Primitive
 from quill.synth._json_tolerant import parse_json_object
 from quill.synth.schema_designer import SchemaProposal
 

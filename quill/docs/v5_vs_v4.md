@@ -1,5 +1,7 @@
 # V5 vs V4 — What Changed and Why
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 One-sentence summary: **V4 is a hand-written pipeline for one task. V5 is a plugin host that can run V4 as a plugin — or synthesize its own plugins from a TaskCard for any new task.**
 
 ## TL;DR table

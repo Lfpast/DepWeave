@@ -1,5 +1,7 @@
 # V5 End-to-End Examples
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 Two complete pipeline traces showing every stage V5 runs on real benchmark data.
 Both use `gpt-4o-mini` as the LLM backend and the same `V5Pipeline` orchestrator.
 

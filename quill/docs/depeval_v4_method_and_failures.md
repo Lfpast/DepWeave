@@ -1,5 +1,7 @@
 # PixelMem V4: Graph-Native Retrieval for DependEval
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 ## 1. Task
 
 **DependEval Task 2 (Repository Construction)**: Given 3-5 Python source files with full code (~40K tokens), determine the correct dependency ordering -- base files first, dependent files last.

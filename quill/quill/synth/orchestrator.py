@@ -21,7 +21,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from quill.core.plugins import LLMCaller, PluginSet
+from quill.plugins import LLMCaller, PluginSet
 from quill.harness import EvalReport, TestHarness
 from quill.synth.derivation_synth import DerivationSynth
 from quill.synth.extractor_synth import (

@@ -1,5 +1,7 @@
 # V5 — Workload-Reducing Tool Design
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 Follow-up to `docs/v5_failure_review.md` on the question: **is V5's extractor too weak for CrossCodeEval, or is the task the ceiling?**
 
 ## Reframe

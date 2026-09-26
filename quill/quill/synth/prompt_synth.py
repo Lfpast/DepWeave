@@ -19,8 +19,8 @@ import json
 import re
 from typing import Any
 
-from quill.core.plugins import LLMCaller, PromptTemplate
-from quill.core.types import EvidenceBundle, TaskSpec
+from quill.plugins import LLMCaller, PromptTemplate
+from quill.types import EvidenceBundle, TaskSpec
 from quill.synth._json_tolerant import parse_json_object
 from quill.synth.schema_designer import SchemaProposal
 

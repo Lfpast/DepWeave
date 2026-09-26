@@ -1,5 +1,7 @@
 # PixelMem on DependEval: Method, Results, and Failure Analysis
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 ## 1. Task
 
 **DependEval Task 2 (Repository Construction)**: Given 3-5 Python source files with their full code, determine the correct dependency ordering — base files first, files that depend on others last.

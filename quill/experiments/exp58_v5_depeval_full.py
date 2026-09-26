@@ -1,13 +1,12 @@
 """Exp 58: CardMem (V5) on DependEval Task 2 (Python, 3-5 file items).
 
-Wraps V4's dependency-ordering pipeline through V5's plugin host so we can
-report a CardMem-on-DependEval data point in the paper. V4 standalone
-(exp21) hit 81.3 % / 389 mean input tokens on the same 166 questions.
-This experiment confirms the V5-wrapped path matches that.
+Runs the unified PixelMem dependency extractor through Quill's plugin host.
+The earlier V4 standalone run scored 81.3 % / 389 mean input tokens on the
+same 166 questions; this driver records the Quill run separately.
 
 Configuration:
-  - Plugin set: ``build_python_deps_plugins()`` (V4Extractor +
-    V4DependencyEngine + V4OrderingPrompt) — the same V4 components,
+  - Plugin set: ``build_python_deps_plugins()`` (PythonDependencyExtractor +
+    PythonDependencyEngine + PythonOrderingPrompt) — the same V4 components,
     routed through ``V5Pipeline``.
   - Cache: ``PixelMemCache`` at ``/tmp/v5_depeval_cache``. Each
     DependEval question is a unique 3-5 file slice, so we expect ~0%
@@ -23,7 +22,6 @@ tokens, cache hit rate, wall time) goes to
 
 from __future__ import annotations
 
-import hashlib
 import json
 import os
 import re
@@ -59,19 +57,18 @@ if not os.environ.get("OPENAI_API_KEY"):
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from quill import TaskCard
-from quill.cache import PixelMemCache
-from quill.core.pipeline import V5Pipeline
-from quill.core.plugins import Extractor, PluginSet
-from quill.core.types import Primitive
+from quill.cache import CachedExtractor, PixelMemCache
+from quill.pipeline import V5Pipeline
+from quill.plugins import PluginSet
+from quill.types import Primitive
 from quill.harness import default_input_adapter
-from quill.plugins.python_deps import build_python_deps_plugins
-from quill.plugins.python_deps.default import (
-    V4DependencyEngine,
-    V4Extractor,
-    V4OrderingPrompt,
+from benchmarks.dependeval.python_deps import (
+    PythonDependencyEngine,
+    PythonDependencyExtractor,
+    PythonOrderingPrompt,
 )
 
-from experiments.exp13_dependeval import parse_dependeval_content
+from benchmarks.dependeval.data import DATA_PATH, parse_dependeval_content
 from experiments.exp22_v5_haiku_smoke import openai_4omini
 
 
@@ -80,7 +77,6 @@ from experiments.exp22_v5_haiku_smoke import openai_4omini
 # ---------------------------------------------------------------------------
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DATA_PATH = "/tmp/DependEval/data/python/task2_python_final.json"
 RESULTS_JSON = str(REPO_ROOT / "results" / "exp58_v5_depeval_full.json")
 SUMMARY_JSON = str(REPO_ROOT / "results" / "exp58_v5_depeval_full_summary.json")
 CACHE_DIR = "/tmp/v5_depeval_cache"
@@ -89,87 +85,23 @@ MODEL = "gpt-4o-mini"
 
 
 # ---------------------------------------------------------------------------
-# ProbeCachedExtractor — same workaround used in exp56 to record per-thread
-# cache hits/misses (PixelMemCache.get_or_extract has a hit-check that
-# looks for ``provenance.json`` while the save path writes
-# ``provenance.json.gz`` — without this probe we'd always miss).
+# Cached extractor retaining the context needed for dependency derivation
 # ---------------------------------------------------------------------------
 
 
-def _hash_documents(documents: dict[str, str]) -> str:
-    h = hashlib.sha256()
-    for key in sorted(documents):
-        h.update(key.encode("utf-8"))
-        h.update(b"\x00")
-        value = documents[key]
-        if not isinstance(value, str):
-            value = str(value)
-        h.update(value.encode("utf-8", errors="replace"))
-        h.update(b"\x01")
-    return h.hexdigest()[:16]
+class _DependencyCachedExtractor(CachedExtractor):
+    """Use cached primitives while rebuilding per-query namespace on a hit."""
 
-
-class _ProbeCachedExtractor(Extractor):
-    """Wrap a V4Extractor with a PixelMemCache lookup; also expose
-    ``last_namespace`` / ``last_resolver`` so V4DependencyEngine can read
-    them after a cache hit (the inner extractor only populates these on
-    a real extract() call, so on a hit we need to repopulate)."""
-
-    def __init__(self, inner: V4Extractor, cache: PixelMemCache) -> None:
+    def __init__(self, inner: PythonDependencyExtractor, cache: PixelMemCache) -> None:
+        super().__init__(inner, cache)
         self._inner = inner
-        self._cache = cache
-        self.last_hit: bool = False
-
-    # ---- Extractor protocol ------------------------------------------------
 
     def extract(self, documents: dict[str, str], **kwargs) -> list[Primitive]:
-        key = _hash_documents(documents)
-        entry_dir = Path(self._cache.root) / key
-        lock = self._cache._lock_for(key)
-        with lock:
-            sidecar_gz = entry_dir / "provenance.json.gz"
-            index_json = entry_dir / "index.json"
-            if index_json.exists() and sidecar_gz.exists():
-                t0 = time.perf_counter()
-                primitives = self._cache._load_from_pixels(entry_dir)
-                with self._cache._stats_lock:
-                    self._cache.stats.total_wallclock_load_s += (
-                        time.perf_counter() - t0
-                    )
-                    self._cache.stats.hits += 1
-                self.last_hit = True
-                # On a hit the inner V4Extractor has not run, so its
-                # namespace/resolver are stale or None. The downstream
-                # V4DependencyEngine needs both. Re-run the inner
-                # extractor's setup but discard its triples — we use
-                # the cached primitives, but we need the freshly built
-                # namespace + resolver for graph construction.
-                _ = self._inner.extract(documents, **kwargs)
-                return primitives
-
-            self.last_hit = False
-            with self._cache._stats_lock:
-                self._cache.stats.misses += 1
-            t0 = time.perf_counter()
-            primitives = list(self._inner.extract(documents, **kwargs))
-            extract_s = time.perf_counter() - t0
-
-            t1 = time.perf_counter()
-            self._cache._save_to_pixels(entry_dir, primitives)
-            save_s = time.perf_counter() - t1
-
-            from quill.cache.pixel_cache import _dir_size_bytes
-            size = _dir_size_bytes(entry_dir)
-            with self._cache._stats_lock:
-                self._cache.stats.total_wallclock_extract_s += extract_s
-                self._cache.stats.total_wallclock_save_s += save_s
-                self._cache.stats.bytes_written += size
-                self._cache.stats.primitives_cached += len(primitives)
-                self._cache.stats.cache_entries += 1
-                self._cache.stats.entry_sizes.append(size)
-            return primitives
-
-    # ---- Pass-through introspection used by V4DependencyEngine -------------
+        primitives = super().extract(documents, **kwargs)
+        if self.last_hit:
+            # The graph also needs the namespace and resolver built by extract().
+            self._inner.extract(documents, **kwargs)
+        return primitives
 
     @property
     def last_namespace(self):
@@ -209,18 +141,18 @@ def _build_card() -> TaskCard:
     })
 
 
-def _build_plugins(cache: PixelMemCache) -> tuple[PluginSet, _ProbeCachedExtractor]:
+def _build_plugins(cache: PixelMemCache) -> tuple[PluginSet, _DependencyCachedExtractor]:
     """V4-wrapping plugin set with a PixelMemCache-backed extractor."""
-    inner = V4Extractor(language="python")
-    probe = _ProbeCachedExtractor(inner, cache)
-    engine = V4DependencyEngine(probe)  # type: ignore[arg-type]
+    inner = PythonDependencyExtractor(language="python")
+    probe = _DependencyCachedExtractor(inner, cache)
+    engine = PythonDependencyEngine(probe)  # type: ignore[arg-type]
     plugins = PluginSet(
         name="pydepcard_v4_adapter_cached",
         extractor=probe,
         resolver=None,
         derivation_rules=[],
         derivation_engine=engine,
-        prompt_template=V4OrderingPrompt(),
+        prompt_template=PythonOrderingPrompt(),
     )
     return plugins, probe
 
@@ -235,7 +167,7 @@ def process_q(qi: int, item: dict, cache: PixelMemCache, llm) -> dict:
     files = [f.strip("'\"") for f in f_raw]
     gt_bn = [f.strip("'\"").split("/")[-1] for f in gt_raw]
 
-    # documents dict keyed by file path; matches V4Extractor's expectation.
+    # documents dict keyed by file path; matches PythonDependencyExtractor's expectation.
     documents = {f: fc.get(f, "") for f in files}
     query_input = {"files": files, "file_contents": documents}
 

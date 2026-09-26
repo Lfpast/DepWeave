@@ -1,18 +1,11 @@
-"""PixelMem V5 — plugin-based pipeline with LLM-driven tool synthesis.
+"""Quill's task-card pipeline and optional tool synthesis.
 
-V5 is isolated from V4. Nothing in ``quill/core/`` imports V4.
-V4 is consumed only by the default python-deps plugin set under
-``quill/plugins/python_deps/`` as a backwards-compatible adapter.
-
-Public API::
-
-    from quill import V5Pipeline, TaskCard, TestHarness
-
-See ``docs/v5_plan.md`` for the overall architecture.
+The generic pipeline is independent of PixelMem. Benchmark adapters live in
+``benchmarks/`` and use the unified ``pixelmem`` package when needed.
 """
 
-from quill.core.pipeline import V5Pipeline
-from quill.core.types import (
+from quill.pipeline import V5Pipeline
+from quill.types import (
     Primitive,
     EvidenceBundle,
     TaskSpec,

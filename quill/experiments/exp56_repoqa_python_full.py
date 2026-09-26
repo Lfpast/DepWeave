@@ -11,14 +11,13 @@ All three use ``gpt-4o-mini``. Aggressive parallelism (workers=15) is
 safe at OpenAI Tier 4 (10K RPM / 10M TPM).
 
 The cache layer serializes per-document-set, so concurrent Config-A
-queries against the same repo will produce 1 miss + (n-1) hits. We
-log per-query cache_hit by probing the cache entry_dir before the run.
+queries against the same repo will produce 1 miss + (n-1) hits. The wrapped
+extractor records each query's hit status.
 """
 
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import os
 import sys
@@ -30,17 +29,13 @@ from typing import Any
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from quill import TaskCard
-from quill.cache import PixelMemCache
-from quill.cache.pixel_cache import CachedExtractor
-from quill.core.pipeline import V5Pipeline
-from quill.core.plugins import Extractor, PluginSet
-from quill.core.types import Primitive
+from quill.cache import CachedExtractor, PixelMemCache
+from quill.pipeline import V5Pipeline
+from quill.plugins import PluginSet
 from quill.harness import default_input_adapter
 
 from experiments.exp22_v5_haiku_smoke import openai_4omini
-from experiments.exp37_v5_repoqa import (
-    RepoQAFunctionExtractor, RepoQASearchPrompt, REPOQA_JSON,
-)
+from benchmarks.repoqa import REPOQA_JSON, RepoQAFunctionExtractor, RepoQASearchPrompt
 
 
 CACHE_DIR = "/tmp/v5_repoqa_cache_full"
@@ -71,78 +66,6 @@ def _load_python_needles() -> list[dict]:
                 "needle_path": needle.get("path", ""),
             })
     return cases
-
-
-def _hash_documents(documents: dict[str, str]) -> str:
-    """Mirror PixelMemCache._hash_documents so we can probe entry_dir for hits."""
-    h = hashlib.sha256()
-    for key in sorted(documents):
-        h.update(key.encode("utf-8"))
-        h.update(b"\x00")
-        value = documents[key]
-        if not isinstance(value, str):
-            value = str(value)
-        h.update(value.encode("utf-8", errors="replace"))
-        h.update(b"\x01")
-    return h.hexdigest()[:16]
-
-
-class _ProbeCachedExtractor(Extractor):
-    """Wraps PixelMemCache so each extract() call records hit-or-miss.
-
-    Workaround for a v5 cache mismatch where the hit check looks for
-    ``provenance.json`` but the save path writes ``provenance.json.gz``
-    — meaning ``cache.get_or_extract`` always reports a miss. Here we
-    duplicate the cache's hit-check logic against the actual filename
-    that gets written. We still call into the underlying cache for
-    save/load semantics; on a hit (sidecar already on disk) we read it
-    directly to bypass the broken hit branch.
-    """
-
-    def __init__(self, inner: Extractor, cache: PixelMemCache) -> None:
-        self._inner = inner
-        self._cache = cache
-        self.last_hit: bool = False
-
-    def extract(self, documents: dict[str, str], **kwargs) -> list[Primitive]:
-        key = _hash_documents(documents)
-        entry_dir = Path(self._cache.root) / key
-        # Acquire the cache's per-key lock so concurrent threads on the
-        # same key serialize properly (mirrors what get_or_extract does).
-        lock = self._cache._lock_for(key)
-        with lock:
-            sidecar_gz = entry_dir / "provenance.json.gz"
-            index_json = entry_dir / "index.json"
-            if index_json.exists() and sidecar_gz.exists():
-                # Hit: load from sidecar directly (the v5 load path also
-                # works because it accepts the .gz file).
-                t0 = time.perf_counter()
-                primitives = self._cache._load_from_pixels(entry_dir)
-                with self._cache._stats_lock:
-                    self._cache.stats.total_wallclock_load_s += time.perf_counter() - t0
-                    self._cache.stats.hits += 1
-                self.last_hit = True
-                return primitives
-            # Miss
-            self.last_hit = False
-            with self._cache._stats_lock:
-                self._cache.stats.misses += 1
-            t0 = time.perf_counter()
-            primitives = list(self._inner.extract(documents, **kwargs))
-            extract_s = time.perf_counter() - t0
-            t1 = time.perf_counter()
-            self._cache._save_to_pixels(entry_dir, primitives)
-            save_s = time.perf_counter() - t1
-            from quill.cache.pixel_cache import _dir_size_bytes
-            size = _dir_size_bytes(entry_dir)
-            with self._cache._stats_lock:
-                self._cache.stats.total_wallclock_extract_s += extract_s
-                self._cache.stats.total_wallclock_save_s += save_s
-                self._cache.stats.bytes_written += size
-                self._cache.stats.primitives_cached += len(primitives)
-                self._cache.stats.cache_entries += 1
-                self._cache.stats.entry_sizes.append(size)
-            return primitives
 
 
 # ---------------------------------------------------------------------------
@@ -182,11 +105,10 @@ def _run_cardmem(case: dict, llm, cache: PixelMemCache | None) -> dict:
     repo = case["repo"]
 
     inner_extractor = RepoQAFunctionExtractor()
-    probe: _ProbeCachedExtractor | None = None
+    probe: CachedExtractor | None = None
     if cache is not None:
-        # _ProbeCachedExtractor records this thread's hit/miss as the
-        # cache itself decides it (under the per-key lock).
-        probe = _ProbeCachedExtractor(inner_extractor, cache)
+        # Cache records this query's hit or miss under its per-key lock.
+        probe = cache.wrap(inner_extractor)
         extractor = probe
     else:
         extractor = inner_extractor

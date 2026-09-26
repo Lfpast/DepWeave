@@ -4,7 +4,7 @@ Isolates "what does the structured prompt + derivation add over just dumping
 the extracted primitives?".
 
 For each item:
-  1. Run hand-coded V4Extractor on each source file -> a flat list of
+  1. Run hand-coded PythonDependencyExtractor on each source file -> a flat list of
      (subject, relation, object, condition) quadruples (no derivation,
      no graph, no topo-sort precomputation).
   2. Concatenate ALL quadruples into the prompt as plain text lines.
@@ -50,8 +50,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from openai import OpenAI
 
-from experiments.exp13_dependeval import parse_dependeval_content
-from quill.plugins.python_deps.default import V4Extractor
+from benchmarks.dependeval.data import DATA_PATH, parse_dependeval_content
+from benchmarks.dependeval.python_deps import PythonDependencyExtractor
 
 
 # ---------------------------------------------------------------------------
@@ -59,7 +59,6 @@ from quill.plugins.python_deps.default import V4Extractor
 # ---------------------------------------------------------------------------
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DATA_PATH = "/tmp/DependEval/data/python/task2_python_final.json"
 RESULTS_JSON = str(REPO_ROOT / "results" / "exp59_depeval_primitive_dump.json")
 SUMMARY_JSON = str(REPO_ROOT / "results" / "exp59_depeval_primitive_dump_summary.json")
 MAX_WORKERS = 15
@@ -129,13 +128,13 @@ def process_q(qi: int, item: dict) -> dict:
     gt_bn = [f.strip("'\"").split("/")[-1] for f in gt_raw]
     basenames = [f.split("/")[-1] for f in files]
 
-    # documents dict keyed by full file path; matches V4Extractor's API
+    # documents dict keyed by full file path; matches PythonDependencyExtractor's API
     documents = {f: fc.get(f, "") for f in files}
 
     # Run the V4 extractor on the FULL set of files together (so internal
     # alias resolution works the same way it does in PyDepCard); collect
     # the flat list of primitives.
-    extractor = V4Extractor(language="python")
+    extractor = PythonDependencyExtractor(language="python")
     try:
         primitives = extractor.extract(documents)
     except Exception as e:

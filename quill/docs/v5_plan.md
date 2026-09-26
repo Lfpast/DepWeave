@@ -1,5 +1,7 @@
 # PixelMem V5 Plan — From Hand-Written Tool to Synthesized Tool
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 > V4 gave the LLM a tool. V5 teaches the LLM to build the tool.
 
 ## 1. Why V5

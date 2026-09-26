@@ -3,5 +3,4 @@ numpy
 Pillow
 openai
 anthropic
-rank-bm25
 PyYAML

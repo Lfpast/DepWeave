@@ -30,8 +30,8 @@ import re
 from dataclasses import dataclass
 from typing import Any, Optional
 
-from quill.core.plugins import Extractor, PromptTemplate
-from quill.core.types import EvidenceBundle, Primitive, TaskSpec
+from quill.plugins import Extractor, PromptTemplate
+from quill.types import EvidenceBundle, Primitive, TaskSpec
 
 
 # ---------------------------------------------------------------------------

@@ -16,9 +16,9 @@ from collections import Counter
 from dataclasses import asdict, dataclass, field
 from typing import Any, Callable, Optional
 
-from quill.core.pipeline import V5Pipeline
-from quill.core.plugins import LLMCaller, PluginSet
-from quill.core.types import Example, PipelineStats, Primitive, TaskSpec
+from quill.pipeline import V5Pipeline
+from quill.plugins import LLMCaller, PluginSet
+from quill.types import Example, PipelineStats, Primitive, TaskSpec
 from quill.task_card import TaskCard
 
 

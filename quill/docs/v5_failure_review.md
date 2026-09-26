@@ -1,5 +1,7 @@
 # V5 Failure Review
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 A root-cause walk through every failure across the 6 V5 benchmark runs
 (`exp22`–`exp26`). Total: **32 failures across 60 attempts**.
 

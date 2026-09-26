@@ -4,9 +4,7 @@ __all__ = ["PixelMemUnit", "ShardManager", "encode_text", "decode_query"]
 
 
 def __getattr__(name):
-    # Lazy re-exports (PEP 562): importing a submodule (e.g. pixelmem.v6.*) must
-    # not pull in the pixel encoder/decoder and their numpy/Pillow deps. These
-    # names still resolve on first access for v1–v5 callers.
+    # Lazy re-exports avoid loading numpy/Pillow for unrelated imports.
     if name == "PixelMemUnit":
         from pixelmem.memory import PixelMemUnit
         return PixelMemUnit

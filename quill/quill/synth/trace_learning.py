@@ -30,8 +30,8 @@ import json
 from dataclasses import asdict, dataclass, field
 from typing import Any, Optional
 
-from quill.core.plugins import LLMCaller, PluginSet, PromptTemplate
-from quill.core.types import EvidenceBundle, Primitive, TaskSpec
+from quill.plugins import LLMCaller, PluginSet, PromptTemplate
+from quill.types import EvidenceBundle, Primitive, TaskSpec
 from quill.synth._json_tolerant import parse_json_object
 from quill.synth.candidate_aware import (
     SymbolExtractor, _analyze_completion_site, _rank_candidates,

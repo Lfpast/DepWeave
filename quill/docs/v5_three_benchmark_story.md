@@ -1,5 +1,7 @@
 # V5 on DependEval / RepoQA / SWE-Bench — the Three-Benchmark Story
 
+> Historical experiment note: versioned module paths and directory layouts below refer to the pre-restructure repository. See [Quill README](../README.md) for the current layout.
+
 Consolidated after exp37–exp41. Each benchmark demonstrates a different V5 value-prop; together they make the case (and also honestly flag where the case doesn't hold).
 
 ## One-line per benchmark

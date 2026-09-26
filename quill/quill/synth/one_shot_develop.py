@@ -26,9 +26,9 @@ import re
 from dataclasses import dataclass, field
 from typing import Any, Callable, Optional
 
-from quill.core.pipeline import V5Pipeline
-from quill.core.plugins import LLMCaller, PluginSet, PromptTemplate
-from quill.core.types import EvidenceBundle, Example, TaskSpec
+from quill.pipeline import V5Pipeline
+from quill.plugins import LLMCaller, PluginSet, PromptTemplate
+from quill.types import EvidenceBundle, Example, TaskSpec
 from quill.harness import _METRICS, _exact_match, default_input_adapter
 from quill.synth._json_tolerant import parse_json_object
 from quill.synth.extractor_synth import (
