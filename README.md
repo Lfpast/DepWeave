@@ -10,12 +10,12 @@ more, richer context, it **derives** a compact, task-shaped view and wins on
 
 | Folder | What it is | Runs standalone? |
 |--------|------------|------------------|
-| [`quill/`](quill/) | **CardMem / "Quill"** — the compact-card method, evaluated on DependEval and RepoQA. | **Yes** — the `quill` package, a unified flat `pixelmem` package, and task interfaces under `benchmarks/`. See `quill/README.md` for commands and recorded results. |
+| [`shortMem/`](shortMem/) | **CardMem** — the compact-card method, evaluated on DependEval and RepoQA. | **Yes** — the `shortmem` package, a unified flat `pixelmem` package, and task interfaces under `benchmarks/`. See `shortMem/README.md` for commands and recorded results. |
 | [`codegraph/`](codegraph/) | **code_graph plugin** — a Codebase-Memory-style symbol graph (calls / inherits / uses / imports …) on the same substrate, with token-budgeted navigation and an MCP server. | **Yes** — depends only on `pixelmem/v5/core`; `PYTHONPATH=. python experiments/exp61_code_graph_demo.py` runs offline. |
 
 ## Headline results
 
-**CardMem (Quill)** — DependEval Task 2, gpt-4o-mini, 166 items:
+**CardMem (historical GPT-4o-mini run)** — DependEval Task 2, 166 items:
 **84.9 % at 322 input tokens**, beating the V4 baseline (81.3 % / 389) and far
 above a primitive-dump (43.4 % / 1577) or full-text (41.6 % / 2722). The +41 pp
 over a raw primitive dump comes from the **derivation + ranking** layer — not
@@ -25,4 +25,6 @@ extraction.
 tokens** vs ~22 K to dump source (≈**333–782× smaller**, corpus-dependent), with
 no measurable accuracy loss in the offline pipeline.
 
-See each folder's `README.md` for full tables, provenance, and how to run.
+The current CardMem scripts use a local Qwen3-4B checkpoint; no Qwen benchmark
+result has been recorded yet. See each folder's `README.md` for full tables,
+provenance, and how to run.

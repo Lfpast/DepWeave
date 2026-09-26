@@ -1,0 +1,7 @@
+# Install a PyTorch build suited to your CPU/CUDA environment before this file.
+torch
+transformers>=4.51.0,<5
+accelerate
+numpy
+Pillow
+PyYAML

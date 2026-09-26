@@ -1,6 +1,0 @@
-# Quill (CardMem) — runtime dependencies
-numpy
-Pillow
-openai
-anthropic
-PyYAML
