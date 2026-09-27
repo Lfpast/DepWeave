@@ -1,0 +1,55 @@
+{
+  "n_total": 166,
+  "n_correct": 72,
+  "accuracy": 0.43373493975903615,
+  "by_file_count": {
+    "3": {
+      "correct": 47,
+      "total": 79,
+      "accuracy": 0.5949367088607594
+    },
+    "4": {
+      "correct": 23,
+      "total": 71,
+      "accuracy": 0.323943661971831
+    },
+    "5": {
+      "correct": 2,
+      "total": 16,
+      "accuracy": 0.125
+    }
+  },
+  "mean_input_tokens": 1577.3192771084337,
+  "mean_output_tokens": 23.548192771084338,
+  "mean_quadruples_per_item": 96.3433734939759,
+  "wall_seconds": 15.827914631925523,
+  "error_taxonomy": {
+    "correct": 72,
+    "wrong_order": 63,
+    "wrong_files": 31
+  },
+  "model": "gpt-4o-mini",
+  "max_workers": 15,
+  "references": {
+    "quill_cardmem": {
+      "accuracy": 0.849,
+      "mean_input_tokens": 322
+    },
+    "pydepcard_v4": {
+      "accuracy": 0.813,
+      "mean_input_tokens": 389
+    },
+    "full_text_exp57": {
+      "accuracy": 0.416,
+      "mean_input_tokens": 2722
+    }
+  },
+  "deltas": {
+    "vs_quill_accuracy_pp": -41.526506024096385,
+    "vs_pydepcard_accuracy_pp": -37.926506024096376,
+    "vs_full_text_accuracy_pp": 1.7734939759036172,
+    "vs_quill_input_tokens": 1255.3192771084337,
+    "vs_pydepcard_input_tokens": 1188.3192771084337,
+    "vs_full_text_input_tokens": -1144.6807228915663
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "n_total": 166,
+  "n_correct": 141,
+  "accuracy": 0.8493975903614458,
+  "by_file_count": {
+    "3": {
+      "correct": 71,
+      "total": 79,
+      "accuracy": 0.8987341772151899
+    },
+    "4": {
+      "correct": 58,
+      "total": 71,
+      "accuracy": 0.8169014084507042
+    },
+    "5": {
+      "correct": 12,
+      "total": 16,
+      "accuracy": 0.75
+    }
+  },
+  "mean_input_tokens": 322.03614457831327,
+  "mean_output_tokens": 24.957831325301203,
+  "mean_extraction_time_s": 0.4949740423142057,
+  "mean_query_time_s": 1.7194047375253951,
+  "cache_hits": 2,
+  "cache_hit_rate": 0.012048192771084338,
+  "wall_seconds": 25.3024529221002,
+  "error_taxonomy": {
+    "correct": 141,
+    "wrong_order": 24,
+    "wrong_files": 1
+  },
+  "model": "gpt-4o-mini",
+  "max_workers": 15,
+  "pixelmem_cache_stats": {
+    "hits": 2,
+    "misses": 164,
+    "hit_rate": 0.012048192771084338,
+    "total_wallclock_extract_s": 6.500207643723115,
+    "total_wallclock_load_s": 0.11597577901557088,
+    "total_wallclock_save_s": 56.723414352862164,
+    "bytes_written": 2854850,
+    "primitives_cached": 15852,
+    "cache_entries": 164,
+    "avg_entry_size_bytes": 17407.621951219513
+  },
+  "v4_standalone_reference": {
+    "n_total": 166,
+    "n_correct": 135,
+    "accuracy": 0.8132530120481928,
+    "by_file_count": {
+      "3": 87,
+      "4": 76,
+      "5": 75
+    },
+    "mean_input_tokens": 389
+  },
+  "delta_vs_v4_standalone": {
+    "accuracy_delta": 0.03614457831325302,
+    "mean_input_tokens_delta": -66.96385542168673
+  }
+}

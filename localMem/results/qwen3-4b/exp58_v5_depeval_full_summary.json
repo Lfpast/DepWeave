@@ -1,0 +1,51 @@
+{
+  "n_total": 166,
+  "n_correct": 130,
+  "accuracy": 0.7831325301204819,
+  "by_file_count": {
+    "3": {
+      "correct": 67,
+      "total": 79,
+      "accuracy": 0.8481012658227848
+    },
+    "4": {
+      "correct": 52,
+      "total": 71,
+      "accuracy": 0.7323943661971831
+    },
+    "5": {
+      "correct": 11,
+      "total": 16,
+      "accuracy": 0.6875
+    }
+  },
+  "mean_input_tokens": 326.7530120481928,
+  "mean_output_tokens": 22.03012048192771,
+  "mean_extraction_time_s": 0.01821595481358446,
+  "mean_query_time_s": 6.333751765168335,
+  "cache_hits": 2,
+  "cache_hit_rate": 0.012048192771084338,
+  "wall_seconds": null,
+  "error_taxonomy": {
+    "correct": 130,
+    "wrong_order": 34,
+    "wrong_files": 2
+  },
+  "model": "Qwen3-4B",
+  "backend": "local_transformers",
+  "model_path": null,
+  "max_new_tokens": null,
+  "max_workers": null,
+  "pixelmem_cache_stats": {
+    "hits": 2,
+    "misses": 164,
+    "hit_rate": 0.012048192771084338,
+    "total_wallclock_extract_s": null,
+    "total_wallclock_load_s": null,
+    "total_wallclock_save_s": null,
+    "bytes_written": null,
+    "primitives_cached": null,
+    "cache_entries": null,
+    "avg_entry_size_bytes": null
+  }
+}

@@ -1,0 +1,3861 @@
+[
+  {
+    "qi": 0,
+    "exact": true,
+    "predicted_order": [
+      "_typing.py",
+      "__init__.py",
+      "test_login.py"
+    ],
+    "gt_order": [
+      "_typing.py",
+      "__init__.py",
+      "test_login.py"
+    ],
+    "input_tokens": 235,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.030887730987160467,
+    "query_time": 13.590668700999231,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 1,
+    "exact": true,
+    "predicted_order": [
+      "workflow_helper.py",
+      "tasks.py",
+      "boston.py",
+      "endpoint.py"
+    ],
+    "gt_order": [
+      "workflow_helper.py",
+      "tasks.py",
+      "boston.py",
+      "endpoint.py"
+    ],
+    "input_tokens": 315,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.012391533004119992,
+    "query_time": 5.163943715990172,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 2,
+    "exact": true,
+    "predicted_order": [
+      "__init__.py",
+      "base_criterion.py",
+      "lightseq_label_smoothed_cross_entropy.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "base_criterion.py",
+      "lightseq_label_smoothed_cross_entropy.py",
+      "__init__.py"
+    ],
+    "input_tokens": 382,
+    "output_tokens": 36,
+    "n_files": 4,
+    "extraction_time": 0.010150889997021295,
+    "query_time": 10.179915500004427,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 3,
+    "exact": true,
+    "predicted_order": [
+      "backend.py",
+      "freq.py",
+      "__init__.py",
+      "encoding.py"
+    ],
+    "gt_order": [
+      "backend.py",
+      "freq.py",
+      "__init__.py",
+      "encoding.py"
+    ],
+    "input_tokens": 287,
+    "output_tokens": 18,
+    "n_files": 4,
+    "extraction_time": 0.010539120994508266,
+    "query_time": 5.10152907599695,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 4,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "iq_privacy_get.py",
+      "test_iq_privacy_get.py"
+    ],
+    "gt_order": [
+      "iq_privacy_get.py",
+      "__init__.py",
+      "test_iq_privacy_get.py"
+    ],
+    "input_tokens": 348,
+    "output_tokens": 23,
+    "n_files": 3,
+    "extraction_time": 0.009800435000215657,
+    "query_time": 6.8433192020020215,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 5,
+    "exact": true,
+    "predicted_order": [
+      "classify.py",
+      "views.py",
+      "urls.py"
+    ],
+    "gt_order": [
+      "classify.py",
+      "views.py",
+      "urls.py"
+    ],
+    "input_tokens": 252,
+    "output_tokens": 13,
+    "n_files": 3,
+    "extraction_time": 0.009961963005480357,
+    "query_time": 3.5476054070022656,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 6,
+    "exact": true,
+    "predicted_order": [
+      "help_view.py",
+      "quit_view.py",
+      "quit_controller.py",
+      "douban.py"
+    ],
+    "gt_order": [
+      "help_view.py",
+      "quit_view.py",
+      "quit_controller.py",
+      "douban.py"
+    ],
+    "input_tokens": 287,
+    "output_tokens": 22,
+    "n_files": 4,
+    "extraction_time": 0.019469115999527276,
+    "query_time": 6.46040295700368,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 7,
+    "exact": true,
+    "predicted_order": [
+      "rerank_options.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "rerank_options.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "input_tokens": 238,
+    "output_tokens": 28,
+    "n_files": 3,
+    "extraction_time": 0.009594845992978662,
+    "query_time": 8.035733618002268,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 8,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "__init__.py",
+      "user.py",
+      "conftest.py"
+    ],
+    "gt_order": [
+      "user.py",
+      "__init__.py",
+      "__init__.py",
+      "conftest.py"
+    ],
+    "input_tokens": 319,
+    "output_tokens": 32,
+    "n_files": 4,
+    "extraction_time": 0.01098614200600423,
+    "query_time": 9.097618300002068,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 9,
+    "exact": true,
+    "predicted_order": [
+      "__init__.py",
+      "__init__.py",
+      "stack.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "__init__.py",
+      "stack.py",
+      "__init__.py"
+    ],
+    "input_tokens": 546,
+    "output_tokens": 41,
+    "n_files": 4,
+    "extraction_time": 0.01728273399930913,
+    "query_time": 10.887619057000848,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 10,
+    "exact": true,
+    "predicted_order": [
+      "os_environ.py",
+      "dict_templater.py",
+      "dict_templater_test.py"
+    ],
+    "gt_order": [
+      "os_environ.py",
+      "dict_templater.py",
+      "dict_templater_test.py"
+    ],
+    "input_tokens": 304,
+    "output_tokens": 22,
+    "n_files": 3,
+    "extraction_time": 0.011007724999217317,
+    "query_time": 5.974070046999259,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 11,
+    "exact": true,
+    "predicted_order": [
+      "augmenter.py",
+      "rgb_dataset.py",
+      "__init__.py",
+      "train_full.py"
+    ],
+    "gt_order": [
+      "augmenter.py",
+      "rgb_dataset.py",
+      "__init__.py",
+      "train_full.py"
+    ],
+    "input_tokens": 332,
+    "output_tokens": 22,
+    "n_files": 4,
+    "extraction_time": 0.011638051000772975,
+    "query_time": 6.128593029992771,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 12,
+    "exact": true,
+    "predicted_order": [
+      "models.py",
+      "serializers.py",
+      "views.py",
+      "urls.py"
+    ],
+    "gt_order": [
+      "models.py",
+      "serializers.py",
+      "views.py",
+      "urls.py"
+    ],
+    "input_tokens": 337,
+    "output_tokens": 18,
+    "n_files": 4,
+    "extraction_time": 0.020313355009420775,
+    "query_time": 5.102416494002682,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 13,
+    "exact": true,
+    "predicted_order": [
+      "utils.py",
+      "service.py",
+      "products.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "utils.py",
+      "service.py",
+      "products.py",
+      "main.py"
+    ],
+    "input_tokens": 364,
+    "output_tokens": 17,
+    "n_files": 4,
+    "extraction_time": 0.010279145993990824,
+    "query_time": 5.173727367000538,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 14,
+    "exact": true,
+    "predicted_order": [
+      "exception.py",
+      "curriculum.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "exception.py",
+      "curriculum.py",
+      "__init__.py"
+    ],
+    "input_tokens": 227,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.014380437001818791,
+    "query_time": 5.429561794997426,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 15,
+    "exact": true,
+    "predicted_order": [
+      "spoc_admin.py",
+      "framework.py",
+      "__init__.py",
+      "types.py"
+    ],
+    "gt_order": [
+      "spoc_admin.py",
+      "framework.py",
+      "__init__.py",
+      "types.py"
+    ],
+    "input_tokens": 287,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.011268240996287204,
+    "query_time": 5.754955295007676,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 16,
+    "exact": true,
+    "predicted_order": [
+      "agc.py",
+      "clip_grad.py",
+      "cuda.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "agc.py",
+      "clip_grad.py",
+      "cuda.py",
+      "__init__.py"
+    ],
+    "input_tokens": 300,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.01123064999410417,
+    "query_time": 5.870906916999957,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 17,
+    "exact": true,
+    "predicted_order": [
+      "__init__.py",
+      "__init__.py",
+      "stack.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "__init__.py",
+      "stack.py",
+      "__init__.py"
+    ],
+    "input_tokens": 546,
+    "output_tokens": 41,
+    "n_files": 4,
+    "extraction_time": 0.0019493959989631549,
+    "query_time": 13.01158585200028,
+    "cache_hit": true,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 18,
+    "exact": true,
+    "predicted_order": [
+      "test_start_time.py",
+      "__init__.py",
+      "__init__.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "test_start_time.py",
+      "__init__.py",
+      "__init__.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "input_tokens": 460,
+    "output_tokens": 43,
+    "n_files": 5,
+    "extraction_time": 0.010095124001963995,
+    "query_time": 12.580874644001597,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 19,
+    "exact": true,
+    "predicted_order": [
+      "session.py",
+      "router.py",
+      "transports.py"
+    ],
+    "gt_order": [
+      "session.py",
+      "router.py",
+      "transports.py"
+    ],
+    "input_tokens": 241,
+    "output_tokens": 14,
+    "n_files": 3,
+    "extraction_time": 0.011979343005805276,
+    "query_time": 4.194454208991374,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 20,
+    "exact": true,
+    "predicted_order": [
+      "serializers.py",
+      "views.py",
+      "urls.py"
+    ],
+    "gt_order": [
+      "serializers.py",
+      "views.py",
+      "urls.py"
+    ],
+    "input_tokens": 238,
+    "output_tokens": 14,
+    "n_files": 3,
+    "extraction_time": 0.009902436009724624,
+    "query_time": 3.92043678999471,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 21,
+    "exact": true,
+    "predicted_order": [
+      "first_stage.py",
+      "detector.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "first_stage.py",
+      "detector.py",
+      "__init__.py"
+    ],
+    "input_tokens": 265,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.010720324993599206,
+    "query_time": 4.507901427001343,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 22,
+    "exact": true,
+    "predicted_order": [
+      "cider_scorer.py",
+      "cider.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "cider_scorer.py",
+      "cider.py",
+      "__init__.py"
+    ],
+    "input_tokens": 207,
+    "output_tokens": 19,
+    "n_files": 3,
+    "extraction_time": 0.010834621003596112,
+    "query_time": 6.154773727001157,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 23,
+    "exact": false,
+    "predicted_order": [
+      "httplang.py",
+      "tokenize.py",
+      "parse.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "tokenize.py",
+      "parse.py",
+      "__init__.py",
+      "httplang.py"
+    ],
+    "input_tokens": 240,
+    "output_tokens": 21,
+    "n_files": 4,
+    "extraction_time": 0.010995169999659993,
+    "query_time": 6.364239264992648,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 24,
+    "exact": true,
+    "predicted_order": [
+      "host_ops_type.py",
+      "saas_env.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "host_ops_type.py",
+      "saas_env.py",
+      "__init__.py"
+    ],
+    "input_tokens": 266,
+    "output_tokens": 18,
+    "n_files": 3,
+    "extraction_time": 0.010009174002334476,
+    "query_time": 5.390632239999832,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 25,
+    "exact": true,
+    "predicted_order": [
+      "preset.py",
+      "manifest.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "preset.py",
+      "manifest.py",
+      "main.py"
+    ],
+    "input_tokens": 249,
+    "output_tokens": 13,
+    "n_files": 3,
+    "extraction_time": 0.01119823100452777,
+    "query_time": 4.117310759000247,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 26,
+    "exact": true,
+    "predicted_order": [
+      "isRegistration.py",
+      "modules.py",
+      "notFoundErrorHandler.py"
+    ],
+    "gt_order": [
+      "isRegistration.py",
+      "modules.py",
+      "notFoundErrorHandler.py"
+    ],
+    "input_tokens": 183,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.017305932997260243,
+    "query_time": 4.81703639299667,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 27,
+    "exact": true,
+    "predicted_order": [
+      "snmp_helper.py",
+      "config_detect.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "snmp_helper.py",
+      "config_detect.py",
+      "__init__.py"
+    ],
+    "input_tokens": 229,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.009776721009984612,
+    "query_time": 5.253914644999895,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 28,
+    "exact": true,
+    "predicted_order": [
+      "ib.py",
+      "offline_ib.py",
+      "test_offline_iq.py"
+    ],
+    "gt_order": [
+      "ib.py",
+      "offline_ib.py",
+      "test_offline_iq.py"
+    ],
+    "input_tokens": 245,
+    "output_tokens": 18,
+    "n_files": 3,
+    "extraction_time": 0.009959319009794854,
+    "query_time": 5.545479025997338,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 29,
+    "exact": true,
+    "predicted_order": [
+      "tasks.py",
+      "serializers.py",
+      "views.py",
+      "urls.py"
+    ],
+    "gt_order": [
+      "tasks.py",
+      "serializers.py",
+      "views.py",
+      "urls.py"
+    ],
+    "input_tokens": 346,
+    "output_tokens": 18,
+    "n_files": 4,
+    "extraction_time": 0.01838764300919138,
+    "query_time": 5.7861025470047025,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 30,
+    "exact": true,
+    "predicted_order": [
+      "validation.py",
+      "test_validation.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "validation.py",
+      "test_validation.py",
+      "__init__.py"
+    ],
+    "input_tokens": 230,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.00954858299519401,
+    "query_time": 4.665147705993149,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 31,
+    "exact": true,
+    "predicted_order": [
+      "__init__.py",
+      "git.py",
+      "git_builder.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "git.py",
+      "git_builder.py",
+      "__init__.py"
+    ],
+    "input_tokens": 309,
+    "output_tokens": 31,
+    "n_files": 4,
+    "extraction_time": 0.009709157006000169,
+    "query_time": 9.324563485002727,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 32,
+    "exact": true,
+    "predicted_order": [
+      "expiration.py",
+      "start_event_handler_directive.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "expiration.py",
+      "start_event_handler_directive.py",
+      "__init__.py"
+    ],
+    "input_tokens": 279,
+    "output_tokens": 18,
+    "n_files": 3,
+    "extraction_time": 0.010813279004651122,
+    "query_time": 5.515728365993709,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 33,
+    "exact": false,
+    "predicted_order": [
+      "image_uri.py",
+      "disk_volume.py",
+      "validation.py"
+    ],
+    "gt_order": [
+      "image_uri.py",
+      "validation.py",
+      "disk_volume.py"
+    ],
+    "input_tokens": 266,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.011127206002129242,
+    "query_time": 5.044491905995528,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 34,
+    "exact": true,
+    "predicted_order": [
+      "chat_testing.py",
+      "__init__.py",
+      "test_chat.py"
+    ],
+    "gt_order": [
+      "chat_testing.py",
+      "__init__.py",
+      "test_chat.py"
+    ],
+    "input_tokens": 210,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.010777482995763421,
+    "query_time": 5.736860892007826,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 35,
+    "exact": true,
+    "predicted_order": [
+      "__init__.py",
+      "__init__.py",
+      "test_wer.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "__init__.py",
+      "test_wer.py"
+    ],
+    "input_tokens": 292,
+    "output_tokens": 26,
+    "n_files": 3,
+    "extraction_time": 0.01896018799743615,
+    "query_time": 9.07902928898693,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 36,
+    "exact": true,
+    "predicted_order": [
+      "util.py",
+      "USBFtdi.py",
+      "facedancer-ftdi.py"
+    ],
+    "gt_order": [
+      "util.py",
+      "USBFtdi.py",
+      "facedancer-ftdi.py"
+    ],
+    "input_tokens": 238,
+    "output_tokens": 20,
+    "n_files": 3,
+    "extraction_time": 0.011005462991306558,
+    "query_time": 6.937256896999315,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 37,
+    "exact": true,
+    "predicted_order": [
+      "manager.py",
+      "info.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "manager.py",
+      "info.py",
+      "__init__.py"
+    ],
+    "input_tokens": 210,
+    "output_tokens": 14,
+    "n_files": 3,
+    "extraction_time": 0.011991670995485038,
+    "query_time": 5.176284714005305,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 38,
+    "exact": true,
+    "predicted_order": [
+      "package_info.py",
+      "__init__.py",
+      "data.py",
+      "mnli.py",
+      "finetune.py"
+    ],
+    "gt_order": [
+      "package_info.py",
+      "__init__.py",
+      "data.py",
+      "mnli.py",
+      "finetune.py"
+    ],
+    "input_tokens": 407,
+    "output_tokens": 26,
+    "n_files": 5,
+    "extraction_time": 0.020099821995245293,
+    "query_time": 9.933863340993412,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 39,
+    "exact": true,
+    "predicted_order": [
+      "util.py",
+      "hungarian_assigner_3d.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "util.py",
+      "hungarian_assigner_3d.py",
+      "__init__.py"
+    ],
+    "input_tokens": 302,
+    "output_tokens": 20,
+    "n_files": 3,
+    "extraction_time": 0.011830645002191886,
+    "query_time": 6.775670448987512,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 40,
+    "exact": true,
+    "predicted_order": [
+      "parsers.py",
+      "base.py",
+      "__init__.py",
+      "synthetic-dataset-generation-example.py"
+    ],
+    "gt_order": [
+      "parsers.py",
+      "base.py",
+      "__init__.py",
+      "synthetic-dataset-generation-example.py"
+    ],
+    "input_tokens": 366,
+    "output_tokens": 23,
+    "n_files": 4,
+    "extraction_time": 0.019716487993719056,
+    "query_time": 6.497450700000627,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 41,
+    "exact": true,
+    "predicted_order": [
+      "_auth_login_css.py",
+      "__init__.py",
+      "mana.py",
+      "test_mana.py"
+    ],
+    "gt_order": [
+      "_auth_login_css.py",
+      "__init__.py",
+      "mana.py",
+      "test_mana.py"
+    ],
+    "input_tokens": 348,
+    "output_tokens": 23,
+    "n_files": 4,
+    "extraction_time": 0.019702214005519636,
+    "query_time": 6.472763816011138,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 42,
+    "exact": false,
+    "predicted_order": [
+      "builder.py",
+      "state.py",
+      "launcher.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "state.py",
+      "launcher.py",
+      "builder.py",
+      "main.py"
+    ],
+    "input_tokens": 242,
+    "output_tokens": 17,
+    "n_files": 4,
+    "extraction_time": 0.01014015699911397,
+    "query_time": 4.863883519996307,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 43,
+    "exact": true,
+    "predicted_order": [
+      "__init__.py",
+      "__init__.py",
+      "__init__.py",
+      "test_devicerecord.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "__init__.py",
+      "__init__.py",
+      "test_devicerecord.py"
+    ],
+    "input_tokens": 465,
+    "output_tokens": 43,
+    "n_files": 4,
+    "extraction_time": 0.017888720001792535,
+    "query_time": 11.699767717000213,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 44,
+    "exact": false,
+    "predicted_order": [
+      "httplang.py",
+      "tokenize.py",
+      "parse.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "tokenize.py",
+      "parse.py",
+      "__init__.py",
+      "httplang.py"
+    ],
+    "input_tokens": 240,
+    "output_tokens": 21,
+    "n_files": 4,
+    "extraction_time": 0.002510235004592687,
+    "query_time": 5.647217017991352,
+    "cache_hit": true,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 45,
+    "exact": true,
+    "predicted_order": [
+      "tasks.py",
+      "views.py",
+      "urls.py"
+    ],
+    "gt_order": [
+      "tasks.py",
+      "views.py",
+      "urls.py"
+    ],
+    "input_tokens": 194,
+    "output_tokens": 13,
+    "n_files": 3,
+    "extraction_time": 0.008715864008991048,
+    "query_time": 3.4890253439953085,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 46,
+    "exact": true,
+    "predicted_order": [
+      "helpers.py",
+      "shrink.py",
+      "collectstatic.py"
+    ],
+    "gt_order": [
+      "helpers.py",
+      "shrink.py",
+      "collectstatic.py"
+    ],
+    "input_tokens": 309,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.018362991002504714,
+    "query_time": 4.194113178993575,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 47,
+    "exact": true,
+    "predicted_order": [
+      "oblique_tree_node.py",
+      "oblique_tree.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "oblique_tree_node.py",
+      "oblique_tree.py",
+      "__init__.py"
+    ],
+    "input_tokens": 292,
+    "output_tokens": 19,
+    "n_files": 3,
+    "extraction_time": 0.011147041994263418,
+    "query_time": 5.189380130992504,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 48,
+    "exact": true,
+    "predicted_order": [
+      "animation.py",
+      "data.py",
+      "test_pyscroll.py"
+    ],
+    "gt_order": [
+      "animation.py",
+      "data.py",
+      "test_pyscroll.py"
+    ],
+    "input_tokens": 258,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.02069358500011731,
+    "query_time": 4.4538935879973,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 49,
+    "exact": true,
+    "predicted_order": [
+      "senet.py",
+      "__init__.py",
+      "detect_all_images.py"
+    ],
+    "gt_order": [
+      "senet.py",
+      "__init__.py",
+      "detect_all_images.py"
+    ],
+    "input_tokens": 351,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.011979520000750199,
+    "query_time": 4.927153250013362,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 50,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "diagma.py",
+      "threedma.py"
+    ],
+    "gt_order": [
+      "threedma.py",
+      "__init__.py",
+      "diagma.py"
+    ],
+    "input_tokens": 333,
+    "output_tokens": 18,
+    "n_files": 3,
+    "extraction_time": 0.013866930996300653,
+    "query_time": 5.072418379990268,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 51,
+    "exact": true,
+    "predicted_order": [
+      "ui_nodesList.py",
+      "nodesMayaWidget.py",
+      "assetBrowserWindow.py"
+    ],
+    "gt_order": [
+      "ui_nodesList.py",
+      "nodesMayaWidget.py",
+      "assetBrowserWindow.py"
+    ],
+    "input_tokens": 296,
+    "output_tokens": 20,
+    "n_files": 3,
+    "extraction_time": 0.02204531300230883,
+    "query_time": 5.817865138989873,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 52,
+    "exact": true,
+    "predicted_order": [
+      "event_engine.py",
+      "backend.py",
+      "synchronizer.py",
+      "__init__.py",
+      "testservice-synchronizer.py"
+    ],
+    "gt_order": [
+      "event_engine.py",
+      "backend.py",
+      "synchronizer.py",
+      "__init__.py",
+      "testservice-synchronizer.py"
+    ],
+    "input_tokens": 367,
+    "output_tokens": 29,
+    "n_files": 5,
+    "extraction_time": 0.012944489004439674,
+    "query_time": 8.252460445000906,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 53,
+    "exact": true,
+    "predicted_order": [
+      "_plotting.py",
+      "sketch.py",
+      "make_quantization_statistics.py"
+    ],
+    "gt_order": [
+      "_plotting.py",
+      "sketch.py",
+      "make_quantization_statistics.py"
+    ],
+    "input_tokens": 309,
+    "output_tokens": 19,
+    "n_files": 3,
+    "extraction_time": 0.021071958006359637,
+    "query_time": 5.551009667004109,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 54,
+    "exact": true,
+    "predicted_order": [
+      "place.py",
+      "__init__.py",
+      "test_schema.py"
+    ],
+    "gt_order": [
+      "place.py",
+      "__init__.py",
+      "test_schema.py"
+    ],
+    "input_tokens": 284,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.020976390995201655,
+    "query_time": 4.5813222090073396,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 55,
+    "exact": true,
+    "predicted_order": [
+      "constants.py",
+      "hebrewprober.py",
+      "sbcsgroupprober.py",
+      "universaldetector.py",
+      "chardetect.py"
+    ],
+    "gt_order": [
+      "constants.py",
+      "hebrewprober.py",
+      "sbcsgroupprober.py",
+      "universaldetector.py",
+      "chardetect.py"
+    ],
+    "input_tokens": 500,
+    "output_tokens": 36,
+    "n_files": 5,
+    "extraction_time": 0.02087909501278773,
+    "query_time": 10.751602375996299,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 56,
+    "exact": true,
+    "predicted_order": [
+      "elmo_network.py",
+      "__init__.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "elmo_network.py",
+      "__init__.py",
+      "main.py"
+    ],
+    "input_tokens": 275,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.013686346006579697,
+    "query_time": 4.800004896998871,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 57,
+    "exact": true,
+    "predicted_order": [
+      "random_model.py",
+      "__init__.py",
+      "simple_voting_2_model_experiments.py",
+      "__init__.py",
+      "test_simple_voting_2_model_experiments.py"
+    ],
+    "gt_order": [
+      "random_model.py",
+      "__init__.py",
+      "simple_voting_2_model_experiments.py",
+      "__init__.py",
+      "test_simple_voting_2_model_experiments.py"
+    ],
+    "input_tokens": 387,
+    "output_tokens": 48,
+    "n_files": 5,
+    "extraction_time": 0.011875565003720112,
+    "query_time": 13.85373835300561,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 58,
+    "exact": true,
+    "predicted_order": [
+      "base_assigner.py",
+      "atss_assigner.py",
+      "__init__.py",
+      "test_assigner.py"
+    ],
+    "gt_order": [
+      "base_assigner.py",
+      "atss_assigner.py",
+      "__init__.py",
+      "test_assigner.py"
+    ],
+    "input_tokens": 440,
+    "output_tokens": 25,
+    "n_files": 4,
+    "extraction_time": 0.01385385099274572,
+    "query_time": 7.105525938997744,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 59,
+    "exact": true,
+    "predicted_order": [
+      "triplet.py",
+      "__init__.py",
+      "architecture.py",
+      "solver.py"
+    ],
+    "gt_order": [
+      "triplet.py",
+      "__init__.py",
+      "architecture.py",
+      "solver.py"
+    ],
+    "input_tokens": 342,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.011900641999091022,
+    "query_time": 5.302407233000849,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 60,
+    "exact": true,
+    "predicted_order": [
+      "density.py",
+      "prob_abs_r.py",
+      "energy.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "density.py",
+      "prob_abs_r.py",
+      "energy.py",
+      "__init__.py"
+    ],
+    "input_tokens": 304,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.013206026997067966,
+    "query_time": 5.555108639004175,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 61,
+    "exact": true,
+    "predicted_order": [
+      "constants.py",
+      "escsm.py",
+      "escprober.py",
+      "universaldetector.py",
+      "chardetect.py"
+    ],
+    "gt_order": [
+      "constants.py",
+      "escsm.py",
+      "escprober.py",
+      "universaldetector.py",
+      "chardetect.py"
+    ],
+    "input_tokens": 418,
+    "output_tokens": 30,
+    "n_files": 5,
+    "extraction_time": 0.01525925801252015,
+    "query_time": 8.358848838994163,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 62,
+    "exact": true,
+    "predicted_order": [
+      "reimbursements_cleaner.py",
+      "reimbursements.py",
+      "test_reimbursements.py"
+    ],
+    "gt_order": [
+      "reimbursements_cleaner.py",
+      "reimbursements.py",
+      "test_reimbursements.py"
+    ],
+    "input_tokens": 254,
+    "output_tokens": 25,
+    "n_files": 3,
+    "extraction_time": 0.011069525993661955,
+    "query_time": 6.7431924950069515,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 63,
+    "exact": false,
+    "predicted_order": [
+      "appengine.py",
+      "filepost.py",
+      "request.py"
+    ],
+    "gt_order": [
+      "filepost.py",
+      "request.py",
+      "appengine.py"
+    ],
+    "input_tokens": 237,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.011116460009361617,
+    "query_time": 4.100796105005429,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 64,
+    "exact": false,
+    "predicted_order": [
+      "types.py",
+      "sebs.py",
+      "__init__.py",
+      "network_ping_pong.py"
+    ],
+    "gt_order": [
+      "types.py",
+      "sebs.py",
+      "network_ping_pong.py",
+      "__init__.py"
+    ],
+    "input_tokens": 314,
+    "output_tokens": 22,
+    "n_files": 4,
+    "extraction_time": 0.021676115997252055,
+    "query_time": 5.9594326359947445,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 65,
+    "exact": true,
+    "predicted_order": [
+      "task.py",
+      "async_task.py",
+      "patator_task.py",
+      "patator_worker.py",
+      "spawn_worker.py"
+    ],
+    "gt_order": [
+      "task.py",
+      "async_task.py",
+      "patator_task.py",
+      "patator_worker.py",
+      "spawn_worker.py"
+    ],
+    "input_tokens": 377,
+    "output_tokens": 27,
+    "n_files": 5,
+    "extraction_time": 0.027966262001427822,
+    "query_time": 7.378789519993006,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 66,
+    "exact": true,
+    "predicted_order": [
+      "billing_agreement_type.py",
+      "billing_agreement_attributes.py",
+      "setup_amazon_pay_request.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "billing_agreement_type.py",
+      "billing_agreement_attributes.py",
+      "setup_amazon_pay_request.py",
+      "__init__.py"
+    ],
+    "input_tokens": 351,
+    "output_tokens": 28,
+    "n_files": 4,
+    "extraction_time": 0.010633372003212571,
+    "query_time": 8.23396608501207,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 67,
+    "exact": true,
+    "predicted_order": [
+      "suffixes.py",
+      "__init__.py",
+      "who.py",
+      "test_who.py"
+    ],
+    "gt_order": [
+      "suffixes.py",
+      "__init__.py",
+      "who.py",
+      "test_who.py"
+    ],
+    "input_tokens": 315,
+    "output_tokens": 21,
+    "n_files": 4,
+    "extraction_time": 0.028748886994435452,
+    "query_time": 6.174933072994463,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 68,
+    "exact": false,
+    "predicted_order": [
+      "navs.py",
+      "bootstrapgrids.py",
+      "config.py"
+    ],
+    "gt_order": [
+      "navs.py",
+      "bootstrapgrids.py",
+      "web.config.py"
+    ],
+    "input_tokens": 270,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.010943832006887533,
+    "query_time": 4.556997271996806,
+    "cache_hit": false,
+    "error_type": "wrong_files",
+    "error": null
+  },
+  {
+    "qi": 69,
+    "exact": true,
+    "predicted_order": [
+      "factory.py",
+      "conftest.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "factory.py",
+      "conftest.py",
+      "main.py"
+    ],
+    "input_tokens": 297,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.012077723993570544,
+    "query_time": 4.3058667440054705,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 70,
+    "exact": true,
+    "predicted_order": [
+      "job.py",
+      "server.py",
+      "temp_tools.py"
+    ],
+    "gt_order": [
+      "job.py",
+      "server.py",
+      "temp_tools.py"
+    ],
+    "input_tokens": 285,
+    "output_tokens": 14,
+    "n_files": 3,
+    "extraction_time": 0.02058084000600502,
+    "query_time": 3.8279512339940993,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 71,
+    "exact": true,
+    "predicted_order": [
+      "orchestrator.py",
+      "orchestrator_past.py",
+      "test_orchestrator_lambda.py"
+    ],
+    "gt_order": [
+      "orchestrator.py",
+      "orchestrator_past.py",
+      "test_orchestrator_lambda.py"
+    ],
+    "input_tokens": 260,
+    "output_tokens": 23,
+    "n_files": 3,
+    "extraction_time": 0.013457295994157903,
+    "query_time": 6.563136444994598,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 72,
+    "exact": true,
+    "predicted_order": [
+      "mpi_running_mean_std.py",
+      "mlp_policy.py",
+      "run_mujoco.py"
+    ],
+    "gt_order": [
+      "mpi_running_mean_std.py",
+      "mlp_policy.py",
+      "run_mujoco.py"
+    ],
+    "input_tokens": 314,
+    "output_tokens": 21,
+    "n_files": 3,
+    "extraction_time": 0.01278725199517794,
+    "query_time": 6.53810564300511,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 73,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "__init__.py",
+      "rotosolve_minimizer.py",
+      "build_docs.py"
+    ],
+    "gt_order": [
+      "rotosolve_minimizer.py",
+      "__init__.py",
+      "__init__.py",
+      "build_docs.py"
+    ],
+    "input_tokens": 408,
+    "output_tokens": 36,
+    "n_files": 4,
+    "extraction_time": 0.012841313000535592,
+    "query_time": 10.235095294003258,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 74,
+    "exact": true,
+    "predicted_order": [
+      "decode_head.py",
+      "lraspp_head.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "decode_head.py",
+      "lraspp_head.py",
+      "__init__.py"
+    ],
+    "input_tokens": 334,
+    "output_tokens": 18,
+    "n_files": 3,
+    "extraction_time": 0.01863459500600584,
+    "query_time": 5.589125734986737,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 75,
+    "exact": true,
+    "predicted_order": [
+      "ckpt_util.py",
+      "diffusion.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "ckpt_util.py",
+      "diffusion.py",
+      "__init__.py"
+    ],
+    "input_tokens": 249,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.012699544007773511,
+    "query_time": 4.333956494010636,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 76,
+    "exact": true,
+    "predicted_order": [
+      "colorwheel.py",
+      "smpl_uv.py",
+      "diff_renderer.py"
+    ],
+    "gt_order": [
+      "colorwheel.py",
+      "smpl_uv.py",
+      "diff_renderer.py"
+    ],
+    "input_tokens": 278,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.013170502003049478,
+    "query_time": 4.638151546998415,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 77,
+    "exact": true,
+    "predicted_order": [
+      "types.py",
+      "tree.py",
+      "__init__.py",
+      "test_file.py"
+    ],
+    "gt_order": [
+      "types.py",
+      "tree.py",
+      "__init__.py",
+      "test_file.py"
+    ],
+    "input_tokens": 315,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.02020042399817612,
+    "query_time": 5.222705986001529,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 78,
+    "exact": true,
+    "predicted_order": [
+      "component_visible_on_screen_pager_tag.py",
+      "component_visible_on_screen_tags.py",
+      "component_visible_on_screen.py"
+    ],
+    "gt_order": [
+      "component_visible_on_screen_pager_tag.py",
+      "component_visible_on_screen_tags.py",
+      "component_visible_on_screen.py"
+    ],
+    "input_tokens": 283,
+    "output_tokens": 26,
+    "n_files": 3,
+    "extraction_time": 0.011390319996280596,
+    "query_time": 6.978566801000852,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 79,
+    "exact": false,
+    "predicted_order": [
+      "driver.py",
+      "__init__.py",
+      "test_ddna_function.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "driver.py",
+      "test_ddna_function.py"
+    ],
+    "input_tokens": 274,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.011951799999224022,
+    "query_time": 4.6500740320043406,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 80,
+    "exact": false,
+    "predicted_order": [
+      "base.py",
+      "__init__.py",
+      "__init__.py",
+      "spconv_backbone.py"
+    ],
+    "gt_order": [
+      "base.py",
+      "spconv_backbone.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "input_tokens": 407,
+    "output_tokens": 32,
+    "n_files": 4,
+    "extraction_time": 0.022443333000410348,
+    "query_time": 8.723579076002352,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 81,
+    "exact": true,
+    "predicted_order": [
+      "pyutils.py",
+      "sptensor.py",
+      "test_base.py"
+    ],
+    "gt_order": [
+      "pyutils.py",
+      "sptensor.py",
+      "test_base.py"
+    ],
+    "input_tokens": 385,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.022015196998836473,
+    "query_time": 4.668485996997333,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 82,
+    "exact": true,
+    "predicted_order": [
+      "charsetprober.py",
+      "sbcharsetprober.py",
+      "sbcsgroupprober.py",
+      "universaldetector.py"
+    ],
+    "gt_order": [
+      "charsetprober.py",
+      "sbcharsetprober.py",
+      "sbcsgroupprober.py",
+      "universaldetector.py"
+    ],
+    "input_tokens": 440,
+    "output_tokens": 32,
+    "n_files": 4,
+    "extraction_time": 0.01973340500262566,
+    "query_time": 8.874109294003574,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 83,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "algorithmic_codegen.py",
+      "__init__.py",
+      "generate_latex.py"
+    ],
+    "gt_order": [
+      "algorithmic_codegen.py",
+      "__init__.py",
+      "generate_latex.py",
+      "__init__.py"
+    ],
+    "input_tokens": 379,
+    "output_tokens": 34,
+    "n_files": 4,
+    "extraction_time": 0.019033698001294397,
+    "query_time": 9.236329898005351,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 84,
+    "exact": false,
+    "predicted_order": [
+      "api.py",
+      "data_handlers.py",
+      "comms.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "data_handlers.py",
+      "comms.py",
+      "api.py",
+      "__init__.py"
+    ],
+    "input_tokens": 360,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.02154624101240188,
+    "query_time": 5.4884341119905,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 85,
+    "exact": true,
+    "predicted_order": [
+      "misc.py",
+      "inference.py",
+      "mask_head.py"
+    ],
+    "gt_order": [
+      "misc.py",
+      "inference.py",
+      "mask_head.py"
+    ],
+    "input_tokens": 386,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.02161278299172409,
+    "query_time": 4.173272618994815,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 86,
+    "exact": true,
+    "predicted_order": [
+      "custom.py",
+      "__init__.py",
+      "inference.py",
+      "image_demo.py"
+    ],
+    "gt_order": [
+      "custom.py",
+      "__init__.py",
+      "inference.py",
+      "image_demo.py"
+    ],
+    "input_tokens": 399,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.020329022998339497,
+    "query_time": 5.76712691099965,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 87,
+    "exact": true,
+    "predicted_order": [
+      "base.py",
+      "hyperbolic.py",
+      "__init__.py",
+      "train.py"
+    ],
+    "gt_order": [
+      "base.py",
+      "hyperbolic.py",
+      "__init__.py",
+      "train.py"
+    ],
+    "input_tokens": 404,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.02231467899400741,
+    "query_time": 5.792927279995638,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 88,
+    "exact": true,
+    "predicted_order": [
+      "module.py",
+      "search.py",
+      "gitee.py"
+    ],
+    "gt_order": [
+      "module.py",
+      "search.py",
+      "gitee.py"
+    ],
+    "input_tokens": 224,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.01353277699672617,
+    "query_time": 4.280179478999344,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 89,
+    "exact": true,
+    "predicted_order": [
+      "effnet.py",
+      "__init__.py",
+      "detect_all_images.py"
+    ],
+    "gt_order": [
+      "effnet.py",
+      "__init__.py",
+      "detect_all_images.py"
+    ],
+    "input_tokens": 341,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.011425315999076702,
+    "query_time": 4.827078217000235,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 90,
+    "exact": true,
+    "predicted_order": [
+      "_scons_builtins.py",
+      "__init__.py",
+      "__init__.py",
+      "sunc++.py"
+    ],
+    "gt_order": [
+      "_scons_builtins.py",
+      "__init__.py",
+      "__init__.py",
+      "sunc++.py"
+    ],
+    "input_tokens": 275,
+    "output_tokens": 37,
+    "n_files": 4,
+    "extraction_time": 0.012982814994757064,
+    "query_time": 10.451241814007517,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 91,
+    "exact": true,
+    "predicted_order": [
+      "MLPEncoder.py",
+      "EncoderGlobalTemp.py",
+      "model_loader.py",
+      "train.py"
+    ],
+    "gt_order": [
+      "MLPEncoder.py",
+      "EncoderGlobalTemp.py",
+      "model_loader.py",
+      "train.py"
+    ],
+    "input_tokens": 321,
+    "output_tokens": 22,
+    "n_files": 4,
+    "extraction_time": 0.013240150001365691,
+    "query_time": 6.3948880070092855,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 92,
+    "exact": true,
+    "predicted_order": [
+      "remote_status.py",
+      "message_loop.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "remote_status.py",
+      "message_loop.py",
+      "__init__.py"
+    ],
+    "input_tokens": 218,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.02031380101107061,
+    "query_time": 4.577276251002331,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 93,
+    "exact": true,
+    "predicted_order": [
+      "exit_command.py",
+      "interpreter.py",
+      "__main__.py"
+    ],
+    "gt_order": [
+      "exit_command.py",
+      "interpreter.py",
+      "__main__.py"
+    ],
+    "input_tokens": 242,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.011025448999134824,
+    "query_time": 4.303742436997709,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 94,
+    "exact": true,
+    "predicted_order": [
+      "base_policy.py",
+      "__init__.py",
+      "run_rambo.py"
+    ],
+    "gt_order": [
+      "base_policy.py",
+      "__init__.py",
+      "run_rambo.py"
+    ],
+    "input_tokens": 288,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.02061267699173186,
+    "query_time": 4.887746281994623,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 95,
+    "exact": false,
+    "predicted_order": [
+      "logger.py",
+      "__init__.py",
+      "__init__.py",
+      "resnet.py",
+      "resnext.py"
+    ],
+    "gt_order": [
+      "logger.py",
+      "__init__.py",
+      "resnet.py",
+      "resnext.py",
+      "__init__.py"
+    ],
+    "input_tokens": 461,
+    "output_tokens": 34,
+    "n_files": 5,
+    "extraction_time": 0.020401324989506975,
+    "query_time": 9.94714064800064,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 96,
+    "exact": true,
+    "predicted_order": [
+      "case.py",
+      "cli.py",
+      "test_cli.py"
+    ],
+    "gt_order": [
+      "case.py",
+      "cli.py",
+      "test_cli.py"
+    ],
+    "input_tokens": 206,
+    "output_tokens": 14,
+    "n_files": 3,
+    "extraction_time": 0.01202713001111988,
+    "query_time": 3.8284911800001282,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 97,
+    "exact": true,
+    "predicted_order": [
+      "config.py",
+      "amass.py",
+      "get_dataset.py"
+    ],
+    "gt_order": [
+      "config.py",
+      "amass.py",
+      "get_dataset.py"
+    ],
+    "input_tokens": 211,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.012140475999331102,
+    "query_time": 4.125310733012157,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 98,
+    "exact": false,
+    "predicted_order": [
+      "inference.py",
+      "extract_landmarks_method_base.py",
+      "params.py",
+      "GenerateEyePatchesRTGENEDataset.py"
+    ],
+    "gt_order": [
+      "params.py",
+      "inference.py",
+      "extract_landmarks_method_base.py",
+      "GenerateEyePatchesRTGENEDataset.py"
+    ],
+    "input_tokens": 299,
+    "output_tokens": 29,
+    "n_files": 4,
+    "extraction_time": 0.011839104001410306,
+    "query_time": 7.869042995007476,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 99,
+    "exact": true,
+    "predicted_order": [
+      "krippendorff.py",
+      "__init__.py",
+      "sample.py"
+    ],
+    "gt_order": [
+      "krippendorff.py",
+      "__init__.py",
+      "sample.py"
+    ],
+    "input_tokens": 244,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.0112672899995232,
+    "query_time": 4.658874382992508,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 100,
+    "exact": true,
+    "predicted_order": [
+      "sjisprober.py",
+      "mbcsgroupprober.py",
+      "universaldetector.py",
+      "chardetect.py"
+    ],
+    "gt_order": [
+      "sjisprober.py",
+      "mbcsgroupprober.py",
+      "universaldetector.py",
+      "chardetect.py"
+    ],
+    "input_tokens": 474,
+    "output_tokens": 32,
+    "n_files": 4,
+    "extraction_time": 0.020632918996852823,
+    "query_time": 8.863415929998155,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 101,
+    "exact": true,
+    "predicted_order": [
+      "seg_nn.py",
+      "seg_learner.py",
+      "training.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "seg_nn.py",
+      "seg_learner.py",
+      "training.py",
+      "main.py"
+    ],
+    "input_tokens": 307,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.012752429000101984,
+    "query_time": 5.480779029996484,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 102,
+    "exact": true,
+    "predicted_order": [
+      "data_preprocess.py",
+      "model.py",
+      "train.py"
+    ],
+    "gt_order": [
+      "data_preprocess.py",
+      "model.py",
+      "train.py"
+    ],
+    "input_tokens": 300,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.014127029993687756,
+    "query_time": 4.093696456999169,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 103,
+    "exact": true,
+    "predicted_order": [
+      "build_graphs.py",
+      "data_loader_multigraph.py",
+      "train_eval.py"
+    ],
+    "gt_order": [
+      "build_graphs.py",
+      "data_loader_multigraph.py",
+      "train_eval.py"
+    ],
+    "input_tokens": 310,
+    "output_tokens": 19,
+    "n_files": 3,
+    "extraction_time": 0.021580779997748323,
+    "query_time": 5.166294005000964,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 104,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "sample.py",
+      "auth.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "sample.py",
+      "auth.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "input_tokens": 393,
+    "output_tokens": 29,
+    "n_files": 4,
+    "extraction_time": 0.020585057995049283,
+    "query_time": 7.90728765699896,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 105,
+    "exact": false,
+    "predicted_order": [
+      "drn.py",
+      "__init__.py",
+      "__init__.py",
+      "tridepth_3d.py"
+    ],
+    "gt_order": [
+      "drn.py",
+      "__init__.py",
+      "tridepth_3d.py",
+      "__init__.py"
+    ],
+    "input_tokens": 430,
+    "output_tokens": 35,
+    "n_files": 4,
+    "extraction_time": 0.022049238992622122,
+    "query_time": 9.617456583990133,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 106,
+    "exact": true,
+    "predicted_order": [
+      "rnn.py",
+      "siamese_bilstm.py",
+      "run_siamse.py"
+    ],
+    "gt_order": [
+      "rnn.py",
+      "siamese_bilstm.py",
+      "run_siamse.py"
+    ],
+    "input_tokens": 233,
+    "output_tokens": 22,
+    "n_files": 3,
+    "extraction_time": 0.012086404007277451,
+    "query_time": 5.961019895999925,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 107,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "build.py",
+      "cached_image_folder.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "cached_image_folder.py",
+      "build.py",
+      "__init__.py",
+      "main.py"
+    ],
+    "input_tokens": 344,
+    "output_tokens": 21,
+    "n_files": 4,
+    "extraction_time": 0.02361557900439948,
+    "query_time": 5.835249657000531,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 108,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "block.py",
+      "scene.py",
+      "containerblock.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "block.py",
+      "containerblock.py",
+      "__init__.py",
+      "scene.py"
+    ],
+    "input_tokens": 515,
+    "output_tokens": 33,
+    "n_files": 5,
+    "extraction_time": 0.027810990999569185,
+    "query_time": 8.8843762769975,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 109,
+    "exact": true,
+    "predicted_order": [
+      "vulnerability.py",
+      "__init__.py",
+      "explore_for_exploit.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "vulnerability.py",
+      "__init__.py",
+      "explore_for_exploit.py",
+      "__init__.py"
+    ],
+    "input_tokens": 353,
+    "output_tokens": 33,
+    "n_files": 4,
+    "extraction_time": 0.020863880999968387,
+    "query_time": 9.005644396005664,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 110,
+    "exact": true,
+    "predicted_order": [
+      "decryptor.py",
+      "parser.py",
+      "cmdhelper.py",
+      "__main__.py"
+    ],
+    "gt_order": [
+      "decryptor.py",
+      "parser.py",
+      "cmdhelper.py",
+      "__main__.py"
+    ],
+    "input_tokens": 383,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.015737829002318904,
+    "query_time": 5.535261771001387,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 111,
+    "exact": true,
+    "predicted_order": [
+      "comm.py",
+      "batchnorm.py",
+      "__init__.py",
+      "train.py"
+    ],
+    "gt_order": [
+      "comm.py",
+      "batchnorm.py",
+      "__init__.py",
+      "train.py"
+    ],
+    "input_tokens": 327,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.021701920006307773,
+    "query_time": 5.212125114994706,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 112,
+    "exact": true,
+    "predicted_order": [
+      "helper.py",
+      "Buttons.py",
+      "Logo.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "helper.py",
+      "Buttons.py",
+      "Logo.py",
+      "main.py"
+    ],
+    "input_tokens": 311,
+    "output_tokens": 17,
+    "n_files": 4,
+    "extraction_time": 0.03172551600437146,
+    "query_time": 4.844298651005374,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 113,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "composite_encoder.py",
+      "fairseq_model.py"
+    ],
+    "gt_order": [
+      "composite_encoder.py",
+      "__init__.py",
+      "fairseq_model.py"
+    ],
+    "input_tokens": 287,
+    "output_tokens": 18,
+    "n_files": 3,
+    "extraction_time": 0.022739227992133237,
+    "query_time": 5.151051417007693,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 114,
+    "exact": false,
+    "predicted_order": [
+      "AverageMeter.py",
+      "__init__.py",
+      "runner_finetune.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "AverageMeter.py",
+      "runner_finetune.py",
+      "__init__.py",
+      "main.py"
+    ],
+    "input_tokens": 419,
+    "output_tokens": 22,
+    "n_files": 4,
+    "extraction_time": 0.022566695988643914,
+    "query_time": 6.2639961800014134,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 115,
+    "exact": true,
+    "predicted_order": [
+      "__init__.py",
+      "test_host.py",
+      "test_with_statement.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "test_host.py",
+      "test_with_statement.py"
+    ],
+    "input_tokens": 310,
+    "output_tokens": 18,
+    "n_files": 3,
+    "extraction_time": 0.02280923500075005,
+    "query_time": 4.923758135992102,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 116,
+    "exact": true,
+    "predicted_order": [
+      "config.py",
+      "build.py",
+      "job.py",
+      "view.py"
+    ],
+    "gt_order": [
+      "config.py",
+      "build.py",
+      "job.py",
+      "view.py"
+    ],
+    "input_tokens": 277,
+    "output_tokens": 17,
+    "n_files": 4,
+    "extraction_time": 0.029496772011043504,
+    "query_time": 4.651383289005025,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 117,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "server_simple.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "server_simple.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "input_tokens": 265,
+    "output_tokens": 28,
+    "n_files": 3,
+    "extraction_time": 0.012316738997469656,
+    "query_time": 7.624813600996276,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 118,
+    "exact": true,
+    "predicted_order": [
+      "json_array.py",
+      "hquery_processor.py",
+      "test_name_tests.py"
+    ],
+    "gt_order": [
+      "json_array.py",
+      "hquery_processor.py",
+      "test_name_tests.py"
+    ],
+    "input_tokens": 492,
+    "output_tokens": 18,
+    "n_files": 3,
+    "extraction_time": 0.023155535003752448,
+    "query_time": 5.0343299209926045,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 119,
+    "exact": true,
+    "predicted_order": [
+      "utils.py",
+      "main.py",
+      "__init__.py",
+      "engine.py",
+      "test_engine.py"
+    ],
+    "gt_order": [
+      "utils.py",
+      "main.py",
+      "__init__.py",
+      "engine.py",
+      "test_engine.py"
+    ],
+    "input_tokens": 467,
+    "output_tokens": 23,
+    "n_files": 5,
+    "extraction_time": 0.03105472600145731,
+    "query_time": 6.362591158002033,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 120,
+    "exact": true,
+    "predicted_order": [
+      "utils.py",
+      "browser_hacks.py",
+      "html.py",
+      "parser.py"
+    ],
+    "gt_order": [
+      "utils.py",
+      "browser_hacks.py",
+      "html.py",
+      "parser.py"
+    ],
+    "input_tokens": 298,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.044476191003923304,
+    "query_time": 5.142644559004111,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 121,
+    "exact": true,
+    "predicted_order": [
+      "utils.py",
+      "timer_management_service_client.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "utils.py",
+      "timer_management_service_client.py",
+      "__init__.py"
+    ],
+    "input_tokens": 237,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.022105468000518158,
+    "query_time": 4.576567996002268,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 122,
+    "exact": true,
+    "predicted_order": [
+      "entity.py",
+      "entitybrowser.py",
+      "streamlist.py",
+      "tkmain.py"
+    ],
+    "gt_order": [
+      "entity.py",
+      "entitybrowser.py",
+      "streamlist.py",
+      "tkmain.py"
+    ],
+    "input_tokens": 351,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.021849949000170454,
+    "query_time": 5.448489818998496,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 123,
+    "exact": true,
+    "predicted_order": [
+      "efficientnet.py",
+      "__init__.py",
+      "res_layer.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "efficientnet.py",
+      "__init__.py",
+      "res_layer.py",
+      "__init__.py"
+    ],
+    "input_tokens": 441,
+    "output_tokens": 31,
+    "n_files": 4,
+    "extraction_time": 0.021142769997823052,
+    "query_time": 8.46059758598858,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 124,
+    "exact": true,
+    "predicted_order": [
+      "article_service.py",
+      "admin_article.py",
+      "url_mapping.py",
+      "main.py"
+    ],
+    "gt_order": [
+      "article_service.py",
+      "admin_article.py",
+      "url_mapping.py",
+      "main.py"
+    ],
+    "input_tokens": 335,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.02907843899447471,
+    "query_time": 5.425180071004434,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 125,
+    "exact": true,
+    "predicted_order": [
+      "cmake_parser.py",
+      "package.py",
+      "util.py",
+      "misc.py"
+    ],
+    "gt_order": [
+      "cmake_parser.py",
+      "package.py",
+      "util.py",
+      "misc.py"
+    ],
+    "input_tokens": 356,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.022393735009245574,
+    "query_time": 5.3243320519977715,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 126,
+    "exact": false,
+    "predicted_order": [
+      "submission.py",
+      "listing.py",
+      "more_comments.py"
+    ],
+    "gt_order": [
+      "submission.py",
+      "more_comments.py",
+      "listing.py"
+    ],
+    "input_tokens": 331,
+    "output_tokens": 14,
+    "n_files": 3,
+    "extraction_time": 0.022392879996914417,
+    "query_time": 4.027608357995632,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 127,
+    "exact": true,
+    "predicted_order": [
+      "FlatlandModel.py",
+      "ArenaScenario.py",
+      "generate_world.py"
+    ],
+    "gt_order": [
+      "FlatlandModel.py",
+      "ArenaScenario.py",
+      "generate_world.py"
+    ],
+    "input_tokens": 312,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.022735661012120545,
+    "query_time": 4.902261608003755,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 128,
+    "exact": true,
+    "predicted_order": [
+      "ppo_f1.py",
+      "__init__.py",
+      "inference.py",
+      "brain_f1_follow_line_ddpg.py"
+    ],
+    "gt_order": [
+      "ppo_f1.py",
+      "__init__.py",
+      "inference.py",
+      "brain_f1_follow_line_ddpg.py"
+    ],
+    "input_tokens": 420,
+    "output_tokens": 27,
+    "n_files": 4,
+    "extraction_time": 0.021231434991932474,
+    "query_time": 7.717579736010521,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 129,
+    "exact": true,
+    "predicted_order": [
+      "mnist.py",
+      "dataset_factory.py",
+      "train_image_classifier.py"
+    ],
+    "gt_order": [
+      "mnist.py",
+      "dataset_factory.py",
+      "train_image_classifier.py"
+    ],
+    "input_tokens": 300,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.013681789991096593,
+    "query_time": 4.753570579006919,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 130,
+    "exact": true,
+    "predicted_order": [
+      "transforms.py",
+      "panoptic.py",
+      "__init__.py",
+      "evaluate.py"
+    ],
+    "gt_order": [
+      "transforms.py",
+      "panoptic.py",
+      "__init__.py",
+      "evaluate.py"
+    ],
+    "input_tokens": 395,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.028821364001487382,
+    "query_time": 5.60854946100153,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 131,
+    "exact": false,
+    "predicted_order": [
+      "api_server.py",
+      "servers.py",
+      "api.py",
+      "test_compute.py"
+    ],
+    "gt_order": [
+      "servers.py",
+      "api.py",
+      "api_server.py",
+      "test_compute.py"
+    ],
+    "input_tokens": 314,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.031648440010030754,
+    "query_time": 5.613500367006054,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 132,
+    "exact": true,
+    "predicted_order": [
+      "py2specials.py",
+      "main.py",
+      "blocks.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "py2specials.py",
+      "main.py",
+      "blocks.py",
+      "__init__.py"
+    ],
+    "input_tokens": 322,
+    "output_tokens": 21,
+    "n_files": 4,
+    "extraction_time": 0.02642822101188358,
+    "query_time": 6.118701796993264,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 133,
+    "exact": false,
+    "predicted_order": [
+      "common.py",
+      "converter.py",
+      "__init__.py",
+      "functions.py",
+      "min_max_test.py"
+    ],
+    "gt_order": [
+      "functions.py",
+      "__init__.py",
+      "converter.py",
+      "common.py",
+      "min_max_test.py"
+    ],
+    "input_tokens": 509,
+    "output_tokens": 24,
+    "n_files": 5,
+    "extraction_time": 0.029406173998722807,
+    "query_time": 7.073745877001784,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 134,
+    "exact": true,
+    "predicted_order": [
+      "langbulgarianmodel.py",
+      "sbcsgroupprober.py",
+      "universaldetector.py",
+      "chardetect.py"
+    ],
+    "gt_order": [
+      "langbulgarianmodel.py",
+      "sbcsgroupprober.py",
+      "universaldetector.py",
+      "chardetect.py"
+    ],
+    "input_tokens": 435,
+    "output_tokens": 33,
+    "n_files": 4,
+    "extraction_time": 0.019205131000489928,
+    "query_time": 9.655884997991961,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 135,
+    "exact": false,
+    "predicted_order": [
+      "eval.py",
+      "losses_builder.py",
+      "model_builder.py"
+    ],
+    "gt_order": [
+      "losses_builder.py",
+      "model_builder.py",
+      "eval.py"
+    ],
+    "input_tokens": 232,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.011721095987013541,
+    "query_time": 4.607470944989473,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 136,
+    "exact": true,
+    "predicted_order": [
+      "json.py",
+      "__init__.py",
+      "ssl_client.py"
+    ],
+    "gt_order": [
+      "json.py",
+      "__init__.py",
+      "ssl_client.py"
+    ],
+    "input_tokens": 225,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.02488943299977109,
+    "query_time": 4.067831590000424,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 137,
+    "exact": true,
+    "predicted_order": [
+      "fixtures.py",
+      "fixtures.py",
+      "test_usage.py"
+    ],
+    "gt_order": [
+      "fixtures.py",
+      "fixtures.py",
+      "test_usage.py"
+    ],
+    "input_tokens": 313,
+    "output_tokens": 23,
+    "n_files": 3,
+    "extraction_time": 0.022485198991489597,
+    "query_time": 6.270842907993938,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 138,
+    "exact": true,
+    "predicted_order": [
+      "mlp.py",
+      "__init__.py",
+      "dino_vision_transformer.py",
+      "_backbones.py"
+    ],
+    "gt_order": [
+      "mlp.py",
+      "__init__.py",
+      "dino_vision_transformer.py",
+      "_backbones.py"
+    ],
+    "input_tokens": 376,
+    "output_tokens": 25,
+    "n_files": 4,
+    "extraction_time": 0.021367400011513382,
+    "query_time": 6.807201832998544,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 139,
+    "exact": true,
+    "predicted_order": [
+      "fd_bsd.py",
+      "fd_pollserver.py",
+      "fd.py",
+      "sock.py",
+      "demo_polling.py"
+    ],
+    "gt_order": [
+      "fd_bsd.py",
+      "fd_pollserver.py",
+      "fd.py",
+      "sock.py",
+      "demo_polling.py"
+    ],
+    "input_tokens": 376,
+    "output_tokens": 27,
+    "n_files": 5,
+    "extraction_time": 0.03144671500194818,
+    "query_time": 7.345390567992581,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 140,
+    "exact": true,
+    "predicted_order": [
+      "_init.py",
+      "_dfmf.py",
+      "dfmf.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "_init.py",
+      "_dfmf.py",
+      "dfmf.py",
+      "__init__.py"
+    ],
+    "input_tokens": 324,
+    "output_tokens": 21,
+    "n_files": 4,
+    "extraction_time": 0.02025589600089006,
+    "query_time": 5.732230237001204,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 141,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "mask_sac_net.py",
+      "__init__.py",
+      "mask_time_state.py"
+    ],
+    "gt_order": [
+      "mask_time_state.py",
+      "__init__.py",
+      "mask_sac_net.py",
+      "__init__.py"
+    ],
+    "input_tokens": 413,
+    "output_tokens": 33,
+    "n_files": 4,
+    "extraction_time": 0.026857759003178217,
+    "query_time": 9.103316887005349,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 142,
+    "exact": true,
+    "predicted_order": [
+      "__init__.py",
+      "__init__.py",
+      "all.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "__init__.py",
+      "all.py"
+    ],
+    "input_tokens": 330,
+    "output_tokens": 25,
+    "n_files": 3,
+    "extraction_time": 0.03267338800651487,
+    "query_time": 6.805840281987912,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 143,
+    "exact": true,
+    "predicted_order": [
+      "args.py",
+      "docker_gc.py",
+      "docker_gc_test.py"
+    ],
+    "gt_order": [
+      "args.py",
+      "docker_gc.py",
+      "docker_gc_test.py"
+    ],
+    "input_tokens": 300,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.023953953990712762,
+    "query_time": 4.280120720999548,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 144,
+    "exact": true,
+    "predicted_order": [
+      "fpn.py",
+      "__init__.py",
+      "test_necks.py"
+    ],
+    "gt_order": [
+      "fpn.py",
+      "__init__.py",
+      "test_necks.py"
+    ],
+    "input_tokens": 329,
+    "output_tokens": 17,
+    "n_files": 3,
+    "extraction_time": 0.015018856996903196,
+    "query_time": 4.599692559000687,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 145,
+    "exact": true,
+    "predicted_order": [
+      "mse_loss.py",
+      "__init__.py",
+      "dynamic_roi_head.py",
+      "__init__.py",
+      "test_pisa_head.py"
+    ],
+    "gt_order": [
+      "mse_loss.py",
+      "__init__.py",
+      "dynamic_roi_head.py",
+      "__init__.py",
+      "test_pisa_head.py"
+    ],
+    "input_tokens": 559,
+    "output_tokens": 38,
+    "n_files": 5,
+    "extraction_time": 0.03188942899578251,
+    "query_time": 10.239128657995025,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 146,
+    "exact": true,
+    "predicted_order": [
+      "embed_regularize.py",
+      "model.py",
+      "dp.py",
+      "demo.py"
+    ],
+    "gt_order": [
+      "embed_regularize.py",
+      "model.py",
+      "dp.py",
+      "demo.py"
+    ],
+    "input_tokens": 278,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.01561017899075523,
+    "query_time": 5.097778278999613,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 147,
+    "exact": true,
+    "predicted_order": [
+      "__init__.py",
+      "layer.py",
+      "stack.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "__init__.py",
+      "layer.py",
+      "stack.py",
+      "__init__.py"
+    ],
+    "input_tokens": 361,
+    "output_tokens": 29,
+    "n_files": 4,
+    "extraction_time": 0.03151873400202021,
+    "query_time": 7.9289377170061925,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 148,
+    "exact": true,
+    "predicted_order": [
+      "module.py",
+      "__init__.py",
+      "transformer.py"
+    ],
+    "gt_order": [
+      "module.py",
+      "__init__.py",
+      "transformer.py"
+    ],
+    "input_tokens": 397,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.022975597996264696,
+    "query_time": 4.27801366901258,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 149,
+    "exact": false,
+    "predicted_order": [
+      "ironpython_console.py",
+      "ironpython_keysyms.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "ironpython_keysyms.py",
+      "__init__.py",
+      "ironpython_console.py",
+      "__init__.py"
+    ],
+    "input_tokens": 393,
+    "output_tokens": 33,
+    "n_files": 4,
+    "extraction_time": 0.0219684860057896,
+    "query_time": 9.029829592007445,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 150,
+    "exact": false,
+    "predicted_order": [
+      "otb.py",
+      "dtb70.py",
+      "otb.py",
+      "lasot.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "otb.py",
+      "dtb70.py",
+      "__init__.py",
+      "lasot.py"
+    ],
+    "input_tokens": 388,
+    "output_tokens": 28,
+    "n_files": 4,
+    "extraction_time": 0.0247190980007872,
+    "query_time": 7.638432141000521,
+    "cache_hit": false,
+    "error_type": "wrong_files",
+    "error": null
+  },
+  {
+    "qi": 151,
+    "exact": true,
+    "predicted_order": [
+      "gridcrop.py",
+      "__init__.py",
+      "test_core_tilestorage.py"
+    ],
+    "gt_order": [
+      "gridcrop.py",
+      "__init__.py",
+      "test_core_tilestorage.py"
+    ],
+    "input_tokens": 361,
+    "output_tokens": 18,
+    "n_files": 3,
+    "extraction_time": 0.033344285999191925,
+    "query_time": 4.954778688988881,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 152,
+    "exact": false,
+    "predicted_order": [
+      "chatstate_incoming.py",
+      "__init__.py",
+      "__init__.py",
+      "layer.py",
+      "stack.py"
+    ],
+    "gt_order": [
+      "chatstate_incoming.py",
+      "__init__.py",
+      "layer.py",
+      "stack.py",
+      "__init__.py"
+    ],
+    "input_tokens": 468,
+    "output_tokens": 35,
+    "n_files": 5,
+    "extraction_time": 0.032289855007547885,
+    "query_time": 9.497572190011851,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 153,
+    "exact": true,
+    "predicted_order": [
+      "lock.py",
+      "__init__.py",
+      "test_services.py"
+    ],
+    "gt_order": [
+      "lock.py",
+      "__init__.py",
+      "test_services.py"
+    ],
+    "input_tokens": 249,
+    "output_tokens": 15,
+    "n_files": 3,
+    "extraction_time": 0.03298771500703879,
+    "query_time": 4.035581536998507,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 154,
+    "exact": false,
+    "predicted_order": [
+      "__init__.py",
+      "pad_dataset.py",
+      "semisupervised_translation.py"
+    ],
+    "gt_order": [
+      "pad_dataset.py",
+      "__init__.py",
+      "semisupervised_translation.py"
+    ],
+    "input_tokens": 300,
+    "output_tokens": 20,
+    "n_files": 3,
+    "extraction_time": 0.028046867999364622,
+    "query_time": 5.47771276300773,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 155,
+    "exact": true,
+    "predicted_order": [
+      "const.py",
+      "device_wrapper.py",
+      "fan.py",
+      "test_fan.py"
+    ],
+    "gt_order": [
+      "const.py",
+      "device_wrapper.py",
+      "fan.py",
+      "test_fan.py"
+    ],
+    "input_tokens": 361,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.03120539299561642,
+    "query_time": 5.56390984900645,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 156,
+    "exact": true,
+    "predicted_order": [
+      "layers.py",
+      "dnn.py",
+      "model_utils.py",
+      "train.py"
+    ],
+    "gt_order": [
+      "layers.py",
+      "dnn.py",
+      "model_utils.py",
+      "train.py"
+    ],
+    "input_tokens": 312,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.023304387999814935,
+    "query_time": 5.184604820999084,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 157,
+    "exact": true,
+    "predicted_order": [
+      "data_loader.py",
+      "lightning_model.py",
+      "train.py"
+    ],
+    "gt_order": [
+      "data_loader.py",
+      "lightning_model.py",
+      "train.py"
+    ],
+    "input_tokens": 225,
+    "output_tokens": 16,
+    "n_files": 3,
+    "extraction_time": 0.02110343798995018,
+    "query_time": 4.333830140996724,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 158,
+    "exact": false,
+    "predicted_order": [
+      "custom_transforms.py",
+      "__init__.py",
+      "cityscapes.py",
+      "train.py"
+    ],
+    "gt_order": [
+      "custom_transforms.py",
+      "cityscapes.py",
+      "__init__.py",
+      "train.py"
+    ],
+    "input_tokens": 329,
+    "output_tokens": 22,
+    "n_files": 4,
+    "extraction_time": 0.0245204290113179,
+    "query_time": 6.00760566999088,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 159,
+    "exact": true,
+    "predicted_order": [
+      "nsvf.py",
+      "__init__.py",
+      "gui.py",
+      "train.py"
+    ],
+    "gt_order": [
+      "nsvf.py",
+      "__init__.py",
+      "gui.py",
+      "train.py"
+    ],
+    "input_tokens": 311,
+    "output_tokens": 20,
+    "n_files": 4,
+    "extraction_time": 0.02346200999454595,
+    "query_time": 5.484050045008189,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 160,
+    "exact": false,
+    "predicted_order": [
+      "task.py",
+      "decorator.py",
+      "__init__.py",
+      "kubernetes.py",
+      "task.py"
+    ],
+    "gt_order": [
+      "task.py",
+      "decorator.py",
+      "__init__.py",
+      "task.py",
+      "kubernetes.py"
+    ],
+    "input_tokens": 503,
+    "output_tokens": 33,
+    "n_files": 5,
+    "extraction_time": 0.032559354993281886,
+    "query_time": 9.095666473003803,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 161,
+    "exact": false,
+    "predicted_order": [
+      "generic.py",
+      "model.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "generic.py",
+      "__init__.py",
+      "model.py"
+    ],
+    "input_tokens": 230,
+    "output_tokens": 14,
+    "n_files": 3,
+    "extraction_time": 0.012793842994142324,
+    "query_time": 3.755939615992247,
+    "cache_hit": false,
+    "error_type": "wrong_order",
+    "error": null
+  },
+  {
+    "qi": 162,
+    "exact": true,
+    "predicted_order": [
+      "exp_params.py",
+      "rl_agent.py",
+      "rl_world.py",
+      "GetAction.py"
+    ],
+    "gt_order": [
+      "exp_params.py",
+      "rl_agent.py",
+      "rl_world.py",
+      "GetAction.py"
+    ],
+    "input_tokens": 295,
+    "output_tokens": 21,
+    "n_files": 4,
+    "extraction_time": 0.030925052997190505,
+    "query_time": 5.711564944998827,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 163,
+    "exact": true,
+    "predicted_order": [
+      "question_prediction_metric.py",
+      "question_predictor.py",
+      "qasrl_parser.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "gt_order": [
+      "question_prediction_metric.py",
+      "question_predictor.py",
+      "qasrl_parser.py",
+      "__init__.py",
+      "__init__.py"
+    ],
+    "input_tokens": 464,
+    "output_tokens": 39,
+    "n_files": 5,
+    "extraction_time": 0.02157763899595011,
+    "query_time": 10.729480091002188,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 164,
+    "exact": true,
+    "predicted_order": [
+      "models.py",
+      "models.py",
+      "prize_tests.py"
+    ],
+    "gt_order": [
+      "models.py",
+      "models.py",
+      "prize_tests.py"
+    ],
+    "input_tokens": 343,
+    "output_tokens": 23,
+    "n_files": 3,
+    "extraction_time": 0.02480646201001946,
+    "query_time": 6.604611244998523,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  },
+  {
+    "qi": 165,
+    "exact": true,
+    "predicted_order": [
+      "contrib.py",
+      "__init__.py",
+      "phase.py",
+      "test_phase.py"
+    ],
+    "gt_order": [
+      "contrib.py",
+      "__init__.py",
+      "phase.py",
+      "test_phase.py"
+    ],
+    "input_tokens": 300,
+    "output_tokens": 19,
+    "n_files": 4,
+    "extraction_time": 0.01119992500753142,
+    "query_time": 5.346476184000494,
+    "cache_hit": false,
+    "error_type": "correct",
+    "error": null
+  }
+]

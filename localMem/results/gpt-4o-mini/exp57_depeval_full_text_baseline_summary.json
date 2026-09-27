@@ -1,0 +1,35 @@
+{
+  "n_total": 166,
+  "n_correct": 69,
+  "accuracy": 0.41566265060240964,
+  "by_file_count": {
+    "3": {
+      "correct": 44,
+      "total": 79,
+      "accuracy": 0.5569620253164557
+    },
+    "4": {
+      "correct": 22,
+      "total": 71,
+      "accuracy": 0.30985915492957744
+    },
+    "5": {
+      "correct": 3,
+      "total": 16,
+      "accuracy": 0.1875
+    }
+  },
+  "mean_input_tokens": 2722.0843373493976,
+  "mean_output_tokens": 20.30722891566265,
+  "truncation_rate": 0.4457831325301205,
+  "n_truncated": 74,
+  "wall_seconds": 29.326761730015278,
+  "error_taxonomy": {
+    "wrong_files": 40,
+    "correct": 69,
+    "wrong_order": 57
+  },
+  "model": "gpt-4o-mini",
+  "max_workers": 15,
+  "trunc_limit_chars": 8000
+}
