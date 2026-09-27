@@ -41,12 +41,13 @@ per-query wall time was 5.22 s with cache and 17.18 s without it. See
 ```bash
 cd shortMem
 pip install -r requirements.txt
+MODEL_PATH="/home/jackson/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c"
 PYTHONPATH=. python -m unittest discover -s tests -v
-PYTHONPATH=. python experiments/exp22_local_smoke.py --model-path /path/to/Qwen3-4B
-PYTHONPATH=. python experiments/exp58_v5_depeval_full.py --model-path /path/to/Qwen3-4B
-PYTHONPATH=. python experiments/exp59_depeval_primitive_dump.py --model-path /path/to/Qwen3-4B
-PYTHONPATH=. python experiments/exp56_repoqa_python_full.py --model-path /path/to/Qwen3-4B
-PYTHONPATH=. python experiments/exp60_repoqa_primitive_dump.py --model-path /path/to/Qwen3-4B
+PYTHONPATH=. python experiments/exp22_local_smoke.py --model-path $MODEL_PATH
+PYTHONPATH=. python experiments/exp58_v5_depeval_full.py --model-path $MODEL_PATH
+PYTHONPATH=. python experiments/exp59_depeval_primitive_dump.py --model-path $MODEL_PATH
+PYTHONPATH=. python experiments/exp56_repoqa_python_full.py --model-path $MODEL_PATH
+PYTHONPATH=. python experiments/exp60_repoqa_primitive_dump.py --model-path $MODEL_PATH
 ```
 
 The model path must point to an already downloaded local checkpoint. It can
