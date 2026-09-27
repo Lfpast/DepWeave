@@ -11,7 +11,7 @@ DepWeave 用两层记忆辅助小模型在 Python 仓库里定位实体和核对
 ```bash
 cd /home/jackson/python/DepWeave
 python -m pip install -r requirements.txt
-export QWEN3_4B_PATH=/path/to/local/Qwen3-4B
+export QWEN3_4B_PATH=/home/jackson/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c
 python -m experiments.exp56_repoqa_python_full --limit 1
 python -m experiments.exp58_v5_depeval_full --limit 1
 ```

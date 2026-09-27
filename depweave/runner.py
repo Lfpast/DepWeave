@@ -26,7 +26,8 @@ class DepWeaveRunner:
     """
 
     def __init__(self, llm, *, max_input_tokens: int = 4096,
-                 cache_dir: str | None = None, server_path: Path | None = None):
+                 cache_dir: str | None = None, dependency_cache_dir: str | None = None,
+                 reuse_local_functions: bool = True, server_path: Path | None = None):
         if max_input_tokens < 256:
             raise ValueError("max_input_tokens must be at least 256")
         if not callable(getattr(llm, "count_tokens", None)):
@@ -34,6 +35,8 @@ class DepWeaveRunner:
         self.llm = llm
         self.max_input_tokens = max_input_tokens
         self.cache = PixelMemCache(cache_dir) if cache_dir else None
+        self.dependency_cache = PixelMemCache(dependency_cache_dir) if dependency_cache_dir else None
+        self.reuse_local_functions = reuse_local_functions
         self.server_path = server_path or ROOT / "globalMem/code_graph_mcp_server.py"
         self.client = None
         self.prepared: dict[tuple[str, str], dict] = {}
@@ -66,6 +69,11 @@ class DepWeaveRunner:
             previous = self.sessions.get(repo_id)
             if previous and previous["snapshot_id"] != prepared["snapshot_id"]:
                 del self.sessions[repo_id]
+            if not self.reuse_local_functions:
+                local_functions, local_cache_hit, local_extract_time = self._extract_local_functions(documents)
+                return {**prepared, "local_functions": local_functions,
+                        "local_cache_hit": local_cache_hit, "prepare_reused": True,
+                        "global_index_time_s": 0.0, "local_extract_time_s": local_extract_time}
             return {**prepared, "prepare_reused": True,
                     "global_index_time_s": 0.0, "local_extract_time_s": 0.0}
         started = time.perf_counter()
@@ -76,21 +84,25 @@ class DepWeaveRunner:
         previous = self.sessions.get(repo_id)
         if previous and previous["snapshot_id"] != index["snapshot_id"]:
             del self.sessions[repo_id]
-        extractor = RepoQAFunctionExtractor()
-        probe = self.cache.wrap(extractor) if self.cache else extractor
-        started = time.perf_counter()
-        local_functions = probe.extract(documents)
-        local_extract_time = time.perf_counter() - started
+        local_functions, local_cache_hit, local_extract_time = self._extract_local_functions(documents)
         prepared = {"snapshot_id": index["snapshot_id"], "coverage": index["coverage"],
                     "global_stats": index["stats"], "local_functions": local_functions,
-                    "local_cache_hit": bool(getattr(probe, "last_hit", False)),
+                    "local_cache_hit": local_cache_hit,
                     "prepare_reused": False, "global_index_time_s": global_index_time,
                     "local_extract_time_s": local_extract_time}
         self.prepared[key] = prepared
         return prepared
 
+    def _extract_local_functions(self, documents: dict[str, str]) -> tuple[list, bool, float]:
+        extractor = RepoQAFunctionExtractor()
+        probe = self.cache.wrap(extractor) if self.cache else extractor
+        started = time.perf_counter()
+        functions = probe.extract(documents)
+        return functions, bool(getattr(probe, "last_hit", False)), time.perf_counter() - started
+
     async def repoqa(self, repo_id: str, documents: dict[str, str], description: str) -> dict:
         prepared = await self.prepare(repo_id, documents)
+        query_started = time.perf_counter()
         desc_tokens = set(_tokens(description))
         scored = []
         for p in prepared["local_functions"]:
@@ -143,7 +155,9 @@ class DepWeaveRunner:
                 + ("\n" + memory if memory else "")
                 + "\nReturn exactly: ANSWER: <candidate label, such as C1, or UNKNOWN>\n")
         prompt, used_ids, omitted = self._pack(base, blocks, tail)
+        llm_started = time.perf_counter()
         completion, tokens_in, tokens_out = self.llm(prompt)
+        llm_time = time.perf_counter() - llm_started
         if tokens_in > self.max_input_tokens:
             raise ValueError("model input exceeded max_input_tokens despite preflight count")
         match = re.search(r"ANSWER\s*:\s*(\S+)", completion or "")
@@ -162,12 +176,23 @@ class DepWeaveRunner:
                 "prepare_reused": prepared["prepare_reused"],
                 "global_index_time_s": prepared["global_index_time_s"],
                 "local_extract_time_s": prepared["local_extract_time_s"],
+                "extraction_time": prepared["global_index_time_s"] + prepared["local_extract_time_s"],
+                "query_time": time.perf_counter() - query_started,
+                "cache_hit": prepared["local_cache_hit"],
+                "llm_time_s": llm_time,
                 "input_tokens": tokens_in, "output_tokens": tokens_out}
 
     async def dependeval(self, repo_id: str, documents: dict[str, str], files: list[str]) -> dict:
         prepared = await self.prepare(repo_id, documents)
         extractor = PythonDependencyExtractor()
-        raw = extractor.extract(documents)
+        probe = self.dependency_cache.wrap(extractor) if self.dependency_cache else extractor
+        extract_started = time.perf_counter()
+        raw = probe.extract(documents)
+        dependency_cache_hit = bool(getattr(probe, "last_hit", False))
+        if dependency_cache_hit:
+            extractor.extract(documents)  # Rebuild the namespace used by derivation.
+        dependency_extract_time = time.perf_counter() - extract_started
+        query_started = time.perf_counter()
         spec = TaskSpec(domain="python_dependency_ordering", description="Order Python files",
                         input_schema={}, query={"kind": "ordering"})
         local = PythonDependencyEngine(extractor).derive(raw, [], spec)
@@ -205,7 +230,9 @@ class DepWeaveRunner:
         tail = ("\nUnresolved or absent evidence: " + "; ".join(_gap_text(g) for g in _prompt_gaps(packet["gaps"]))
                 + "\nReturn only a JSON array of the input file paths in dependency order.\n")
         prompt, used_edges, omitted = self._pack(base, blocks, tail)
+        llm_started = time.perf_counter()
         completion, tokens_in, tokens_out = self.llm(prompt)
+        llm_time = time.perf_counter() - llm_started
         if tokens_in > self.max_input_tokens:
             raise ValueError("model input exceeded max_input_tokens despite preflight count")
         match = re.search(r"\[[\s\S]*?\]", completion or "")
@@ -226,6 +253,12 @@ class DepWeaveRunner:
                 "prepare_reused": prepared["prepare_reused"],
                 "global_index_time_s": prepared["global_index_time_s"],
                 "local_extract_time_s": prepared["local_extract_time_s"],
+                "dependency_extract_time_s": dependency_extract_time,
+                "extraction_time": (prepared["global_index_time_s"]
+                                    + prepared["local_extract_time_s"] + dependency_extract_time),
+                "query_time": time.perf_counter() - query_started,
+                "cache_hit": dependency_cache_hit,
+                "llm_time_s": llm_time,
                 "input_tokens": tokens_in, "output_tokens": tokens_out}
 
     def _pack(self, base: str, blocks: list[tuple[str, str]], tail: str) -> tuple[str, list[str], int]:
