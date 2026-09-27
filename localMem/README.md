@@ -1,19 +1,17 @@
-# shortMem / CardMem
+# localMem / CardMem
 
-shortMem extracts task facts, derives and ranks the useful ones, and gives the LLM
-a compact card. The `shortmem` package is the task-independent pipeline. The
-`pixelmem` package is one unified storage and dependency substrate; it has no
-versioned subpackages.
+localMem 提供任务证据抽取、缓存与依赖推导。DepWeave 从根目录的 `depweave/`
+调用这些组件；仓库图索引由 `globalMem/` 的 MCP 子进程维护。
 
 ## Layout
 
 | Path | Purpose |
 | --- | --- |
-| `shortmem/` | Pipeline, types, plugin contracts, cache, task cards, harness, and optional synthesis (`synth/`) |
+| `core/` | Pipeline, types, plugin contracts, cache, task cards, harness, and optional synthesis (`synth/`) |
 | `pixelmem/` | Pixel storage and Python dependency primitives in one package |
-| `benchmarks/dependeval/` | DependEval parser, Python dependency plugins, and its standalone ordering interface |
-| `benchmarks/repoqa.py` | RepoQA function extractor and candidate card |
-| `experiments/` | Benchmark drivers and smoke runs |
+| `../benchmarks/dependeval/` | DependEval parser, Python dependency plugins, and ordering interface |
+| `../benchmarks/repoqa.py` | RepoQA function extractor and candidate card |
+| `../experiments/` | Full DepWeave benchmark drivers and historical local ablations |
 | `results/gpt-4o-mini/` | Historical GPT-4o-mini output, preserved locally and ignored by Git |
 | `results/qwen3-4b/` | New local Qwen3-4B output, ignored by Git |
 | `docs/` | Method and experiment history; older notes retain their original version names |
@@ -38,22 +36,20 @@ per-query wall time was 5.22 s with cache and 17.18 s without it. See
 
 ## Run
 
+从仓库根目录运行完整评测：
+
 ```bash
-cd shortMem
-pip install -r requirements.txt
-MODEL_PATH="/home/jackson/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c"
-PYTHONPATH=. python -m unittest discover -s tests -v
-PYTHONPATH=. python experiments/exp22_local_smoke.py --model-path $MODEL_PATH
-PYTHONPATH=. python experiments/exp58_v5_depeval_full.py --model-path $MODEL_PATH
-PYTHONPATH=. python experiments/exp59_depeval_primitive_dump.py --model-path $MODEL_PATH
-PYTHONPATH=. python experiments/exp56_repoqa_python_full.py --model-path $MODEL_PATH
-PYTHONPATH=. python experiments/exp60_repoqa_primitive_dump.py --model-path $MODEL_PATH
+cd /home/jackson/python/DepWeave
+python -m pip install -r requirements.txt
+export QWEN3_4B_PATH=/path/to/local/Qwen3-4B
+python -m experiments.exp56_repoqa_python_full
+python -m experiments.exp58_v5_depeval_full
 ```
 
 The model path must point to an already downloaded local checkpoint. It can
 also be set with `QWEN3_4B_PATH`. Inference uses Transformers offline mode
 (`local_files_only=True`), so no model is downloaded by these commands.
-The full experiments also need the datasets at the paths declared in their
-drivers. Run all comparisons again with the same Qwen checkpoint before
+The full experiments also need the datasets under root `data/`. Run all
+comparisons again with the same Qwen checkpoint before
 interpreting differences between methods; historical GPT numbers are not
 directly comparable with new Qwen numbers.

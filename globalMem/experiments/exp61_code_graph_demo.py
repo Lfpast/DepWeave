@@ -124,10 +124,8 @@ def main() -> None:
     assert pred is not None and not pstats.parse_error, "pipeline path failed"
     print("  OK — extract -> derive -> prompt -> parse path works")
 
-    print("\nNEXT: real-LLM localisation eval (RepoQA / SWE-bench-loc) — wire")
-    print("build_code_graph_plugins(mode='locate') with the OpenAI caller used in")
-    print("exp56/exp58 and submit via jobs/, comparing accuracy AND tokens vs the")
-    print("full-text and primitive-dump baselines (exp57/exp59/exp60).")
+    print("\nDepWeave's root exp56/exp58 drivers use the MCP evidence interface.")
+    print("This demo only checks the standalone graph plugin with a fake caller.")
 
 
 if __name__ == "__main__":

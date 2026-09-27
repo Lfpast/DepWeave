@@ -32,12 +32,14 @@ from pathlib import Path
 from fastmcp import FastMCP
 
 from pixelmem.v5.plugins.code_graph import CodeGraphExtractor, CodeGraphIndex, render_ego
+from depweave_evidence import EvidenceStore
 
 _DEFAULT_ROOT = os.environ.get("PIXELMEM_CODE_ROOT", ".")
 _MAX_FILES = int(os.environ.get("PIXELMEM_CODE_MAX_FILES", "4000"))
 
 _index: CodeGraphIndex | None = None
 _root: str = _DEFAULT_ROOT
+_evidence = EvidenceStore(max_files=_MAX_FILES)
 
 
 def _build_index(root: str) -> tuple[CodeGraphIndex, dict]:
@@ -131,6 +133,33 @@ def code_reindex(root: str = "") -> str:
         _root = root
     _index, meta = _build_index(_root)
     return json.dumps({"status": "reindexed", **meta})
+
+
+@mcp.tool()
+def code_index_documents(repo_id: str, documents_json: str) -> str:
+    """Index a named repository snapshot from path-to-source JSON documents.
+
+    Returns a content-addressed snapshot ID and explicit indexing coverage.
+    The client must pass this ID to code_evidence for every query.
+    """
+    documents = json.loads(documents_json)
+    if not isinstance(documents, dict):
+        raise ValueError("documents_json must be an object keyed by relative path")
+    return json.dumps(_evidence.index_documents(repo_id, documents))
+
+
+@mcp.tool()
+def code_evidence(snapshot_id: str, query: str, seeds_json: str = "[]",
+                  max_candidates: int = 16, max_edges: int = 80, hops: int = 1) -> str:
+    """Return source-backed candidates, relation sites and unresolved gaps.
+
+    Seeds are local candidates [{path, line, name}]. An edge always carries
+    canonical endpoint IDs, relation type, source path and source line.
+    """
+    seeds = json.loads(seeds_json)
+    if not isinstance(seeds, list):
+        raise ValueError("seeds_json must be a list")
+    return json.dumps(_evidence.packet(snapshot_id, query, seeds, max_candidates, max_edges, hops))
 
 
 if __name__ == "__main__":

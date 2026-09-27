@@ -28,6 +28,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "localMem"))
 
 from benchmarks.dependeval.data import DATA_PATH, parse_dependeval_content
 from benchmarks.dependeval.python_deps import PythonDependencyExtractor
@@ -309,4 +310,7 @@ def main():
 
 
 if __name__ == "__main__":
+    if "--ablation-only" not in sys.argv:
+        raise SystemExit("Local-only ablation; use experiments.exp58_v5_depeval_full for DepWeave, or pass --ablation-only")
+    sys.argv.remove("--ablation-only")
     main()

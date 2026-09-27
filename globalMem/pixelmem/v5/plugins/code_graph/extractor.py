@@ -76,20 +76,51 @@ def make_qual(file: str, owner_qual: Optional[str], owner_is_module: bool, name:
 
 @dataclass
 class _Ctx:
-    simple_to_quals: dict[str, set[str]] = field(default_factory=dict)   # name -> {qual}
     def_file: dict[str, str] = field(default_factory=dict)              # qual -> file
     class_methods: dict[str, set[str]] = field(default_factory=dict)    # class_qual -> {method name}
     class_bases: dict[str, list[str]] = field(default_factory=dict)     # class_qual -> [base simple name]
     node_qual: dict[int, str] = field(default_factory=dict)             # id(node) -> qual
+    modules: dict[str, str] = field(default_factory=dict)             # import name -> path
+    imported: dict[str, dict[str, tuple[str, str | None]]] = field(default_factory=dict)
+    shadows: dict[str, set[str]] = field(default_factory=dict)
+    duplicate_quals: set[str] = field(default_factory=set)
 
-    def register(self, file: str, qual: str, simple: str) -> None:
+    def register(self, file: str, qual: str) -> None:
+        if qual in self.def_file:
+            self.duplicate_quals.add(qual)
         self.def_file[qual] = file
-        self.simple_to_quals.setdefault(simple, set()).add(qual)
 
-    def resolve_simple(self, simple: str) -> Optional[str]:
-        """A bare name resolves only when it is unambiguous repo-wide."""
-        quals = self.simple_to_quals.get(simple)
-        return next(iter(quals)) if quals and len(quals) == 1 else None
+    def resolve_export(self, module: str, name: str, seen: Optional[set[str]] = None) -> Optional[str]:
+        """Resolve a definition or explicit re-export in an indexed module."""
+        path = self.modules.get(module)
+        if path is None:
+            return None
+        seen = seen or set()
+        if path in seen:
+            return None
+        seen.add(path)
+        direct = f"{path}{QUAL_SEP}{name}"
+        binding = self.imported.get(path, {}).get(name)
+        if direct in self.def_file and binding:
+            return None
+        if direct in self.def_file:
+            return direct
+        if binding and binding[1] is not None:
+            return self.resolve_export(binding[0], binding[1], seen)
+        return None
+
+    def resolve_bare(self, path: str, owner: str, name: str) -> Optional[str]:
+        if name in self.shadows.get(owner, set()):
+            return None
+        local = f"{path}{QUAL_SEP}{name}"
+        binding = self.imported.get(path, {}).get(name)
+        if local in self.def_file and binding:
+            return None
+        if local in self.def_file:
+            return local
+        if binding and binding[1] is not None:
+            return self.resolve_export(*binding)
+        return None
 
     def resolve_self_method(
         self, class_qual: str, simple: str, _seen: Optional[set] = None,
@@ -102,8 +133,9 @@ class _Ctx:
         seen.add(class_qual)
         if simple in self.class_methods.get(class_qual, set()):
             return f"{class_qual}.{simple}"
-        for base_simple in self.class_bases.get(class_qual, []):
-            bq = self.resolve_simple(base_simple)
+        for base_name in self.class_bases.get(class_qual, []):
+            bq = (self.resolve_bare(self.def_file[class_qual], class_qual, base_name)
+                  if "." not in base_name else None)
             if bq is not None:
                 hit = self.resolve_self_method(bq, simple, seen)
                 if hit is not None:
@@ -131,23 +163,32 @@ class CodeGraphExtractor(Extractor):
             )
         self._language = language
         self._n_parse_errors = 0
+        self.parse_error_paths: list[str] = []
+        self.duplicate_quals: list[str] = []
 
     # -- Extractor protocol -------------------------------------------------
 
     def extract(self, documents: dict[str, str], **kwargs: Any) -> list[Primitive]:
         self._n_parse_errors = 0
+        self.parse_error_paths = []
+        self.duplicate_quals = []
         trees: dict[str, ast.AST] = {}
         for path, src in documents.items():
             try:
                 trees[path] = ast.parse(src or "")
             except SyntaxError:
                 self._n_parse_errors += 1
+                self.parse_error_paths.append(path)
 
         ctx = _Ctx()
         out: list[Primitive] = []
         order = sorted(trees)
         for path in order:                       # pass 1: register defs
             self._register(path, trees[path], ctx)
+        self.duplicate_quals = sorted(ctx.duplicate_quals)
+        ctx.modules = _module_paths(order)
+        for path in order:
+            ctx.imported[path] = _import_bindings(path, trees[path])
         for path in order:                       # pass 2: structural edges
             self._emit_structure(path, trees[path], ctx, out)
         for path in order:                       # pass 3: behavioural edges
@@ -166,17 +207,18 @@ class CodeGraphExtractor(Extractor):
                 if isinstance(node, ast.ClassDef):
                     cq = make_qual(path, owner_qual, owner_is_module, node.name)
                     ctx.node_qual[id(node)] = cq
-                    ctx.register(path, cq, node.name)
+                    ctx.register(path, cq)
                     ctx.class_methods.setdefault(cq, set())
                     ctx.class_bases[cq] = [
-                        (_name_of(b) or "").split(".")[-1] for b in node.bases
+                        _name_of(b) for b in node.bases
                         if _name_of(b)
                     ]
                     walk(node.body, cq, False, cq)
                 elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                     fq = make_qual(path, owner_qual, owner_is_module, node.name)
                     ctx.node_qual[id(node)] = fq
-                    ctx.register(path, fq, node.name)
+                    ctx.register(path, fq)
+                    ctx.shadows[fq] = _local_names(node)
                     if class_qual is not None:
                         ctx.class_methods[class_qual].add(node.name)
                     walk(node.body, fq, False, None)
@@ -198,7 +240,7 @@ class CodeGraphExtractor(Extractor):
                         full = _name_of(base)
                         if not full:
                             continue
-                        bq = ctx.resolve_simple(full.split(".")[-1])
+                        bq = ctx.resolve_bare(path, cq, full) if "." not in full else None
                         out.append(Primitive(cq, REL_INHERITS, bq or full,
                                              "resolved" if bq else "name",
                                              provenance={"line": node.lineno}))
@@ -228,13 +270,16 @@ class CodeGraphExtractor(Extractor):
     def _emit_imports(self, path: str, node: ast.AST, out: list[Primitive]) -> None:
         if isinstance(node, ast.Import):
             for alias in node.names:
-                out.append(Primitive(path, REL_IMPORTS_MODULE, alias.name, ""))
+                out.append(Primitive(path, REL_IMPORTS_MODULE, alias.name, "",
+                                     provenance={"line": node.lineno, "alias": alias.asname}))
         elif isinstance(node, ast.ImportFrom):
             module = node.module or ("." * (node.level or 0))
-            out.append(Primitive(path, REL_IMPORTS_MODULE, module, "from"))
+            out.append(Primitive(path, REL_IMPORTS_MODULE, module, "from",
+                                 provenance={"line": node.lineno}))
             for alias in node.names:
                 if alias.name != "*":
-                    out.append(Primitive(path, REL_IMPORTS_SYMBOL, alias.name, module))
+                    out.append(Primitive(path, REL_IMPORTS_SYMBOL, alias.name, module,
+                                         provenance={"line": node.lineno, "alias": alias.asname}))
 
     def _emit_annotations(self, fqual: str, node: ast.AST, out: list[Primitive]) -> None:
         args = node.args  # type: ignore[attr-defined]
@@ -257,53 +302,55 @@ class CodeGraphExtractor(Extractor):
                     cq = ctx.node_qual.get(id(node), owner_qual)
                     for stmt in node.body:
                         if not isinstance(stmt, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
-                            self._region(stmt, cq, cq, ctx, out)
+                            self._region(stmt, path, cq, cq, ctx, out)
                     walk(node.body, cq, cq)
                 elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                     fq = ctx.node_qual.get(id(node), owner_qual)
                     for stmt in node.body:
                         if not isinstance(stmt, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
-                            self._region(stmt, fq, class_qual, ctx, out)
+                            self._region(stmt, path, fq, class_qual, ctx, out)
                     walk(node.body, fq, None)
                 else:
-                    self._region(node, owner_qual, class_qual, ctx, out)
+                    self._region(node, path, owner_qual, class_qual, ctx, out)
 
         walk(list(getattr(tree, "body", [])), path, None)
 
-    def _region(self, node, owner, class_qual, ctx, out) -> None:
+    def _region(self, node, path, owner, class_qual, ctx, out) -> None:
         """Walk a statement subtree (NOT descending into nested defs), emitting
         ``calls`` and ``uses`` edges attributed to ``owner``."""
         for child in ast.iter_child_nodes(node):
             if isinstance(child, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
                 continue
             if isinstance(child, ast.Call):
-                self._emit_call(child, owner, class_qual, ctx, out)
+                self._emit_call(child, path, owner, class_qual, ctx, out)
                 for arg in child.args:
-                    self._region(arg, owner, class_qual, ctx, out)
+                    self._region(arg, path, owner, class_qual, ctx, out)
                 for kw in child.keywords:
-                    self._region(kw.value, owner, class_qual, ctx, out)
+                    self._region(kw.value, path, owner, class_qual, ctx, out)
                 continue
             if isinstance(child, (ast.Name, ast.Attribute)) and \
                     isinstance(getattr(child, "ctx", None), ast.Load):
-                self._emit_use(child, owner, class_qual, ctx, out)
-            self._region(child, owner, class_qual, ctx, out)
+                self._emit_use(child, path, owner, class_qual, ctx, out)
+            self._region(child, path, owner, class_qual, ctx, out)
 
-    def _emit_call(self, call, owner, class_qual, ctx, out) -> None:
-        target, cond = self._resolve_callable(call.func, class_qual, ctx)
+    def _emit_call(self, call, path, owner, class_qual, ctx, out) -> None:
+        target, cond = self._resolve_callable(call.func, path, owner, class_qual, ctx)
         if target is not None:
             out.append(Primitive(owner, REL_CALLS, target, cond,
-                                 provenance={"line": getattr(call, "lineno", 0)}))
+                                 provenance={"line": getattr(call, "lineno", 0),
+                                             "column": getattr(call, "col_offset", 0)}))
 
-    def _emit_use(self, ref, owner, class_qual, ctx, out) -> None:
-        target, cond = self._resolve_callable(ref, class_qual, ctx)
+    def _emit_use(self, ref, path, owner, class_qual, ctx, out) -> None:
+        target, cond = self._resolve_callable(ref, path, owner, class_qual, ctx)
         if target is not None and cond == "resolved" and target != owner:
             out.append(Primitive(owner, REL_USES, target, "resolved",
-                                 provenance={"line": getattr(ref, "lineno", 0)}))
+                                 provenance={"line": getattr(ref, "lineno", 0),
+                                             "column": getattr(ref, "col_offset", 0)}))
 
-    def _resolve_callable(self, fn, class_qual, ctx) -> tuple[Optional[str], str]:
+    def _resolve_callable(self, fn, path, owner, class_qual, ctx) -> tuple[Optional[str], str]:
         """Resolve a call/use target to (qualname_or_bare_name, condition)."""
         if isinstance(fn, ast.Name):
-            q = ctx.resolve_simple(fn.id)
+            q = ctx.resolve_bare(path, owner, fn.id)
             return (q, "resolved") if q else (fn.id, "unresolved")
         if isinstance(fn, ast.Attribute):
             simple = fn.attr
@@ -318,6 +365,16 @@ class CodeGraphExtractor(Extractor):
                 hit = ctx.resolve_self_method(class_qual, simple)
                 if hit is not None:
                     return hit, "self"
+            dotted = _name_of(fn)
+            if dotted:
+                parts = dotted.split(".")
+                binding = ctx.imported.get(path, {}).get(parts[0])
+                if binding:
+                    imported_module = binding[0] if binding[1] is None else f"{binding[0]}.{binding[1]}"
+                    module = ".".join([imported_module, *parts[1:-1]])
+                    hit = ctx.resolve_export(module, parts[-1])
+                    if hit:
+                        return hit, "resolved"
             return simple, "unresolved"
         return None, "unresolved"
 
@@ -354,12 +411,59 @@ def _signature(node: ast.AST) -> str:
     return "(" + ", ".join(names) + ")"
 
 
+def _module_name(path: str) -> str:
+    stem = path[:-3].replace("/", ".")
+    return stem[:-9] if stem.endswith(".__init__") else stem
+
+
+def _module_paths(paths: list[str]) -> dict[str, str]:
+    """Index importable suffixes only when they identify one file."""
+    candidates: dict[str, set[str]] = {}
+    for path in paths:
+        parts = _module_name(path).split(".")
+        for i in range(len(parts)):
+            candidates.setdefault(".".join(parts[i:]), set()).add(path)
+    return {module: next(iter(found)) for module, found in candidates.items()
+            if len(found) == 1}
+
+
+def _import_bindings(path: str, tree: ast.AST) -> dict[str, tuple[str, str | None]]:
+    package = _module_name(path) if path.endswith("/__init__.py") else _module_name(path).rpartition(".")[0]
+    bindings: dict[str, tuple[str, str | None]] = {}
+    for node in getattr(tree, "body", []):
+        if isinstance(node, ast.Import):
+            for alias in node.names:
+                local = alias.asname or alias.name.split(".")[0]
+                module = alias.name if alias.asname else local
+                bindings[local] = (module, None)
+        elif isinstance(node, ast.ImportFrom):
+            base = package.split(".") if package else []
+            if node.level:
+                base = base[:max(0, len(base) - node.level + 1)]
+            module = ".".join([*base, *(node.module or "").split(".")]) if node.level else (node.module or "")
+            module = module.strip(".")
+            for alias in node.names:
+                if alias.name != "*":
+                    bindings[alias.asname or alias.name] = (module, alias.name)
+    return bindings
+
+
+def _local_names(node: ast.AST) -> set[str]:
+    """Conservatively avoid binding calls shadowed by parameters or locals."""
+    names = {a.arg for a in ast.walk(node.args) if isinstance(a, ast.arg)}
+    for stmt in ast.walk(node):
+        if isinstance(stmt, ast.Name) and isinstance(stmt.ctx, (ast.Store, ast.Del)):
+            names.add(stmt.id)
+    return names
+
+
 def _dedup(prims: list[Primitive]) -> list[Primitive]:
-    """Stable de-duplication on the (s, r, o, c) key (provenance ignored)."""
-    seen: set[tuple[str, str, str, str]] = set()
+    """Keep separate source sites for calls and uses."""
+    seen: set[tuple] = set()
     out: list[Primitive] = []
     for p in prims:
-        key = p.as_tuple()
+        site = tuple((p.provenance or {}).get(k) for k in ("line", "column")) if p.relation in (REL_CALLS, REL_USES) else None
+        key = (*p.as_tuple(), site)
         if key not in seen:
             seen.add(key)
             out.append(p)

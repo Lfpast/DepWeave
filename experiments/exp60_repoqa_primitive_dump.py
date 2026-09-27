@@ -28,6 +28,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(REPO_ROOT / "localMem"))
 
 from benchmarks.repoqa import REPOQA_JSON, RepoQAFunctionExtractor
 from benchmarks.local_model import LocalQwen3, MODEL_NAME, RESULTS_DIR, add_model_arguments
@@ -426,4 +427,7 @@ def main():
 
 
 if __name__ == "__main__":
+    if "--ablation-only" not in sys.argv:
+        raise SystemExit("Local-only ablation; use experiments.exp56_repoqa_python_full for DepWeave, or pass --ablation-only")
+    sys.argv.remove("--ablation-only")
     main()

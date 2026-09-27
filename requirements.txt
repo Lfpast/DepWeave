@@ -1,0 +1,2 @@
+-r localMem/requirements.txt
+fastmcp>=4.0,<5

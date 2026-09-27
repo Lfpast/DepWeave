@@ -38,6 +38,7 @@ from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "localMem"))
 
 from core import TaskCard
 from core.pipeline import V5Pipeline
@@ -208,4 +209,7 @@ def main():
 
 
 if __name__ == "__main__":
+    if "--ablation-only" not in sys.argv:
+        raise SystemExit("Local-only historical run; use experiments.exp56_repoqa_python_full for DepWeave, or pass --ablation-only")
+    sys.argv.remove("--ablation-only")
     main()
