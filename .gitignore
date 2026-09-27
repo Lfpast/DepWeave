@@ -12,3 +12,4 @@ venv/
 shortMem/results/
 shortMem/benchmarks/
 data/
+/baselines

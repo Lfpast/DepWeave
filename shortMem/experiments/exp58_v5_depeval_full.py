@@ -251,8 +251,9 @@ def _write_partial(results: list[dict]) -> None:
         json.dump(sorted_results, f, indent=2, default=str)
 
 
-def _summarize(results: list[dict], wall_seconds: float, cache: PixelMemCache,
-               workers: int, model_path: str, max_new_tokens: int) -> dict:
+def _summarize(results: list[dict], wall_seconds: float | None,
+               cache: PixelMemCache | None, workers: int | None,
+               model_path: str | None, max_new_tokens: int | None) -> dict:
     n = len(results)
     if n == 0:
         return {}
@@ -273,6 +274,18 @@ def _summarize(results: list[dict], wall_seconds: float, cache: PixelMemCache,
     mean_query = sum(r["query_time"] for r in results) / n
     n_cache_hits = sum(1 for r in results if r["cache_hit"])
     err_counts = Counter(r["error_type"] for r in results)
+    cache_stats = cache.stats.to_dict() if cache is not None else {
+        "hits": n_cache_hits,
+        "misses": n - n_cache_hits,
+        "hit_rate": n_cache_hits / n,
+        "total_wallclock_extract_s": None,
+        "total_wallclock_load_s": None,
+        "total_wallclock_save_s": None,
+        "bytes_written": None,
+        "primitives_cached": None,
+        "cache_entries": None,
+        "avg_entry_size_bytes": None,
+    }
 
     summary = {
         "n_total": n,
@@ -292,9 +305,15 @@ def _summarize(results: list[dict], wall_seconds: float, cache: PixelMemCache,
         "model_path": model_path,
         "max_new_tokens": max_new_tokens,
         "max_workers": workers,
-        "pixelmem_cache_stats": cache.stats.to_dict(),
+        "pixelmem_cache_stats": cache_stats,
     }
     return summary
+
+
+def _write_summary(summary: dict) -> None:
+    Path(SUMMARY_JSON).parent.mkdir(parents=True, exist_ok=True)
+    with open(SUMMARY_JSON, "w") as f:
+        json.dump(summary, f, indent=2, default=str)
 
 
 # ---------------------------------------------------------------------------
@@ -305,8 +324,23 @@ def _summarize(results: list[dict], wall_seconds: float, cache: PixelMemCache,
 def main():
     ap = argparse.ArgumentParser()
     add_model_arguments(ap, max_new_tokens=200)
-    ap.add_argument("--workers", type=int, default=1)
+    ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--summary-only", action="store_true",
+                    help="Rebuild summary from a completed results JSON without loading the model")
     args = ap.parse_args()
+
+    if args.summary_only:
+        with open(RESULTS_JSON) as f:
+            results = json.load(f)
+        if (not isinstance(results, list) or len(results) != 166
+                or sorted(r["qi"] for r in results) != list(range(166))):
+            ap.error("Expected all 166 distinct exp58 questions (qi 0..165)")
+        summary = _summarize(results, None, None, None, None, None)
+        _write_summary(summary)
+        print(f"Saved summary: {summary['n_correct']}/{summary['n_total']} "
+              f"({summary['accuracy']:.1%}) -> {SUMMARY_JSON}")
+        return
+
     llm = LocalQwen3(args.model_path, max_new_tokens=args.max_new_tokens)
 
     if not Path(DATA_PATH).exists():
@@ -404,9 +438,7 @@ def main():
     ):
         print(f"    {err:12s}: {cnt}")
 
-    Path(SUMMARY_JSON).parent.mkdir(parents=True, exist_ok=True)
-    with open(SUMMARY_JSON, "w") as f:
-        json.dump(summary, f, indent=2, default=str)
+    _write_summary(summary)
 
     print(f"\n  Saved: {RESULTS_JSON}")
     print(f"  Saved: {SUMMARY_JSON}")

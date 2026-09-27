@@ -221,7 +221,7 @@ def summarize(results: list[dict], wall_seconds: float, workers: int,
 def main():
     ap = argparse.ArgumentParser()
     add_model_arguments(ap, max_new_tokens=200)
-    ap.add_argument("--workers", type=int, default=1)
+    ap.add_argument("--workers", type=int, default=8)
     args = ap.parse_args()
     llm = LocalQwen3(args.model_path, max_new_tokens=args.max_new_tokens)
 

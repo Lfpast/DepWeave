@@ -292,7 +292,7 @@ def _write_partial(records: dict, path: str) -> None:
 def main():
     ap = argparse.ArgumentParser()
     add_model_arguments(ap, max_new_tokens=512)
-    ap.add_argument("--workers", type=int, default=1)
+    ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--limit", type=int, default=0,
                     help="limit number of needles (0 = all)")
     ap.add_argument("--cache-dir", default=CACHE_DIR)

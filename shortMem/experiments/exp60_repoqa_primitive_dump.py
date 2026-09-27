@@ -333,7 +333,7 @@ def _summarize(records: list[dict], wall: float, workers: int,
 def main():
     ap = argparse.ArgumentParser()
     add_model_arguments(ap, max_new_tokens=MAX_OUTPUT_TOKENS)
-    ap.add_argument("--workers", type=int, default=1)
+    ap.add_argument("--workers", type=int, default=8)
     args = ap.parse_args()
     llm = LocalQwen3(args.model_path, max_new_tokens=args.max_new_tokens)
     cases = _load_python_needles()
